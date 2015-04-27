@@ -18,6 +18,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=512k \
     dalvik.vm.heapmaxfree=8m \
     vendor.video.disable.ubwc=1 \
+    debug.cpurend.vsync=false \
     persist.radio.multisim.config=dsds \
     persist.vendor.qcomsysd.enabled=1 \
     ro.vendor.extension_library=libqti-perfd-client.so \
