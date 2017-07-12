@@ -42,6 +42,8 @@
 #include "QCameraTrace.h"
 #include "QCameraCommon.h"
 
+#include <android-base/properties.h>
+
 extern "C" {
 #include "mm_camera_dbg.h"
 }
@@ -493,6 +495,7 @@ QCameraPerfLock::QCameraPerfLock(
         mPerfLockType(perfLockType),
         mPerfLockIntf(perfLockIntf)
 {
+    mIsPerfdEnabled = android::base::GetBoolProperty("persist.camera.perfd.enable", false);
 }
 
 
@@ -617,6 +620,8 @@ bool QCameraPerfLock::acquirePerfLock(
         return true;
     }
 
+    if (!mIsPerfdEnabled) return ret;
+
     if (isTimedOut()) {
         mHandle   = 0;
         mRefCount = 0;
@@ -685,6 +690,8 @@ bool QCameraPerfLock::releasePerfLock()
         powerHintInternal(POWER_HINT_VIDEO_DECODE, false);
         return true;
     }
+
+    if (!mIsPerfdEnabled) return ret;
 
     if (mHandle > 0) {
         if (isTimedOut()) {
