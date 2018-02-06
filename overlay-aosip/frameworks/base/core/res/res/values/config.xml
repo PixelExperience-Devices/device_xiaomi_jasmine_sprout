@@ -18,4 +18,7 @@
     <!-- Whether device has screen with higher aspect ratio -->
     <bool name="config_haveHigherAspectRatioScreen">true</bool>
 
+    <!-- Multicolor Led Support -->
+    <bool name="config_multiColorBatteryLed">false</bool>
+
 </resources>
