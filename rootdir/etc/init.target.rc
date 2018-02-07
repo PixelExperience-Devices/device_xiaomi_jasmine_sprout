@@ -266,6 +266,7 @@ on charger
     start vendor.hvdcp_opti
     setprop sys.usb.configfs 1
     start thermal-engine
+    start vendor.thermal-engine
 
 service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
     class main
