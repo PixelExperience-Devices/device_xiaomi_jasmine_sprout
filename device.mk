@@ -434,7 +434,9 @@ PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/platform/soc/c0c4000.sdhci/by-name
 $(call inherit-product, build/target/product/verity.mk)
 
 # VNDK
-PRODUCT_PACKAGES += vndk_package
+PRODUCT_PACKAGES += \
+    libstdc++.vendor \
+    vndk_package
 
 # Wifi
 PRODUCT_PACKAGES += \
