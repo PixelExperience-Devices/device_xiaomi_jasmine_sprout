@@ -426,8 +426,7 @@ PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
     libjson \
     libprotobuf-cpp-full \
-    librmnetctl \
-    libxml2
+    librmnetctl
 
 # Sdcard
 PRODUCT_CHARACTERISTICS := nosdcard
