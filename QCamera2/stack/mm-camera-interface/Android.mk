@@ -67,7 +67,7 @@ LOCAL_MODULE           := libmmcamera_interface
 include $(SDCLANG_COMMON_DEFS)
 
 LOCAL_SHARED_LIBRARIES := libdl libcutils liblog \
-                          libhal_dbg
+                          libhal_dbg libutils
 
 LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
