@@ -1265,9 +1265,6 @@ vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
-# Power-off charging daemon
--sbin/charger:sbin/chargeonlymode;rootfs|7ccd811c7dd81429626c4ce135856086ce46f58a
-
 # Postprocessing
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/bin/mm-pp-dpps
@@ -1276,6 +1273,9 @@ vendor/lib64/libdisp-aba.so
 vendor/lib64/vendor.display.color@1.0.so
 vendor/lib64/vendor.display.color@1.1.so
 vendor/lib64/vendor.display.postproc@1.0.so
+
+# Power-off charging daemon
+-sbin/charger:sbin/chargeonlymode;rootfs|664dfa548b81cac348f1699222160f8d2b4d247c
 
 # QMI
 etc/permissions/qti_permissions.xml
