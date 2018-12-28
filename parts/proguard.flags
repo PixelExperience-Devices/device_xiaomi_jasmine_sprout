@@ -3,6 +3,11 @@
 }
 
 -keep class ** extends android.support.v14.preference.PreferenceFragment
+
+-keep class org.mokee.settings.dirac.* {
+  *;
+}
+
 -keep class org.mokee.settings.doze.* {
   *;
 }
