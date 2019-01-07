@@ -21,4 +21,7 @@
     <!-- Multicolor Led Support -->
     <bool name="config_multiColorBatteryLed">false</bool>
 
+    <!-- Specify custom blanking delay of the display -->
+    <integer name="config_screen_off_delay">0</integer>
+
 </resources>
