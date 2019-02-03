@@ -2290,7 +2290,8 @@ int32_t QCameraGrallocMemory::dequeueBuffer()
             mPrivateHandle[dequeuedIdx] =
                     (struct private_handle_t *)(*mBufferHandle[dequeuedIdx]);
             //update max fps info
-            setMetaData(mPrivateHandle[dequeuedIdx], UPDATE_REFRESH_RATE, (void*)&mMaxFPS);
+        float refreshShow = (float) mMaxFPS;
+        setMetaData(mPrivateHandle[dequeuedIdx], UPDATE_REFRESH_RATE, (void*)&refreshShow);
 #ifndef TARGET_ION_ABI_VERSION
             mMemInfo[dequeuedIdx].main_ion_fd = open("/dev/ion", O_RDONLY);
 #else
