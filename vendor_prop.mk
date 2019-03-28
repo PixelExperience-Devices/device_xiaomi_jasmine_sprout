@@ -84,3 +84,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # enable FIFO scheduling for UI and Render threads by default
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.use_fifo_ui=1
+
+# OEM Unlock reporting
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.oem_unlock_supported=1
+
