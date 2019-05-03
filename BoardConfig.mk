@@ -196,9 +196,6 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/bt_firmware:/bt_firmware
 TARGET_COPY_OUT_VENDOR := vendor
 
-# Power
-TARGET_USES_INTERACTION_BOOST := true
-
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
