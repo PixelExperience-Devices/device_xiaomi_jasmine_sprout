@@ -20,6 +20,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.shutdown_timeout=0 \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp \
     ro.opengles.version=196610 \
+    ro.sf.lcd_density=400 \
     vendor.qcom.bluetooth.soc=cherokee \
     af.fast_track_multiplier=1 \
     vendor.audio_hal.period_size=192 \
