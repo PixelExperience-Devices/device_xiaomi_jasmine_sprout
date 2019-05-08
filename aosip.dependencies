@@ -11,5 +11,10 @@
     "repository": "LineageOS/android_packages_resources_devicesettings",
     "target_path": "packages/resources/devicesettings",
     "branch": "lineage-16.0"
+ },
+ {
+    "repository": "TeamWin/external_magisk-prebuilt",
+    "target_path": "external/magisk-prebuilt",
+    "branch": "master"
  }
 ]
