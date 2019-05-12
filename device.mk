@@ -437,6 +437,7 @@ $(call inherit-product, build/target/product/verity.mk)
 PRODUCT_PACKAGES += \
     libdng_sdk.vendor_32 \
     libstdc++.vendor \
+    vndk-ext \
     vndk_package
 
 # Wifi
