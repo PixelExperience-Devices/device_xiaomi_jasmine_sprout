@@ -1,0 +1,2 @@
+# Touchscreen
+genfscon proc /nvt_wake_gesture                                 u:object_r:proc_tap_to_wake:s0

@@ -124,9 +124,6 @@ on boot
 #Create folder dump yuv images while debugging
     mkdir /data/vendor/camera 0770 camera camera
 
-    # Touchscreen
-    chown system system /sys/class/input/input2/wake_gesture
-
     #add for display feature
     chown system system /sys/class/graphics/fb0/msm_fb_ce
     chown system system /sys/class/graphics/fb0/msm_fb_cabc
