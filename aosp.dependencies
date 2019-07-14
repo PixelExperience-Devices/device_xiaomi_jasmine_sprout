@@ -1,0 +1,46 @@
+
+
+[
+  {
+    "remote":      "github",
+    "repository":  "PixelExperience-Devices/device_xiaomi_sdm660-common",
+    "target_path": "device/xiaomi/sdm660-common",
+    "branch":      "pie-caf"
+  },
+  {
+    "remote":      "github",
+    "repository":  "PixelExperience-Devices/kernel_xiaomi_jasmine_sprout",
+    "target_path": "kernel/xiaomi/jasmine_sprout",
+    "branch":      "master"
+  },
+  {
+    "remote":      "github",
+    "repository":  "xiaomi-sdm660/android_vendor_xiaomi_wayne",
+    "target_path": "vendor/xiaomi/wayne",
+    "branch":      "master"
+  },
+  {
+    "remote":      "github",
+    "repository":  "LineageOS/android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings",
+    "branch":      "lineage-16.0"
+  },
+  {
+    "remote":      "github",
+    "repository":  "xiaomi-sdm660/android_vendor_xiaomi_Miuicamera",
+    "target_path": "vendor/xiaomi/MiuiCamera",
+    "branch":      "master"
+  },
+  { 
+    "remote": "github",
+    "repository": "xiaomi-sdm660/android_vendor_xiaomi_sdm660-common",
+    "target_path": "vendor/xiaomi/sdm660-common",
+    "branch": "pe-caf"
+  },
+  {
+    "remote": "github",
+    "repository": "TeamWin/external_magisk-prebuilt",
+    "target_path": "external/magisk-prebuilt",
+    "branch": "master"
+  }
+]
