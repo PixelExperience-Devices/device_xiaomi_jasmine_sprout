@@ -19,24 +19,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
 
-# Inherit from whyred device
-$(call inherit-product, device/xiaomi/whyred/device.mk)
+# Inherit from jasmine_sprout device
+$(call inherit-product, device/xiaomi/jasmine_sprout/device.mk)
 
 # Inherit some common AOSiP stuff.
 $(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 
-PRODUCT_NAME := aosip_whyred
+PRODUCT_NAME := aosip_jasmine_sprout
 PRODUCT_BRAND := Xiaomi
-PRODUCT_DEVICE := whyred
+PRODUCT_DEVICE := jasmine_sprout
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := Redmi Note 5
+PRODUCT_MODEL := Mi A2
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE="whyred" \
-    PRODUCT_NAME="whyred" \
-    BUILD_FINGERPRINT="xiaomi/whyred/whyred:9/PKQ1.180904.001/V10.3.1.0.PEICNXM:user/release-keys" \
-    PRIVATE_BUILD_DESC="whyred-user 9 PKQ1.180904.001 V10.3.1.0.PEICNXM release-keys"
+    TARGET_DEVICE="jasmine_sprout" \
+    PRODUCT_NAME="jasmine" \
+    BUILD_FINGERPRINT="xiaomi/jasmine/jasmine_sprout:9/PKQ1.180904.001/V10.0.9.0.PDIMIXM:user/release-keys" \
+    PRIVATE_BUILD_DESC="jasmine-user 9 PKQ1.180904.001 V10.0.9.0.PDIMIXM release-keys"
 
 TARGET_VENDOR := Xiaomi

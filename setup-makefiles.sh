@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=whyred
+DEVICE=jasmine_sprout
 VENDOR=xiaomi
 
 INITIAL_COPYRIGHT_YEAR=2018

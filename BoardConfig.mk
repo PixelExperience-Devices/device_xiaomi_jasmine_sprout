@@ -21,7 +21,7 @@
 # definition file).
 #
 
-DEVICE_PATH := device/xiaomi/whyred
+DEVICE_PATH := device/xiaomi/jasmine_sprout
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sdm660
@@ -59,8 +59,8 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/whyred
-TARGET_KERNEL_CONFIG := whyred-perf_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/jasmine_sprout
+TARGET_KERNEL_CONFIG := jasmine_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 
 # QCOM
@@ -249,4 +249,4 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # inherit from the proprietary version
--include vendor/xiaomi/whyred/BoardConfigVendor.mk
+-include vendor/xiaomi/jasmine_sprout/BoardConfigVendor.mk

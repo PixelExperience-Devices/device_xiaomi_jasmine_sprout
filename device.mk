@@ -21,7 +21,7 @@
 # definition file).
 #
 
-$(call inherit-product, vendor/xiaomi/whyred/whyred-vendor.mk)
+$(call inherit-product, vendor/xiaomi/jasmine_sprout/jasmine_sprout-vendor.mk)
 
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_prop.mk
@@ -182,7 +182,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint feature
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_whyred
+    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_jasmine_sprout
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
@@ -268,7 +268,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_whyred
+    android.hardware.light@2.0-service.xiaomi_jasmine_sprout
 
 # Media
 PRODUCT_COPY_FILES += \

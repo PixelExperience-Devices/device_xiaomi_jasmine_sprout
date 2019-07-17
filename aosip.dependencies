@@ -1,11 +1,11 @@
 [
  {
-   "repository": "vendor_xiaomi_whyred",
-   "target_path": "vendor/xiaomi/whyred"
+   "repository": "vendor_xiaomi_jasmine_sprout",
+   "target_path": "vendor/xiaomi/jasmine_sprout"
  },
  {
-   "repository": "kernel_xiaomi_whyred",
-   "target_path": "kernel/xiaomi/whyred"
+   "repository": "kernel_xiaomi_jasmine_sprout",
+   "target_path": "kernel/xiaomi/jasmine_sprout"
  },
  {
     "repository": "LineageOS/android_packages_resources_devicesettings",
