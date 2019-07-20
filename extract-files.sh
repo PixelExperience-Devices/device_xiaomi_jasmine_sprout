@@ -63,6 +63,10 @@ function blob_fixup() {
     vendor/lib64/libgf_ca.so)
         sed -i "s|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g" "${2}"
         ;;
+
+    lib/libwfdnative.so|lib64/libwfdnative.so|vendor/lib/hw/camera.sdm660.so|vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so)
+        patchelf --remove-needed "android.hidl.base@1.0.so" "${2}"
+        ;;
     esac
 }
 
