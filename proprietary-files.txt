@@ -1435,16 +1435,11 @@ vendor/lib64/libsensor_reg.so
 vendor/lib64/libsensor1.so
 vendor/lib64/sensors.ssc.so
 
-# Thermal
-vendor/etc/thermal-engine.conf
-vendor/etc/thermal-engine-map.conf
-vendor/etc/thermal-engine-normal.conf
-vendor/bin/thermal-engine
-vendor/lib/libthermalfeature.so
--vendor/lib/libthermalclient.so
-vendor/lib64/libthermalfeature.so
--vendor/lib64/libthermalclient.so
-vendor/lib64/libthermalioctl.so
+# Thermal - from LA.UM.7.2.r1-06900-sdm660.0
+vendor/bin/thermal-engine|074f574ebfcdce5d4950572dc32eddef2540f494
+-vendor/lib/libthermalclient.so|9599c774e03aeb2b4bacde8f63c4ea89f1984394
+-vendor/lib64/libthermalclient.so|256ee1de4ec298c7240de76d1f307ec9609e1a94
+vendor/lib64/libthermalioctl.so|d73361fc391da39ea519bae15bc2dc55909dbab8
 
 # Time services
 -vendor/app/TimeService/TimeService.apk
