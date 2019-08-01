@@ -4,10 +4,8 @@
       "Name": "CPULittleClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
       "Values": [
-        "1900800",
-        "1555200",
-        "1478400",
-        "1248000"
+        "1843200",
+        "1401600"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -16,11 +14,8 @@
       "Name": "CPULittleClusterMinFreq",
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
       "Values": [
-        "1900800",
-        "1555200",
-        "1512000",
-        "1478400",
-        "1134000",
+        "1843200",
+        "1401600",
         "0"
       ],
       "ResetOnInit": true
@@ -29,11 +24,8 @@
       "Name": "CPUBigClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq",
       "Values": [
-        "2457600",
-        "1958400",
-        "1574400",
-        "1344000",
-        "1267200"
+        "2208000",
+        "1401600"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -42,11 +34,7 @@
       "Name": "CPUBigClusterMinFreq",
       "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq",
       "Values": [
-        "2457600",
-        "1574400",
-        "1420800",
-        "1344000",
-        "1132800",
+        "2208000",
         "0"
       ],
       "ResetOnInit": true
@@ -55,10 +43,8 @@
       "Name": "GPUMaxFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq",
       "Values": [
-        "342000000",
-        "414000000",
-        "515000000",
-        "710000000"
+        "266000000",
+        "647000000"
       ],
       "ResetOnInit": true
     },
@@ -66,9 +52,8 @@
       "Name": "GPUMinFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq",
       "Values": [
-        "515000000",
-        "414000000",
-        "257000000"
+        "465000000",
+        "160000000"
       ],
       "ResetOnInit": true
     },
@@ -136,10 +121,9 @@
       "Name": "CPUBWMinFreq",
       "Path": "/sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/min_freq",
       "Values": [
-        "13763",
-        "5195",
-        "1525",
-        "762"
+        "6881",
+        "2929",
+        "381"
       ],
       "ResetOnInit": true
     },
@@ -158,25 +142,25 @@
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 0,
-      "Value": "1267200"
+      "Value": "1401600"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "CPULittleClusterMaxFreq",
       "Duration": 0,
-      "Value": "1248000"
+      "Value": "1401600"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "GPUMaxFreq",
       "Duration": 0,
-      "Value": "342000000"
+      "Value": "266000000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
-      "Value": "1134000"
+      "Value": "1401600"
     },
     {
       "PowerHint": "INTERACTION",
@@ -206,25 +190,25 @@
       "PowerHint": "INTERACTION",
       "Node": "CPUBWMinFreq",
       "Duration": 0,
-      "Value": "5195"
+      "Value": "2929"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 5000,
-      "Value": "2457600"
+      "Value": "2208000"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMinFreq",
       "Duration": 5000,
-      "Value": "2457600"
+      "Value": "2208000"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 5000,
-      "Value": "1900800"
+      "Value": "1843200"
     },
     {
       "PowerHint": "LAUNCH",
@@ -254,7 +238,7 @@
       "PowerHint": "LAUNCH",
       "Node": "CPUBWMinFreq",
       "Duration": 5000,
-      "Value": "13763"
+      "Value": "6881"
     },
     {
       "PowerHint": "LAUNCH",
@@ -278,13 +262,13 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "515000000"
+      "Value": "465000000"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMaxFreq",
       "Duration": 0,
-      "Value": "710000000"
+      "Value": "647000000"
     }
   ]
 }
