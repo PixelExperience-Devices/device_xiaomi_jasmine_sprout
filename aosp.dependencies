@@ -1,11 +1,15 @@
 [
  {
-   "repository": "vendor_xiaomi_jasmine_sprout",
-   "target_path": "vendor/xiaomi/jasmine_sprout"
+   "repository": "darkbeast69/vendor_xiaomi_jasmine_sprout",
+   "target_path": "vendor/xiaomi/jasmine_sprout",
+   "branch": "pie",
+   "remote": "github"
  },
  {
-   "repository": "kernel_xiaomi_jasmine_sprout",
-   "target_path": "kernel/xiaomi/jasmine_sprout"
+   "repository": "AOSiP-Devices/kernel_xiaomi_jasmine_sprout",
+   "target_path": "kernel/xiaomi/jasmine_sprout",
+   "branch": "pie",
+   "remote": "github"
  },
  {
     "repository": "LineageOS/android_packages_resources_devicesettings",
