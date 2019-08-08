@@ -22,8 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 # Inherit from jasmine_sprout device
 $(call inherit-product, device/xiaomi/jasmine_sprout/device.mk)
 
-# Inherit some common AOSiP stuff.
+# Inherit some common Pixel Experience stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+TARGET_GAPPS_ARCH := arm64
 
 PRODUCT_NAME := aosp_jasmine_sprout
 PRODUCT_BRAND := Xiaomi
