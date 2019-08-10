@@ -255,6 +255,7 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
     ifeq ($(WITH_DEXPREOPT),)
+      DONT_DEXPREOPT_PREBUILTS := true
       WITH_DEXPREOPT := true
       WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
     endif
