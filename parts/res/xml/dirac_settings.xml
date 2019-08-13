@@ -23,7 +23,7 @@
         android:defaultValue="0"
         android:title="@string/dirac_headset_title"
         android:summary="%s" 
-	android:icon="@drawable/ic_headphone" />
+        android:icon="@drawable/ic_headphone" />
 
     <ListPreference
         android:key="dirac_preset_pref"
