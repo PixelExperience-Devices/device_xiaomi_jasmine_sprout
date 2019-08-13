@@ -1244,6 +1244,10 @@ vendor/lib64/libvpphvx.so
 vendor/lib64/libvpptestutils.so
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 
+# Perf - from taimen PQ3A.190801.002
+vendor/lib/libqti-perfd-client.so|f277daf9632b4d4c22a27abec2c4d0ccf776892d
+vendor/lib64/libqti-perfd-client.so|eaf678de5d7d0de194a263db1835b1f582452419
+
 # Peripheral manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
