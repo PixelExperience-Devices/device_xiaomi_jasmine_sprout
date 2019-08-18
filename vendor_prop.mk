@@ -91,8 +91,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # OEM Unlock reporting
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.oem_unlock_supported=1
-    
+
 #Density
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=440
 
+# Rendering
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.enable.sglscale=1 \
+    debug.egl.hw=1 \
+    debug.sf.disable_hwc=0 \
+    debug.sf.recomputecrop=0 \
+    persist.hwc.ptor.enable=true \
+    debug.sf.gpu_comp_tiling=1
