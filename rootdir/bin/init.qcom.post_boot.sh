@@ -2365,9 +2365,37 @@ case "$target" in
             panel=${panel:2:4}
         fi
 
+        if [ $panel -gt 1080 ]; then
+            echo 2 > /proc/sys/kernel/sched_window_stats_policy
+            echo 5 > /proc/sys/kernel/sched_ravg_hist_size
+        else
+            echo 3 > /proc/sys/kernel/sched_window_stats_policy
+            echo 3 > /proc/sys/kernel/sched_ravg_hist_size
+        fi
         #Apply settings for sdm660, sdm636,sda636
         case "$soc_id" in
                 "317" | "324" | "325" | "326" | "345" | "346" )
+
+            echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
+            echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
+            echo 30 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
+            echo 100 > /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms
+            echo 1 > /sys/devices/system/cpu/cpu4/core_ctl/is_big_cluster
+            echo 4 > /sys/devices/system/cpu/cpu4/core_ctl/task_thres
+
+            # Setting b.L scheduler parameters
+            echo 96 > /proc/sys/kernel/sched_upmigrate
+            echo 90 > /proc/sys/kernel/sched_downmigrate
+            echo 140 > /proc/sys/kernel/sched_group_upmigrate
+            echo 120 > /proc/sys/kernel/sched_group_downmigrate
+            echo 0 > /proc/sys/kernel/sched_select_prev_cpu_us
+            echo 400000 > /proc/sys/kernel/sched_freq_inc_notify
+            echo 400000 > /proc/sys/kernel/sched_freq_dec_notify
+            echo 5 > /proc/sys/kernel/sched_spill_nr_run
+            echo 1 > /proc/sys/kernel/sched_restrict_cluster_spill
+            echo 100000 > /proc/sys/kernel/sched_short_burst_ns
+            echo 1 > /proc/sys/kernel/sched_prefer_sync_wakee_to_waker
+            echo 20 > /proc/sys/kernel/sched_small_wakee_task_load
 
             # cpuset settings
             echo 0-7 > /dev/cpuset/top-app/cpus
@@ -2381,19 +2409,37 @@ case "$target" in
             # online CPU0
             echo 1 > /sys/devices/system/cpu/cpu0/online
             # configure governor settings for little cluster
-            echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-            echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
-            echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/iowait_boost_enable
-            echo 500 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
+            echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+            echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load
+            echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_migration_notif
+            echo "19000 1401600:39000" > /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay
+            echo 90 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load
+            echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
+            echo 1401600 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
+            echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy
+            echo "85 1747200:95" > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
+            echo 39000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time
+            echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis
             echo 633600 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+            echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/ignore_hispeed_on_notif
+            echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/fast_ramp_down
             # online CPU4
             echo 1 > /sys/devices/system/cpu/cpu4/online
             # configure governor settings for big cluster
-            echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-            echo 20000 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us
-            echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/iowait_boost_enable
-            echo 500 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
+            echo "interactive" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+            echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_sched_load
+            echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_migration_notif
+            echo "19000 1401600:39000" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
+            echo 90 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
+            echo 20000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
+            echo 1401600 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
+            echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy
+            echo "85 1401600:90 2150400:95" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
+            echo 39000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
+            echo 59000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis
             echo 1113600 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+            echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/ignore_hispeed_on_notif
+            echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/fast_ramp_down
 
             # bring all cores online
             echo 1 > /sys/devices/system/cpu/cpu0/online
@@ -2440,6 +2486,7 @@ case "$target" in
             do
                 echo "bw_hwmon" > $cpubw/governor
                 echo 50 > $cpubw/polling_interval
+                echo 762 > $cpubw/min_freq
                 echo "1525 3143 5859 7759 9887 10327 11863 13763" > $cpubw/bw_hwmon/mbps_zones
                 echo 4 > $cpubw/bw_hwmon/sample_ms
                 echo 85 > $cpubw/bw_hwmon/io_percent
@@ -2456,6 +2503,12 @@ case "$target" in
                 echo 1600 > $cpubw/bw_hwmon/idle_mbps
             done
 
+            for memlat in /sys/class/devfreq/*qcom,memlat-cpu*
+            do
+                echo "mem_latency" > $memlat/governor
+                echo 10 > $memlat/polling_interval
+                echo 400 > $memlat/mem_latency/ratio_ceil
+            done
             echo "cpufreq" > /sys/class/devfreq/soc:qcom,mincpubw/governor
 
             # Start cdsprpcd only for sdm660 and disable for sdm630
