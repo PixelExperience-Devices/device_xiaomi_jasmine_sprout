@@ -221,6 +221,7 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
 # TWRP Support
+RECOVERY_VARIANT := twrp
 include $(DEVICE_PATH)/twrp.mk
 
 # Use mke2fs to create ext4 images
