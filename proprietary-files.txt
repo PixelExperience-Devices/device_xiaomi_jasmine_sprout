@@ -1164,6 +1164,9 @@ vendor/lib/hw/keystore.sdm660.so
 vendor/lib64/hw/keystore.sdm660.so
 
 # Listen
+vendor/etc/audio.bsd|a8a83254fff006e50a879806a8fd141596290cb3
+vendor/lib/libnwa.so|54b30f461c1589ed1217019f41e89a9f986eeea4
+vendor/lib64/libnwa.so|fac04a2253dcc43d1f9de51fe80a7bdcc3fff534
 vendor/lib/hw/sound_trigger.primary.sdm660.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libgcs-calwrapper.so
