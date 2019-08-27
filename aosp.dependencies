@@ -24,8 +24,8 @@
     "remote": "github" 
  },
  {
-    "repository": "omnirom/android_bootable_recovery",
-    "target_path": "bootable/recovery",
-    "branch": "android-9.0"
+    "repository": "xiaomi-sdm660/android_vendor_xiaomi_MiuiCamera",
+    "target_path": "vendor/xiaomi/MiuiCamera",
+    "branch": "master"
     "remote": "github"  
 ]
