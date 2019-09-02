@@ -6,9 +6,9 @@
    "remote": "github"
  },
  {
-   "repository": "AOSiP-Devices/kernel_xiaomi_jasmine_sprout",
+   "repository": "rcstar6696/android_kernel_xiaomi_sdm660",
    "target_path": "kernel/xiaomi/jasmine_sprout",
-   "branch": "pie",
+   "branch": "clean4",
    "remote": "github"
  },
  {
