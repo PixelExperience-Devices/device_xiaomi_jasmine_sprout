@@ -94,7 +94,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 #Density
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=440
+    ro.sf.lcd_density=320
 
 # Rendering
 PRODUCT_PROPERTY_OVERRIDES += \
