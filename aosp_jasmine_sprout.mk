@@ -44,3 +44,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
    BUILD_FINGERPRINT="xiaomi/jasmine/jasmine_sprout:9/PKQ1.180904.001/V10.0.9.0.PDIMIXM:user/release-keys"
 
 TARGET_VENDOR := Xiaomi
+
+# Twrp
+BUILD_TWRP := true
