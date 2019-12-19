@@ -6383,7 +6383,8 @@ int32_t QCamera3HardwareInterface::captureQuadraCfaFrameInternal(camera3_capture
     rc = _orchestrationDb.getFrameworkFrameNumber(request->frame_number,
             frameworkFrameNumber);
     uint32_t internalFrameNumber;
-    request->frame_number = _orchestrationDb.generateStoreInternalFrameNumber(internalFrameNumber);
+    _orchestrationDb.generateStoreInternalFrameNumber(internalFrameNumber);
+    request->frame_number = internalFrameNumber;
 
     /* 1. config streams internally and stream on */
     rc = switchStreamConfigInternal(request->frame_number);
