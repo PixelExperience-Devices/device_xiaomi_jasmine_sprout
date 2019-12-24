@@ -6229,6 +6229,10 @@ int32_t QCamera3HardwareInterface::switchStreamConfigInternal(__unused uint32_t 
         delete mMultiRawChannel;
         mMultiRawChannel = NULL;
     }
+    if (mRawDumpChannel) {
+       delete mRawDumpChannel;
+       mRawDumpChannel = NULL;
+    }
 
     /* unconfigure and reset meta stream info */
     cam_stream_size_info_t stream_config_info;
@@ -11190,6 +11194,7 @@ void QCamera3HardwareInterface::cleanAndSortStreamInfo()
         if(((*it)->status) == INVALID){
             QCamera3Channel *channel = (QCamera3Channel*)(*it)->stream->priv;
             delete channel;
+            (*it)->stream->priv = NULL;
             free(*it);
             it = mStreamInfo.erase(it);
         } else {
