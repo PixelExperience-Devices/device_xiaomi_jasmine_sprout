@@ -40,11 +40,5 @@
     "target_path": "packages/apps/PixelLiveWallpaper",
     "branch": "ten",
     "remote": "pixel-gitlab"
-  },
-  {
-  "remote": "github",
-   "repository": "xiaomi-sdm660/device_twrp_jasmine_sprout",
-   "target_path": "device/twrp/jasmine_sprout",
-   "branch": "master"
- }
+  }
 ]
