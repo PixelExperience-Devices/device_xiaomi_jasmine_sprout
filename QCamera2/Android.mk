@@ -201,6 +201,12 @@ ifneq (,$(filter $(TRINKET) msm8937_32go-userdebug, $(TARGET_BOARD_PLATFORM)))
 LOCAL_CFLAGS += -DSUPPORT_ONLY_HAL3
 endif
 
+ifeq ($(TARGET_KERNEL_VERSION), 4.14)
+    ifeq ($(TARGET_BOARD_PLATFORM), sdm660)
+        LOCAL_CFLAGS += -DSUPPORT_ONLY_HAL3
+    endif
+endif
+
 LOCAL_STATIC_LIBRARIES := android.hardware.camera.common@1.0-helper
 
 
