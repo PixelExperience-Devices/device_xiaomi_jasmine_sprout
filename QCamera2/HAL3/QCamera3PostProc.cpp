@@ -746,7 +746,6 @@ int32_t QCamera3PostProcessor::processData(mm_camera_super_buf_t *input,
             mCancelpprocReqFrameList.erase(cancel_frame);
         }
     }
-
     return NO_ERROR;
 }
 
@@ -950,12 +949,15 @@ int32_t QCamera3PostProcessor::processData(qcamera_fwk_input_pp_data_t *frame)
 int32_t QCamera3PostProcessor::cancelFramePProc(uint32_t framenum)
 {
     int rc = NO_ERROR;
+    pthread_mutex_lock(&mReprocJobLock);
     if(!m_inputPPQ.isEmpty()){
         LOGH("pp request cancel for frame : %d", framenum);
         m_dataProcTh.sendCmd(CAMERA_CMD_TYPE_CANCEL_PP_FRAME, FALSE, FALSE);
+        pthread_mutex_unlock(&mReprocJobLock);
     } else {
         LOGH("PP Frame queue is empty. cache cancel frame request %d", framenum);
         mCancelpprocReqFrameList.push_back(framenum);
+        pthread_mutex_unlock(&mReprocJobLock);
     }
     return rc;
 }
