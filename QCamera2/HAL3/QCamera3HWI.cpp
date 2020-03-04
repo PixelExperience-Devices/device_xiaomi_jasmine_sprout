@@ -6671,6 +6671,12 @@ int QCamera3HardwareInterface::initiateRecovery(bool defered)
 {
     int rc = NO_ERROR;
     LOGE("%s Start internal recovery",defered? "Defered work:":"");
+    if(m_bRecoveryDone)
+    {
+        LOGE("One session already started recovery in dualcamera %d",isDualCamera());
+        return rc;
+    }
+
     if(defered){
         DeferredTask task;
         task.msg_type = INITIATE_HW_RECOVERY;
@@ -7839,6 +7845,7 @@ no_error:
     if (meta.exists(ANDROID_REQUEST_ID)) {
         request_id = meta.find(ANDROID_REQUEST_ID).data.i32[0];
         mCurrentRequestId = request_id;
+        m_bRecoveryDone = false;
         LOGD("Received request with id: %d", request_id);
     } else if (((mState == CONFIGURED )
                && (!m_bRecoveryDone))
