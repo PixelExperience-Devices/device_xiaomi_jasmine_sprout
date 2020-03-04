@@ -627,6 +627,8 @@ QCamera3HardwareInterface::QCamera3HardwareInterface(uint32_t cameraId,
     mSessionId = 0;
     mHFRMode = CAM_HFR_MODE_OFF;
 #endif
+    sync_counter =0;
+
 }
 
 /*===========================================================================
@@ -8818,6 +8820,11 @@ no_error:
 
             if(!IS_MULTI_CAMERA)
             {
+               if(isDualCamera() && gCamCapability[mCameraId]->version == CAM_HAL_V3) {
+                 sync_counter++;
+                 ADD_SET_PARAM_ENTRY_TO_BATCH(mParameters,CAM_INTF_PARAM_COUNTER,sync_counter);
+                 ADD_SET_PARAM_ENTRY_TO_BATCH(mAuxParameters,CAM_INTF_PARAM_COUNTER,sync_counter);
+               }
                 rc = mCameraHandle->ops->set_parms(
                         get_main_camera_handle(mCameraHandle->camera_handle), mParameters);
                 if (rc < 0) {

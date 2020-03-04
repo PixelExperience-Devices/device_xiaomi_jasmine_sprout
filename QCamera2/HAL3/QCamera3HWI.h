@@ -885,6 +885,7 @@ private:
     camera3_capture_request_t **quad_req;
     bool m_bRecoveryDone;
     CameraMetadata mSavedParams;
+    uint32_t sync_counter;
 };
 
 }; // namespace qcamera
