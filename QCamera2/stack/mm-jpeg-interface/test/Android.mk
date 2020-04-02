@@ -31,9 +31,14 @@ LOCAL_CFLAGS += -DSYSTEM_HEADER_PREFIX=sys
 OMX_CORE_DIR := $(MM_JPEG_TEST_PATH)/../../../../mm-image-codec
 
 ifneq ($(TARGET_KERNEL_VERSION),$(filter $(TARGET_KERNEL_VERSION),3.18 4.4 4.9))
-LOCAL_C_INCLUDES := \
-    $(TOP)/system/core/libion/include \
-    $(TOP)/system/core/libion/kernel-headers
+  ifneq ($(LIBION_HEADER_PATH_WRAPPER), )
+    include $(LIBION_HEADER_PATH_WRAPPER)
+    LOCAL_C_INCLUDES := $(LIBION_HEADER_PATHS)
+  else
+    LOCAL_C_INCLUDES := \
+            $(TOP)/system/core/libion/include \
+            $(TOP)/system/core/libion/kernel-headers
+  endif
 endif
 LOCAL_C_INCLUDES += $(MM_JPEG_TEST_PATH)
 LOCAL_C_INCLUDES += $(MM_JPEG_TEST_PATH)/../inc
@@ -82,9 +87,14 @@ LOCAL_CFLAGS += -DSYSTEM_HEADER_PREFIX=sys
 OMX_CORE_DIR := $(MM_JPEG_TEST_PATH)/../../../../mm-image-codec
 
 ifneq ($(TARGET_KERNEL_VERSION),$(filter $(TARGET_KERNEL_VERSION),3.18 4.4 4.9))
-LOCAL_C_INCLUDES := \
-    $(TOP)/system/core/libion/include \
-    $(TOP)/system/core/libion/kernel-headers
+  ifneq ($(LIBION_HEADER_PATH_WRAPPER), )
+    include $(LIBION_HEADER_PATH_WRAPPER)
+    LOCAL_C_INCLUDES := $(LIBION_HEADER_PATHS)
+  else
+    LOCAL_C_INCLUDES := \
+            $(TOP)/system/core/libion/include \
+            $(TOP)/system/core/libion/kernel-headers
+  endif
 endif
 LOCAL_C_INCLUDES += $(MM_JPEG_TEST_PATH)
 LOCAL_C_INCLUDES += $(MM_JPEG_TEST_PATH)/../inc

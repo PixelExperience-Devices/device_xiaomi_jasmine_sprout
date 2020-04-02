@@ -10,9 +10,14 @@ LOCAL_CFLAGS+= -D_ANDROID_ -DQCAMERA_REDEFINE_LOG
 LOCAL_CFLAGS += -Wall -Wextra -Werror -Wno-unused-parameter
 
 ifneq ($(TARGET_KERNEL_VERSION),$(filter $(TARGET_KERNEL_VERSION),3.18 4.4 4.9))
-LOCAL_C_INCLUDES += \
-    $(TOP)/system/core/libion/include \
-    $(TOP)/system/core/libion/kernel-headers
+  ifneq ($(LIBION_HEADER_PATH_WRAPPER), )
+    include $(LIBION_HEADER_PATH_WRAPPER)
+    LOCAL_C_INCLUDES += $(LIBION_HEADER_PATHS)
+  else
+    LOCAL_C_INCLUDES += \
+            $(TOP)/system/core/libion/include \
+            $(TOP)/system/core/libion/kernel-headers
+  endif
 endif
 LOCAL_C_INCLUDES+= $(kernel_includes)
 LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps)

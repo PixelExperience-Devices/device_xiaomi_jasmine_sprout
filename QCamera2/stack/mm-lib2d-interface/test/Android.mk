@@ -18,9 +18,14 @@ endif
 IMGLIB_HEADER_PATH := $(TARGET_OUT_INTERMEDIATES)/include/mm-camera/imglib
 
 ifneq ($(TARGET_KERNEL_VERSION),$(filter $(TARGET_KERNEL_VERSION),3.18 4.4 4.9))
-LOCAL_C_INCLUDES += \
-        system/core/libion/kernel-headers \
-        system/core/libion/include
+  ifneq ($(LIBION_HEADER_PATH_WRAPPER), )
+    include $(LIBION_HEADER_PATH_WRAPPER)
+    LOCAL_C_INCLUDES += $(LIBION_HEADER_PATHS)
+  else
+    LOCAL_C_INCLUDES += \
+            system/core/libion/kernel-headers \
+            system/core/libion/include
+  endif
 endif
 LOCAL_C_INCLUDES += \
     $(IMGLIB_HEADER_PATH) \
