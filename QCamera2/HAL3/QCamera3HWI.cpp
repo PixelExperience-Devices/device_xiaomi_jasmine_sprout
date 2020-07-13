@@ -8781,11 +8781,11 @@ no_error:
                 if ((IS_YUV_ZSL && IS_VALID_PTR(mZSLChannel))
                     || (!(IS_YUV_ZSL) && blob_request && needHALPP())
                     ||(IS_SNAP_ZSL && IS_HAL_PP_TYPE_BOKEH)) {
-                    LOGD("snapshot request on slave session");
+                    LOGH("snapshot request on slave session");
                     ADD_SET_PARAM_ENTRY_TO_BATCH( params, CAM_INTF_META_STREAM_ID,
                                                                 streamsArraySlave);
                 } else {
-                    LOGD("Requesting PCR on %s session", (mMasterCamera == CAM_TYPE_MAIN) ?
+                    LOGH("Requesting PCR on %s session", (mMasterCamera == CAM_TYPE_MAIN) ?
                                                                             "main" : "aux");
                     params->is_valid[CAM_INTF_META_STREAM_ID] = 0;
                     params->is_valid[CAM_INTF_META_FRAME_NUMBER] = 0;
