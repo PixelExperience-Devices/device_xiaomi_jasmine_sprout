@@ -514,11 +514,6 @@ PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
 PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/bootdevice/by-name/vendor
 $(call inherit-product, build/target/product/verity.mk)
 
-# VNDK
-PRODUCT_PACKAGES += \
-    vndk-ext \
-    vndk_package
-
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
