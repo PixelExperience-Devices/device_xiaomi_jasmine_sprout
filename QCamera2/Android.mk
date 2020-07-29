@@ -209,7 +209,7 @@ ifneq (,$(filter $(TRINKET) msm8937_32go-userdebug, $(TARGET_BOARD_PLATFORM)))
 LOCAL_CFLAGS += -DSUPPORT_ONLY_HAL3
 endif
 
-ifeq ($(TARGET_KERNEL_VERSION), 4.14)
+ifneq (,$(filter $(strip $(TARGET_KERNEL_VERSION)),4.14 4.19))
     ifeq ($(TARGET_BOARD_PLATFORM), sdm660)
         LOCAL_CFLAGS += -DSUPPORT_ONLY_HAL3
     endif
