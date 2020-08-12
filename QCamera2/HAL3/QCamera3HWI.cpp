@@ -7258,12 +7258,26 @@ int QCamera3HardwareInterface::processCaptureRequest(
                     mStreamConfigInfo[config_index].stream_sizes[i]);
             }
 
-            if (l_meta.exists(QCAMERA3_VIDEO_HDR_MODE)) {
-                cam_video_hdr_mode_t vhdr = (cam_video_hdr_mode_t)
-                        l_meta.find(QCAMERA3_VIDEO_HDR_MODE).data.i32[0];
-                rc = setVideoHdrMode(params, vhdr);
+            /* Set Video HDR Mode Using a SetProp */
+            char prop[PROPERTY_VALUE_MAX];
+            memset(prop, 0, sizeof(prop));
+            property_get("persist.vendor.camera.videohdr.enable", prop, "0");
+            bool videoHDR = atoi(prop);
+            if(videoHDR)
+            {
+                rc = setVideoHdrMode(params, (cam_video_hdr_mode_t)videoHDR);
                 if (rc != NO_ERROR) {
-                    LOGE("setVideoHDR is failed");
+                    LOGE("VideoHDR Failed");
+                }
+            }
+            else {
+                if (l_meta.exists(QCAMERA3_VIDEO_HDR_MODE)) {
+                    cam_video_hdr_mode_t vhdr = (cam_video_hdr_mode_t)
+                        l_meta.find(QCAMERA3_VIDEO_HDR_MODE).data.i32[0];
+                    rc = setVideoHdrMode(params, vhdr);
+                    if (rc != NO_ERROR) {
+                        LOGE("setVideoHDR is failed");
+                    }
                 }
             }
 
@@ -15428,18 +15442,32 @@ int QCamera3HardwareInterface::translateToHalMetadata
         }
     }
 
-    // Video HDR
-    if (frame_settings.exists(QCAMERA3_VIDEO_HDR_MODE)) {
-        cam_video_hdr_mode_t vhdr = (cam_video_hdr_mode_t)
-                frame_settings.find(QCAMERA3_VIDEO_HDR_MODE).data.i32[0];
-        int8_t curr_hdr_state = ((mCurrFeatureState & CAM_QCOM_FEATURE_STAGGERED_VIDEO_HDR) != 0);
-
-        if(vhdr != curr_hdr_state)
-           LOGH("PROFILE_SET_HDR_MODE %d" ,vhdr);
-
-        rc = setVideoHdrMode(mParameters, vhdr);
+    /* Set Video HDR Mode Using a SetProp */
+    char prop[PROPERTY_VALUE_MAX];
+    memset(prop, 0, sizeof(prop));
+    property_get("persist.vendor.camera.videohdr.enable", prop, "0");
+    bool videoHDR = atoi(prop);
+    if(videoHDR)
+    {
+        rc = setVideoHdrMode(mParameters, (cam_video_hdr_mode_t)videoHDR);
         if (rc != NO_ERROR) {
-            LOGE("setVideoHDR is failed");
+            LOGE("VideoHDR Failed");
+        }
+    }
+    else {
+        // Video HDR
+        if (frame_settings.exists(QCAMERA3_VIDEO_HDR_MODE)) {
+            LOGE("Video HDR Mode is set");
+            cam_video_hdr_mode_t vhdr = (cam_video_hdr_mode_t)
+                   frame_settings.find(QCAMERA3_VIDEO_HDR_MODE).data.i32[0];
+            int8_t curr_hdr_state = ((mCurrFeatureState & CAM_QCOM_FEATURE_STAGGERED_VIDEO_HDR) != 0);
+
+            if(vhdr != curr_hdr_state)
+                LOGE("PROFILE_SET_HDR_MODE %d" ,vhdr);
+            rc = setVideoHdrMode(mParameters, vhdr);
+            if (rc != NO_ERROR) {
+                LOGE("setVideoHDR is failed");
+            }
         }
     }
 
@@ -16284,6 +16312,7 @@ int32_t QCamera3HardwareInterface::setVideoHdrMode(
         metadata_buffer_t *hal_metadata, cam_video_hdr_mode_t vhdr)
 {
     if ( (vhdr >= CAM_VIDEO_HDR_MODE_OFF) && (vhdr < CAM_VIDEO_HDR_MODE_MAX)) {
+        LOGH("setVideoHDR Mode %d", vhdr);
         return setSensorHDR(hal_metadata, (vhdr == CAM_VIDEO_HDR_MODE_ON), true);
     }
 
