@@ -37,6 +37,7 @@
 #define EARLY_WAKEUP_FEATURE 1
 #define DYNAMIC_EARLY_WAKEUP_CONFIG 1
 #define PASS_COMPOSITOR_PID 1
+#define SMART_DISPLAY_CONFIG 1
 
 namespace composer {
 
@@ -83,6 +84,7 @@ class DisplayExtnIntf {
                         FBTSlotInfo &fbt_future) = 0;
   virtual int EndDraw(uint32_t display_id, const FBTSlotInfo &fbt_current) = 0;
   virtual void SendCompositorPid() = 0;
+  virtual bool IsSmartDisplayConfig(uint32_t display_id) = 0;
 
  protected:
   virtual ~DisplayExtnIntf() { }
