@@ -1,4 +1,4 @@
-/* Copyright (c) 2012-2019, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2012-2020, The Linux Foundation. All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without
 * modification, are permitted provided that the following conditions are
@@ -896,6 +896,7 @@ QCamera3ProcessingChannel::QCamera3ProcessingChannel(uint32_t cam_handle,
             mJpegMemory(numBuffers, true, isSecureMode()),
             mCamera3Stream(stream),
             mAllocDone(FALSE),
+            m_bSkipConfig(false),
             m_bQuadraChannel(false)
 {
     char prop[PROPERTY_VALUE_MAX];
