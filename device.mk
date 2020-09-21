@@ -24,13 +24,15 @@
 # Inherit from wayne-common
 $(call inherit-product, device/xiaomi/wayne-common/wayne.mk)
 
+DEVICE_PATH := device/xiaomi/jasmine_sprout
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    device/xiaomi/jasmine_sprout/overlay
+    $(DEVICE_PATH)/overlay
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(DEVICE_PATH)
 
 # A/B
 AB_OTA_UPDATER := true
@@ -78,6 +80,3 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
 PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/bootdevice/by-name/vendor
 $(call inherit-product, build/target/product/verity.mk)
-
-# Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/jasmine_sprout/jasmine_sprout-vendor.mk)

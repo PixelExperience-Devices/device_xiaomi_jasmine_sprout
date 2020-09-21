@@ -1,0 +1,7 @@
+[
+  {
+    "repository" : "device_xiaomi_wayne-common",
+    "target_path": "device/xiaomi/wayne-common",
+    "branch"     : "ten-plus"
+  }
+]
