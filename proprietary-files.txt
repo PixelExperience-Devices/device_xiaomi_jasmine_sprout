@@ -1,2 +1,0 @@
-# Camera - from jasmine
-vendor/etc/MIUI_DualCamera_watermark.png
