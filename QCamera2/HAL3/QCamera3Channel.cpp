@@ -903,6 +903,7 @@ QCamera3ProcessingChannel::QCamera3ProcessingChannel(uint32_t cam_handle,
     property_get("persist.vendor.debug.sf.showfps", prop, "0");
     mDebugFPS = (uint8_t) atoi(prop);
     mReqFrameNumList.clear();
+    mAllocThread = 0;
 
     int32_t rc = m_postprocessor.init(&mMemory);
     if (rc != 0) {
