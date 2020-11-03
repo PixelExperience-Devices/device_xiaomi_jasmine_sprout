@@ -2048,7 +2048,7 @@ static void check_usecases_capture_codec_backend(struct audio_device *adev,
         if (capture_uc_needs_routing && !call_proxy_snd_device &&
                 ((backend_check_cond &&
                  (is_codec_backend_in_device_type(&usecase->device_list) ||
-                  (usecase->type == VOIP_CALL))) ||
+                  (usecase->type == VOIP_CALL))) &&
                 ((uc_info->type == VOICE_CALL &&
                  is_single_device_type_equal(&usecase->device_list,
                                             AUDIO_DEVICE_IN_VOICE_CALL)) ||
