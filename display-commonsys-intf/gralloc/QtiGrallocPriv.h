@@ -76,10 +76,6 @@
 
 #include "QtiGrallocMetadata.h"
 
-#ifndef __QTI_DISPLAY_GRALLOC__
-#pragma message "QtiGrallocPriv.h should not be included"
-#endif
-
 /*
  *
  * DISCLAIMER:
