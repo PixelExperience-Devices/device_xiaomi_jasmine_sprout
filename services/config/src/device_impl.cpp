@@ -27,6 +27,7 @@
 * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+#include <cinttypes>
 #include <string>
 #include <vector>
 
@@ -116,7 +117,7 @@ void DeviceImpl::serviceDied(uint64_t client_handle,
     ConfigInterface *intf = client->GetDeviceConfigIntf();
     intf_->UnRegisterClientContext(intf);
     client.reset();
-    ALOGW("Client id:%lu service died", client_handle);
+    ALOGW("Client id:%" PRIu64 " service died", client_handle);
     display_config_map_.erase(itr);
   }
 }
@@ -858,6 +859,63 @@ void DeviceImpl::DeviceClientContext::ParseAllowIdleFallback(perform_cb _hidl_cb
   _hidl_cb(error, {}, {});
 }
 
+void DeviceImpl::DeviceClientContext::ParseGetDisplayTileCount(const ByteStream &input_params,
+                                                               perform_cb _hidl_cb) {
+  const uint64_t *data = reinterpret_cast<const uint64_t*>(input_params.data());
+  uint64_t physical_disp_id = data ? *data : 0;
+  uint32_t num_tiles[2] = {0, 0};
+
+  int32_t error = intf_->GetDisplayTileCount(physical_disp_id, &num_tiles[0], &num_tiles[1]);
+  ByteStream output_params;
+  output_params.setToExternal(reinterpret_cast<uint8_t*>(&num_tiles),
+                              sizeof(num_tiles) * sizeof(uint32_t));
+
+  _hidl_cb(error, output_params, {});
+}
+
+void DeviceImpl::DeviceClientContext::ParseSetPowerModeTiled(const ByteStream &input_params,
+                                                             perform_cb _hidl_cb) {
+  struct PowerModeTiledParams set_power_mode_tiled_data = {};
+
+  const uint8_t *data = input_params.data();
+  if (data) {
+    set_power_mode_tiled_data = *reinterpret_cast<const PowerModeTiledParams*>(data);
+  }
+  int32_t error = intf_->SetPowerModeTiled(set_power_mode_tiled_data.physical_disp_id,
+                                           set_power_mode_tiled_data.power_mode,
+                                           set_power_mode_tiled_data.tile_h_loc,
+                                           set_power_mode_tiled_data.tile_v_loc);
+  _hidl_cb(error, {}, {});
+}
+
+void DeviceImpl::DeviceClientContext::ParseSetPanelBrightnessTiled(const ByteStream &input_params,
+                                                                   perform_cb _hidl_cb) {
+  struct PanelBrightnessTiledParams set_panel_brightness_tiled_data = {};
+
+  const uint8_t *data = input_params.data();
+  if (data) {
+    set_panel_brightness_tiled_data = *reinterpret_cast<const PanelBrightnessTiledParams*>(data);
+  }
+  int32_t error = intf_->SetPanelBrightnessTiled(set_panel_brightness_tiled_data.physical_disp_id,
+                                                 set_panel_brightness_tiled_data.level,
+                                                 set_panel_brightness_tiled_data.tile_h_loc,
+                                                 set_panel_brightness_tiled_data.tile_v_loc);
+  _hidl_cb(error, {}, {});
+}
+
+void DeviceImpl::DeviceClientContext::ParseSetWiderModePreference(const ByteStream &input_params,
+                                                                  perform_cb _hidl_cb) {
+  struct WiderModePrefParams set_wider_mode_pref_data = {};
+
+  const uint8_t *data = input_params.data();
+  if (data) {
+    set_wider_mode_pref_data = *reinterpret_cast<const WiderModePrefParams*>(data);
+  }
+  int32_t error = intf_->SetWiderModePreference(set_wider_mode_pref_data.physical_disp_id,
+                                                set_wider_mode_pref_data.mode_pref);
+  _hidl_cb(error, {}, {});
+}
+
 Return<void> DeviceImpl::perform(uint64_t client_handle, uint32_t op_code,
                                  const ByteStream &input_params, const HandleStream &input_handles,
                                  perform_cb _hidl_cb) {
@@ -1029,6 +1087,18 @@ Return<void> DeviceImpl::perform(uint64_t client_handle, uint32_t op_code,
       break;
     case kAllowIdleFallback:
       client->ParseAllowIdleFallback(_hidl_cb);
+      break;
+    case kGetDisplayTileCount:
+      client->ParseGetDisplayTileCount(input_params, _hidl_cb);
+      break;
+    case kSetPowerModeTiled:
+      client->ParseSetPowerModeTiled(input_params, _hidl_cb);
+      break;
+    case kSetPanelBrightnessTiled:
+      client->ParseSetPanelBrightnessTiled(input_params, _hidl_cb);
+      break;
+    case kSetWiderModePref:
+      client->ParseSetWiderModePreference(input_params, _hidl_cb);
       break;
     default:
       _hidl_cb(-EINVAL, {}, {});
