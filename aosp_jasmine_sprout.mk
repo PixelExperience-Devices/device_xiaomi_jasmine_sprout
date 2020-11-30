@@ -24,7 +24,6 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # PixelExperience Properties
 TARGET_INCLUDE_WIFI_EXT := true
-TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Inherit from jasmine_sprout device
@@ -42,5 +41,3 @@ TARGET_VENDOR_PRODUCT_NAME := jasmine
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="jasmine-user 8.1.0 OPM1.171019.011 V9.6.17.0.ODIMIFE release-keys"
-
-BUILD_FINGERPRINT := google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys
