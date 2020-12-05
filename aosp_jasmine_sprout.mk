@@ -24,6 +24,7 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # PixelExperience Properties
 TARGET_INCLUDE_WIFI_EXT := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Inherit from jasmine_sprout device
