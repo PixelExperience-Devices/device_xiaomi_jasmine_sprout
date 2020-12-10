@@ -676,10 +676,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
         <interface>
-            <name>IDisplayModes</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
             <name>IPictureAdjustment</name>
             <instance>default</instance>
         </interface>
