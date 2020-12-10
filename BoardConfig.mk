@@ -144,6 +144,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/jasmine_sprout
 TARGET_KERNEL_CONFIG := jasmine_sprout_defconfig
+TARGET_KERNEL_VERSION := 4.19
 TARGET_KERNEL_CLANG_COMPILE := true
 
 # Keystore
