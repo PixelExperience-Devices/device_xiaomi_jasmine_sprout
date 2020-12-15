@@ -215,6 +215,14 @@ ifneq (,$(filter $(strip $(TARGET_KERNEL_VERSION)),4.14 4.19))
     endif
 endif
 
+ifneq (,$(filter $(strip $(TARGET_KERNEL_VERSION)),4.14 4.19))
+ifneq (,$(filter $(TRINKET) sdm660 msm8937 msm8953, $(TARGET_BOARD_PLATFORM)))
+ifeq (,$(filter P% p% Q% q% ,$(TARGET_PLATFORM_VERSION)))
+LOCAL_CFLAGS += -DSUPPORT_POWER_HINT_XML
+endif
+endif
+endif
+
 LOCAL_STATIC_LIBRARIES := android.hardware.camera.common@1.0-helper
 
 
