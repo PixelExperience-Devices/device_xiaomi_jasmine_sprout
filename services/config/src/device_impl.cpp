@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2020 The Linux Foundation. All rights reserved.
+* Copyright (c) 2020-2021 The Linux Foundation. All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without
 * modification, are permitted provided that the following conditions are
@@ -48,7 +48,6 @@ int DeviceImpl::CreateInstance(ClientContext *intf) {
     android::status_t status = device_obj_->IDisplayConfig::registerAsService();
     // Unable to start Display Config 2.0 service. Fail Init.
     if (status != android::OK) {
-      delete device_obj_;
       device_obj_ = nullptr;
       return -1;
     }
@@ -101,7 +100,7 @@ Return<void> DeviceImpl::registerClient(const hidl_string &client_name,
 
   device_client->SetDeviceConfigIntf(intf);
 
-  std::lock_guard<std::mutex> lock(death_service_mutex_);
+  std::lock_guard<std::recursive_mutex> lock(death_service_mutex_);
   ALOGI("Register client name: %s device client: %p", client_name.c_str(), device_client.get());
   display_config_map_.emplace(std::make_pair(client_handle, device_client));
   _hidl_cb(error, client_handle);
@@ -110,7 +109,7 @@ Return<void> DeviceImpl::registerClient(const hidl_string &client_name,
 
 void DeviceImpl::serviceDied(uint64_t client_handle,
                              const android::wp<::android::hidl::base::V1_0::IBase>& callback) {
-  std::lock_guard<std::mutex> lock(death_service_mutex_);
+  std::lock_guard<std::recursive_mutex> lock(death_service_mutex_);
   auto itr = display_config_map_.find(client_handle);
   std::shared_ptr<DeviceClientContext> client = itr->second;
   if (client != NULL) {
@@ -755,6 +754,7 @@ void DeviceImpl::DeviceClientContext::ParseSendTUIEvent(const ByteStream &input_
 }
 
 void DeviceImpl::ParseDestroy(uint64_t client_handle, perform_cb _hidl_cb) {
+  std::lock_guard<std::recursive_mutex> lock(death_service_mutex_);
   auto itr = display_config_map_.find(client_handle);
   if (itr == display_config_map_.end()) {
     _hidl_cb(-EINVAL, {}, {});
@@ -862,6 +862,7 @@ Return<void> DeviceImpl::perform(uint64_t client_handle, uint32_t op_code,
                                  const ByteStream &input_params, const HandleStream &input_handles,
                                  perform_cb _hidl_cb) {
   int32_t error = 0;
+  std::lock_guard<std::recursive_mutex> lock(death_service_mutex_);
   auto itr = display_config_map_.find(client_handle);
   if (itr == display_config_map_.end()) {
     error = -EINVAL;

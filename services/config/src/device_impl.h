@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2020 The Linux Foundation. All rights reserved.
+* Copyright (c) 2020-2021 The Linux Foundation. All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without
 * modification, are permitted provided that the following conditions are
@@ -143,7 +143,7 @@ class DeviceImpl : public IDisplayConfig, public android::hardware::hidl_death_r
   ClientContext *intf_ = nullptr;
   std::map<uint64_t, std::shared_ptr<DeviceClientContext>> display_config_map_;
   uint64_t client_id_ = 0;
-  std::mutex death_service_mutex_;
+  std::recursive_mutex death_service_mutex_;
   static DeviceImpl *device_obj_;
   static std::mutex device_lock_;
 };
