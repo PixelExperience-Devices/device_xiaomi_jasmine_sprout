@@ -109,8 +109,6 @@ persist.vendor.imx376_sunny.light.lux=275
 persist.vendor.imx376_sunny.low.lux=290
 vendor.video.disable.ubwc=1
 vidc.enc.dcvs.extra-buff-count=2
-vendor.camera.hal1.packagelist=com.whatsapp,com.intsig.camscanner,com.instagram.android
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.motorola.faceunlock,com.android.camera
 
 # Charger
 ro.charger.enable_suspend=true
