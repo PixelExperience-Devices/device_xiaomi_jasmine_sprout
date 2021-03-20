@@ -210,7 +210,7 @@ LOCAL_CFLAGS += -DSUPPORT_ONLY_HAL3
 endif
 
 ifneq (,$(filter $(strip $(TARGET_KERNEL_VERSION)),4.14 4.19))
-    ifeq ($(TARGET_BOARD_PLATFORM), sdm660)
+    ifneq (,$(filter sdm660 msm8937 msm8953, $(TARGET_BOARD_PLATFORM)))
         LOCAL_CFLAGS += -DSUPPORT_ONLY_HAL3
     endif
 endif
