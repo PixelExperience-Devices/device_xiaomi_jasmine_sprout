@@ -1445,10 +1445,6 @@ vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 vendor/lib64/libtime_genoff.so|c8e0bbc9c6b7b5beddba43bc4125a9eaeba7c79f
 
 # Thermal - from jasmine
-vendor/etc/thermal-engine.conf|c6c9312b7c7b52926cf7d0fc9bff933d90967100
-vendor/etc/thermal-engine-map.conf|474264ed357e02b7bb8b757024275a4cb8ff2929
-vendor/etc/thermal-engine-normal.conf|c48af99c954c22a1e0b386813db08ae599a6ba0f
-vendor/etc/thermal-engine-video.conf|00960d517f33e34bfc9fb21c1a6f9120e4623e50
 vendor/bin/thermal-engine|459c3fb5ab99ac95cff15387358c1d0e239a5735
 -vendor/lib/libthermalclient.so|c3aecc7610e8f5775a6f6af2ff7790bef74380a1
 -vendor/lib64/libthermalclient.so|84072e150722cc668320f07a75cb8695ce1a79b0
