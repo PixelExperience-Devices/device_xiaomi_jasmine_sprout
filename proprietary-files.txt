@@ -950,11 +950,12 @@ vendor/firmware/fpctzappfingerprint.b06|3e33546552f8ee4af98008f5907079a43f75d443
 vendor/firmware/fpctzappfingerprint.b07|127342f5ddf0f91a9d62d133bfc04fb68fedd0d3
 vendor/firmware/fpctzappfingerprint.mdt|c149e27236e275fcef2cb243c3ab180e84197da2
 
-# FM - from jasmine V11.0.14.0.QDIMIXM
-lib64/fm_helium.so|bc9f6314528630c060b593cef4a8cec786b22467
-lib64/libfm-hci.so|589e9e290acfa18a49deba33606ed158d5e7f898
-product/lib64/vendor.qti.hardware.fm@1.0.so|fc7ad886f82089edf36509865fadac17a7340f32
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|506efd87250697bdae271f86ea472785a77b84ef
+# FM - from ginkgo 21.8.18
+system_ext/lib64/fm_helium.so|99140db2b53af1b70577507517540e64aff87d7a
+system_ext/lib64/libfm-hci.so|bfca2b2f424921cc5fa7c075bfe1dea2d1b46fec
+system_ext/lib64/vendor.qti.hardware.fm@1.0.so|a91ac4f777a81224e3be78561d29bdaa2838aacd
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|f23a4efc7baa2bcab560e8fda02b9afad3e82d51
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|ee02e7e7a7c474822f575fc76eb3fe6205ffde53
 
 # Gatekeeper - from jasmine
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|a189a50515831e6ac9a7e88a165ac979ae6ac077
