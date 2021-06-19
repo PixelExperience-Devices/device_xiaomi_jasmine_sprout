@@ -22,6 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Boot Aniamation Resolution
+TARGET_BOOT_ANIMATION_RES := 1080
+
 # Inherit from jasmine_sprout device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
