@@ -22,6 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# We are a phone
+IS_PHONE := true
+
 # Gapps Architecture
 TARGET_GAPPS_ARCH := arm64
 
