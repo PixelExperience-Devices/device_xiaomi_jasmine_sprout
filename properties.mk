@@ -101,9 +101,28 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.bokeh.switch.lux=290 \
+    persist.vendor.camera.HAL3.enabled=1 \
+    persist.vendor.camera.depth.focus.cb=0 \
+    persist.vendor.camera.exif.make=Xiaomi \
+    persist.vendor.camera.expose.aux=1 \
+    persist.vendor.camera.imglib.usefdlite=1 \
+    persist.vendor.camera.isp.clock.optmz=0 \
+    persist.vendor.camera.isp.turbo=1 \
+    persist.vendor.camera.linkpreview=0 \
+    persist.vendor.camera.preview.ubwc=0 \
+    persist.vendor.camera.stats.test=0 \
+    persist.vendor.imx376_ofilm.light.lux=275 \
+    persist.vendor.imx376_ofilm.low.lux=290 \
+    persist.vendor.imx376_sunny.light.lux=275 \
+    persist.vendor.imx376_sunny.low.lux=290
     persist.vendor.camera.preview.ubwc=0 \
     vendor.video.disable.ubwc=1 \
     vidc.enc.dcvs.extra-buff-count=2
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.camera.hal1.packagelist=com.whatsapp,com.intsig.camscanner,com.instagram.android \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.motorola.faceunlock,com.android.camera
 
 # CNE
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -120,6 +139,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     debug.sf.latch_unsignaled=1 \
     ro.opengles.version=196610 \
+    ro.sf.lcd_density=440 \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
     ro.surface_flinger.max_virtual_display_dimension=4096 \
     ro.surface_flinger.protected_contents=true \
