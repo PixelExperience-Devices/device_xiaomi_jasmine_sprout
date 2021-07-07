@@ -273,6 +273,7 @@ subsystem mem_buf_vm
 /dev/avtimer              0660   system     audio
 /dev/spidev2.0            0660   system     audio
 /dev/spidev22.0           0660   system     audio
+/dev/msm_adsp_sleepmon    0660   system     audio
 
 # DVB devices
 /dev/dvb/adapter0/demux*  0440   media       media
