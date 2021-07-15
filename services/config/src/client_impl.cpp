@@ -962,6 +962,18 @@ int ClientImpl::IsRCSupported(uint32_t disp_id, bool *supported) {
   return error;
 }
 
+int ClientImpl::DummyDisplayConfigAPI() {
+  int error = 0;
+  auto hidl_cb = [&error] (int32_t err, ByteStream params, HandleStream handles) {
+    error = err;
+  };
+  display_config_->perform(client_handle_, kDummyOpcode, {}, {}, hidl_cb);
+  if (error) {
+    return -EINVAL;
+  }
+  return error;
+}
+
 int ClientImpl::IsSupportedConfigSwitch(uint32_t disp_id, uint32_t config, bool *supported) {
   struct SupportedModesParams input = {disp_id, config};
   ByteStream input_params;
