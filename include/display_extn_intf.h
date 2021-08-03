@@ -38,7 +38,6 @@
 #define DYNAMIC_EARLY_WAKEUP_CONFIG 1
 #define PASS_COMPOSITOR_PID 1
 #define SMART_DISPLAY_CONFIG 1
-#define FPS_MITIGATION_ENABLED 1
 
 namespace composer {
 
