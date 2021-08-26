@@ -102,7 +102,7 @@ vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|624ac893ea428a29df
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|64de735684377aba4a33a3bb0bee25f7999bafcd
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|32c763b353882c9a711a641ff9eb99fe1b0e164d
 
-# Camera - from jasmine
+# Camera - from jasmine V11.0.28.0.QDIMIXM
 vendor/etc/camera/camera_config.xml|d0844df668ba6353cd2ecd8efcf3e713eb2fea7c
 vendor/etc/camera/female_bg.png|1209828fb0b4d425ee75498531bdcfe2f4eacb2e
 vendor/etc/camera/female_icon.png|ebd7db92ef2f28d191e68c3b955ba7c2053c7418
@@ -175,19 +175,19 @@ vendor/lib/libmmcamera_tuning.so|2a06dbf49160c543b4e7c59cb3b1dfb9a083f3a3
 vendor/lib/libmmcamera2_c2d_module.so|873826dcbcce7840055b5ea89c80ec52daf031de
 vendor/lib/libmmcamera2_cpp_module.so|39b5f0e6126de56550e8489125f8b30f1657f931
 vendor/lib/libmmcamera2_frame_algorithm.so|0c4e1a239996c9aa60e59bdfc81c37a5b2ff1daa
-vendor/lib/libmmcamera2_iface_modules.so|24ed6de89be7f37eb2b04a8269739def3768e7fe
-vendor/lib/libmmcamera2_imglib_modules.so|72d8b9f26eff4d5f0e5c7ec5f887a055dbc43caa
+vendor/lib/libmmcamera2_iface_modules.so|6167d7fdc1424b09a8dfbd95bb19becfc5b6fa8c
+vendor/lib/libmmcamera2_imglib_modules.so|251f54a293947bb75c725023fb296169318b5ce2
 vendor/lib/libmmcamera2_is.so|fda30563dc92dfa0e0aa4babf3b81f0aad700fd2
 vendor/lib/libmmcamera2_isp_modules.so|d9c64ceb2f48a742259f41c8d68fe1779cbcc738
 vendor/lib/libmmcamera2_mct_shimlayer.so|5814522ea88a63654681db852d798de717778ba6
-vendor/lib/libmmcamera2_mct.so|a851efaf88a24df31fa7d5a6ac0c04cc92fd6cb9
+vendor/lib/libmmcamera2_mct.so|aed03bdb4a456f8b8c2f4b6bdcbd476ef52546cb
 vendor/lib/libmmcamera2_pp_buf_mgr.so|d429e779b3b49d0dcf048efec4a546fa2b0e66dc
 vendor/lib/libmmcamera2_pproc_modules.so|9b7e8eb56a38f09e37edfade4f391e5625c6c40f
 vendor/lib/libmmcamera2_q3a_core.so|a093dbde656a10cf29922b212fa5d862e2ff6fee
-vendor/lib/libmmcamera2_sensor_modules.so|2e6291ff78c7dbc79db33b777376e1ff48710156
+vendor/lib/libmmcamera2_sensor_modules.so|ae6a605ee3851db13aa559ddc87eea913767b5f2
 vendor/lib/libmmcamera2_stats_algorithm.so|38cc8c4031f80f303b62db5dede0eddbc53009dc
 vendor/lib/libmmcamera2_stats_lib.so|4104fcb4f92788911b233dac6f6efd990f7cc7ad
-vendor/lib/libmmcamera2_stats_modules.so|2143fcf6ce25db370c7794e374330c7f73b0cc42
+vendor/lib/libmmcamera2_stats_modules.so|db3c01d8c9e12671e08712c7c8f42d31130f9f35
 vendor/lib/libmmjpeg.so|3a2fc8984a711faf77b313031df105154f5858e5
 vendor/lib/libmmqjpeg_codec.so|9f02f407db23e5a538464b92927e65bcfb7a649e
 vendor/lib/libmmqjpegdma.so|031c21b21194b8d8e9a3232b28c365c545050e91
@@ -213,13 +213,13 @@ vendor/lib64/libmmcamera_tintless_algo.so|51fda0469a9ffbcd53c2e5baf5ae55129ce601
 vendor/lib64/libmmcamera_tintless_bg_pca_algo.so|79e04b1855e45755591ae599817d1295cee20b47
 vendor/lib64/libvideoutils.so|01c0e74b80aaa71cf7875e48017e549073efecb1
 
-# Camera Actuators - from jasmine
+# Camera Actuators - from jasmine V11.0.28.0.QDIMIXM
 vendor/lib/libactuator_wayne_imx376_ofilm_back_ii_dw9763.so|e594f902ccd19fb55a47f935bfca67a8e622b348
 vendor/lib/libactuator_wayne_imx376_sunny_back_i_dw9763.so|a7e95f4e05d07582d193fad83183bf613771fc04
 vendor/lib/libactuator_wayne_imx486_ofilm_ii_dw9763.so|59ca5be65b15b0e74db9d137b6be4510ea9a4d42
 vendor/lib/libactuator_wayne_imx486_sunny_i_dw9763.so|1e41e2a47086ceca6611b426d48b0179de21f69a
 
-# Camera Chromatix - from jasmine
+# Camera Chromatix - from jasmine V11.0.28.0.QDIMIXM
 vendor/lib/libchromatix_wayne_imx376_ofilm_cn_back_ii_bokeh_preview_3a.so|1cf383f10a747e56d6ef0ec62104179ddfe51dde
 vendor/lib/libchromatix_wayne_imx376_ofilm_cn_back_ii_bokeh_preview.so|adb49c8098dab4d094eb0518808fd47e92e7a360
 vendor/lib/libchromatix_wayne_imx376_ofilm_cn_back_ii_common.so|c33c5f8997d7f91fcad6424b0dbde394d7f67b5e
@@ -768,10 +768,10 @@ vendor/lib/libmmcamera_wayne_imx486_sunny_iii_eeprom.so|d68f1b3baa3a314bf5850307
 vendor/lib/libmmcamera_wayne_imx486_sunny_iii.so|140da52cbabfa80f74be0dd798a889f7bcdcc293
 vendor/lib/libmmcamera_wayne_imx486_sunny_i.so|09d6c72bd7808be2365b3d726f77532250c71b25
 
-# Camera firmware - from jasmine
+# Camera firmware - from jasmine V11.0.28.0.QDIMIXM
 vendor/firmware/cpp_firmware_v1_12_0.fw|c7939d46f9875054c5b30c3280862e7d9df3dcf9
 
-# Camera sensors - from jasmine
+# Camera sensors - from jasmine V11.0.28.0.QDIMIXM
 vendor/lib/libmmcamera_arcsoftbokeh_lib.so|218f27b909781e07a0c15e89a8d3d38b039b755d
 vendor/lib/libmmcamera_bokeh.so|90d15af63d59a82555e9029f6ed416c2141f0b45
 vendor/lib/libmmcamera_depth_map.so|c89eed09c28a874b8e4e6473b45e08c8c89d2123
