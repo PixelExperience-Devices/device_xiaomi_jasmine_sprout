@@ -820,8 +820,8 @@ vendor/lib/libmmcamera_isp_sce40.so|07117f32e1eca3e14204d4190f4fd263a63a25a6
 vendor/lib/libmmcamera_isp_snr47.so|22ba84117bd4f91cb9895fd275f2368a7af2fb0c
 vendor/lib/libmmcamera_isp_sub_module.so|92d9cd0a2d71d5159736d1e0ad856138ac94c012
 
-# Charger - from jasmine
-vendor/bin/hvdcp_opti|120837d6d44abfd86515731dd26183be9cdd5596
+# Charger - from ginkgo 21.8.18
+vendor/bin/hvdcp_opti|673f4c4eb8fa0ad5f274a18081c8619f4b775596
 
 # CNE - from ginkgo 21.8.18
 system_ext/framework/com.quicinc.cne.api-V1.1-java.jar|e71f1a060bc65eb373beb6d33158c0e2b37e2a70
