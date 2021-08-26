@@ -66,6 +66,10 @@ function blob_fixup() {
     vendor/lib/hw/camera.sdm660.so)
         "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
         ;;
+
+    vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so)
+        "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
+        ;;
     esac
 }
 

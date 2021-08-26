@@ -966,7 +966,7 @@ vendor/lib64/hw/fingerprint.goodix.default.so|30a459e4ff9c047d1cc6a130885460cc07
 vendor/lib64/com.fingerprints.extension@1.0.so|2ae37b689b286921702cf9533e9f09ffe6736968
 vendor/lib64/libgf_ca.so|b7635dcbea9a7e7252e746914f995a5ffb92b5d0
 vendor/lib64/libgf_hal.so|d601b957f58e840d2ff5a69f7fda74aca93805b2
-vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so|ac7f5d1a9cfc04926cde4fb475d074331ba8dbf5
+vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so|226eafb17998f7f4f97836934c6f1aad4321f940
 vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so|b47f3d59c111a97a47ed38d4cb05ddf59a47ebac
 
 # Fingerprint firmware - from jasmine V10.0.2.0.PDIMIFJ
