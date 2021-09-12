@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2018-2021 The LineageOS Project
+# Copyright (C) 2021 Pixel Experience
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,8 +9,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Pixel Extended stuff
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # We are a phone
 IS_PHONE := true
@@ -27,7 +28,7 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := jasmine_sprout
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Mi A2
-PRODUCT_NAME := lineage_jasmine_sprout
+PRODUCT_NAME := aosp_jasmine_sprout
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
