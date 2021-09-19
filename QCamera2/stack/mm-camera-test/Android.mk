@@ -22,7 +22,6 @@ LOCAL_CFLAGS += -D_ANDROID_ -DQCAMERA_REDEFINE_LOG
 
 # System header file path prefix
 LOCAL_CFLAGS += -DSYSTEM_HEADER_PREFIX=sys
-LOCAL_CFLAGS += -Wno-compound-token-split-by-macro
 
 LOCAL_SRC_FILES:= \
         src/mm_qcamera_main_menu.c \
@@ -45,8 +44,8 @@ ifneq ($(TARGET_KERNEL_VERSION),$(filter $(TARGET_KERNEL_VERSION),3.18 4.4 4.9))
     LOCAL_C_INCLUDES += $(LIBION_HEADER_PATHS)
   else
     LOCAL_C_INCLUDES += \
-            system/memory/libion/kernel-headers \
-            system/memory/libion/include
+            system/core/libion/kernel-headers \
+            system/core/libion/include
   endif
 endif
 LOCAL_C_INCLUDES+= \
@@ -138,8 +137,6 @@ LOCAL_CFLAGS += -D_ANDROID_ -DQCAMERA_REDEFINE_LOG
 # System header file path prefix
 LOCAL_CFLAGS += -DSYSTEM_HEADER_PREFIX=sys
 
-LOCAL_CFLAGS += -Wno-compound-token-split-by-macro
-
 LOCAL_SRC_FILES:= \
         src/mm_qcamera_main_menu.c \
         src/mm_qcamera_app.c \
@@ -161,8 +158,8 @@ ifneq ($(TARGET_KERNEL_VERSION),$(filter $(TARGET_KERNEL_VERSION),3.18 4.4 4.9))
     LOCAL_C_INCLUDES += $(LIBION_HEADER_PATHS)
   else
     LOCAL_C_INCLUDES += \
-            system/memory/libion/kernel-headers \
-            system/memory/libion/include
+            system/core/libion/kernel-headers \
+            system/core/libion/include
   endif
 endif
 
