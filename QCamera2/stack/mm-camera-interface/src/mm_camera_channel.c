@@ -2759,7 +2759,7 @@ int8_t mm_channel_util_seq_comp_w_rollover(uint32_t v1,
  *              =0  -- Cannot validate
  *              <0  -- Invalid frame. Can be freed
  *==========================================================================*/
-int8_t mm_channel_validate_super_buf(mm_channel_t* ch_obj,
+int8_t mm_channel_validate_super_buf(__unused mm_channel_t* ch_obj,
         mm_channel_queue_t *queue, mm_camera_buf_info_t *buf_info)
 {
     int8_t ret = 0;
