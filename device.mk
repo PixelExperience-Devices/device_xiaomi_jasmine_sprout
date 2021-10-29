@@ -243,9 +243,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey
 
-PRODUCT_PACKAGES += \
-    android.hardware.broadcastradio@1.0-impl
-
 # Framework detect
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor \
