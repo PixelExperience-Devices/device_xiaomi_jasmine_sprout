@@ -108,6 +108,7 @@ persist.vendor.imx376_sunny.light.lux=275
 persist.vendor.imx376_sunny.low.lux=290
 vendor.video.disable.ubwc=1
 vidc.enc.dcvs.extra-buff-count=2
+persist.vendor.camera.dual.isp.sync=0
 
 # Charger
 ro.charger.enable_suspend=true
