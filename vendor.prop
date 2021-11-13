@@ -109,6 +109,9 @@ persist.vendor.imx376_sunny.low.lux=290
 vendor.video.disable.ubwc=1
 vidc.enc.dcvs.extra-buff-count=2
 persist.vendor.camera.dual.isp.sync=0
+vendor.camera.aux.packageblacklist=com.discord
+camera.aux.packagelist=com.google.android.GoogleCamera,com.android.camera,org.codeaurora.snapcam
+vendor.camera.aux.packagelist=com.google.android.GoogleCamera,com.android.camera,org.codeaurora.snapcam
 
 # Charger
 ro.charger.enable_suspend=true
