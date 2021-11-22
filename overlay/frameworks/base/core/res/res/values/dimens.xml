@@ -19,5 +19,8 @@
 -->
 <resources>
     <!-- Default radius of the software rounded corners. -->
-    <dimen name="rounded_corner_radius">33px</dimen>
+    <dimen name="rounded_corner_radius">39px</dimen>
+    <dimen name="rounded_corner_radius_top">39px</dimen>
+    <dimen name="rounded_corner_radius_bottom">39px</dimen>
+    <dimen name="status_bar_height_portrait">28dp</dimen>
 </resources>
