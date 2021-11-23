@@ -251,7 +251,7 @@ void lib_map_destroy(struct map_info_holder *map_hold)
 
 extern "C" void print_allocated_memory()
 {
-  hdr_t *del; int cnt, cnt_all = 0;
+  hdr_t *del; int cnt_all = 0;
   struct map_info_holder *p_map_info;
 
   ALOGI("%d bytes non freed memory.\n", leaks_bytes);
