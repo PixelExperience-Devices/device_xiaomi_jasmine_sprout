@@ -370,6 +370,10 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+
+# Platform
+TARGET_BOARD_PLATFORM := sdm660
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
