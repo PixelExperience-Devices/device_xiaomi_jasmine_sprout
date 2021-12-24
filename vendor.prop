@@ -197,6 +197,9 @@ ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
 persist.vendor.radio.enableadvancedscan=false
 
+# USB
+persist.vendor.usb.config=diag,serial_cdev,rmnet,adb
+
 # VoLTE
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
