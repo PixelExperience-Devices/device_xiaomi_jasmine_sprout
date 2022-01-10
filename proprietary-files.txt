@@ -1180,13 +1180,6 @@ vendor/lib64/libqti-perfd-client.so|43ffe48ce70220f94a6b5829c7ecf08e3e94e305
 vendor/lib64/libqti-perfd.so|1d3f192f53127d1f6efe9fcf9c34d24f204710cc
 vendor/lib64/libqti-util.so|ce98e960170cbdeef8fda0d85f03947f46c4c754
 
-# Perf configs - from LA.UM.8.2.1.r1-05600-sdm660
-vendor/etc/perf/commonresourceconfigs.xml|b014d70d329a385091aacb6539b2fee1bd9b285d
-vendor/etc/perf/perfboostsconfig.xml|402a87eaefe640d72a74abfcddcf924d19810704
-vendor/etc/perf/perfconfigstore.xml|d2f3548925343eb5f5263ec8544e8931938d39ce
-vendor/etc/perf/targetconfig.xml|dbc6dc566f70b687fa3a740441aef7f0252b1128
-vendor/etc/perf/targetresourceconfigs.xml|17a860cb3d0f8e8a610f78da1cc9baed85bfa8ca
-
 # Peripheral - from S62Pro RKQ1.210406.002
 vendor/bin/pm-proxy|42383b9163716d8e6d81f0516e9cf09f22ea8b06
 vendor/bin/pm-service|b0a5d3491615ef9a237d93a393082105e3c0097c
