@@ -112,6 +112,7 @@ persist.vendor.camera.dual.isp.sync=0
 vendor.camera.aux.packageblacklist=com.discord
 camera.aux.packagelist=com.google.android.GoogleCamera,com.android.camera,org.codeaurora.snapcam
 vendor.camera.aux.packagelist=com.google.android.GoogleCamera,com.android.camera,org.codeaurora.snapcam
+persist.vendor.camera.isp.dualisp=1
 
 # Charger
 ro.charger.enable_suspend=true
