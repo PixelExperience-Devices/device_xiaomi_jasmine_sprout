@@ -2935,15 +2935,12 @@ case "$target" in
             echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
 
             # Start cdsprpcd only for sdm660 and disable for sdm630
-            #start vendor.cdsprpcd
+            start vendor.cdsprpcd
 
         esac
         #Apply settings for sdm630 and Tahaa
         case "$soc_id" in
             "318" | "327" | "385" )
-
-	    # Disable cdsprpcd daemon for sdm630
-	    setprop vendor.fastrpc.disable.cdsprpcd.daemon 1
 
             # Setting b.L scheduler parameters
             echo 85 > /proc/sys/kernel/sched_upmigrate
