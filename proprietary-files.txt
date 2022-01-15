@@ -5,7 +5,6 @@ vendor/bin/adsprpcd|5e246a6f5d2dca27e29b233a17e4673532191b95
 vendor/etc/init/vendor.qti.adsprpc-service.rc|54588df8e7da58c66838028d2284986b966c2d37
 vendor/lib/libadsp_default_listener.so|c822c536d9776ca2d60bf5a158531544f20c4829
 vendor/lib/libadsprpc.so|3da7471cbfb2f26bb997d21098282697ee1965e4
-vendor/lib/libcdsprpc.so|4ef30602663e13d44e1c7dd09db927fa4e6947ae
 vendor/lib/libfastcvopt.so|4f4a2297c4071c3b22b967000ecc1f4ea1b9d203
 vendor/lib/libmdsprpc.so|50380552c78713d9678978b6654c20401b5040f6
 vendor/lib/libsdsprpc.so|dcff191dcb9af4cc6f9a54c4eca6664bf6f965a4
@@ -810,6 +809,18 @@ vendor/lib/libmmcamera_isp_scaler_viewfinder46.so|af0b8d0c59c024069214aebf5ec711
 vendor/lib/libmmcamera_isp_sce40.so|07117f32e1eca3e14204d4190f4fd263a63a25a6
 vendor/lib/libmmcamera_isp_snr47.so|22ba84117bd4f91cb9895fd275f2368a7af2fb0c
 vendor/lib/libmmcamera_isp_sub_module.so|92d9cd0a2d71d5159736d1e0ad856138ac94c012
+
+# CDSP - from S62Pro RKQ1.210406.002
+vendor/bin/cdsprpcd|ea126ed2f1b11622547239f331b8013320c59ad2
+vendor/etc/init/vendor.qti.cdsprpc-service.rc|36772b70216796e8ef19376d9c6a81ee9ffff549
+vendor/lib/libcdsprpc.so|4ef30602663e13d44e1c7dd09db927fa4e6947ae
+vendor/lib/libcdsp_default_listener.so|1c24530e998d6ea908b86afd20470e7e3d0a48c0
+vendor/lib/libfastrpc_utf_stub.so|945a41ea68452806d1a5add3584d34b30c7f9a95
+vendor/lib/libsysmon_cdsp_skel.so|8a23e64a696517679e7c336fc31f3b912f4ca32a
+vendor/lib64/libcdsprpc.so|891066a404b155c545ff7f4bf23cb7e042f29f28
+vendor/lib64/libcdsp_default_listener.so|96d722b324c4d1a554d0f018d8cbbb8c4e4519b8
+vendor/lib64/libfastrpc_utf_stub.so|15243b9539bb74069d6ee59bd70340b0ea0ec338
+vendor/lib64/libsysmon_cdsp_skel.so|6b07100c3294c76402e2d064d463629c9468d6a9
 
 # Charger - from S62Pro RKQ1.210406.002
 vendor/bin/hvdcp_opti|0af1d3a59fd10acd7a614662c341421d9267014c
