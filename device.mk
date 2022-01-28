@@ -173,7 +173,12 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.5:64 \
     libdng_sdk.vendor \
-    vendor.qti.hardware.camera.device@1.0:64
+    vendor.qti.hardware.camera.device@1.0:64 \
+    camera.sdm660 \
+    libmm-qcamera
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml
 
 # Component overrides
 PRODUCT_COPY_FILES += \
@@ -422,10 +427,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl:64 \
     android.hardware.sensors@1.0-service
-
-# Shims
-PRODUCT_PACKAGES += \
-    libcamera_shim
 
 # Tethering
 PRODUCT_PACKAGES += \

@@ -1,9 +1,0 @@
-cc_library_shared {
-    name: "libcamera_shim",
-    srcs: ["camera_jasmine_sprout_shim.cpp"],
-    shared_libs: [
-        "libui",
-        "libutils",
-    ],
-    vendor: true,
-}
