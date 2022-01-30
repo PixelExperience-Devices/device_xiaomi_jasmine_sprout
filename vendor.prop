@@ -147,6 +147,10 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
 
+# Graphics
+ro.hardware.egl=adreno
+ro.hardware.vulkan=adreno
+
 # Media
 debug.stagefright.omx_default_rank=0
 media.stagefright.thumbnail.prefer_hw_codecs=true
