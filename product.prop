@@ -14,9 +14,6 @@ ro.sf.blurs_are_expensive=1
 ro.launcher.blur.appLaunch=false
 ro.surface_flinger.supports_background_blur=0
 
-# BPF
-ro.kernel.ebpf.supported=true
-
 # CNE
 persist.vendor.cne.feature=1
 
