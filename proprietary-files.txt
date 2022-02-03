@@ -1096,6 +1096,15 @@ vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql|9c7e9a78f0890
 # Radio - from nubia NX659J 20201109.121337
 system_ext/framework/qti-telephony-common.jar|ac67728c317dc56f5a98f11e9f0fd526bf725755
 
+# Radio - IMS - alioth-qssi-user-12-SKQ1.210908.001
+system_ext/lib64/lib-imsvideocodec.so|b7001bb1008106ccb9ef92dd2560e2052b40c325
+system_ext/lib64/lib-imsvt.so|e7816bfe27bfaf0e88c4b65d0973ddeca3478801
+system_ext/lib64/lib-imsvtextutils.so|16bed08e80919635fcb7ace934bd5f16f059c182
+system_ext/lib64/lib-imsvtutils.so|bb9f9b8c4030e616027440996f71edae6ba5ec84
+system_ext/lib64/libimscamera_jni.so|ff3d65093f5bf19fba95798b0a121ee510b0f72e
+system_ext/lib64/libimsmedia_jni.so|3c625b6216237f1df44e0c75fcc6894f1a296847
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|0c11ff5a7a671073ee40e17d46aa8b7acbf1dc0a
+
 # Radio - IMS - from nubia NX659J 20201109.121337
 -system_ext/priv-app/ims/ims.apk|3dae438ef192086a8913c06d24c055802c25f2a6
 
@@ -1120,16 +1129,9 @@ system_ext/lib64/com.qualcomm.qti.imscmservice@2.2.so|e679307d8ab7b5181b9d288dcd
 system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so|c2b5190987e63067e97f6cdbdc4069ecbeead891
 system_ext/lib64/com.qualcomm.qti.uceservice@2.1.so|1e60a4eb4f157303f1ca14066e5cf5654f209245
 system_ext/lib64/com.qualcomm.qti.uceservice@2.2.so|f1a0fb08c5bf39ce25b8e2d8f63b872860ca585b
-system_ext/lib64/lib-imsvideocodec.so|6e2ea8e43d23353011b4b9fbc48d8051965c22b1
-system_ext/lib64/lib-imsvt.so|2a1398979ccf62e2fe6059fc7fd54297b8a9a4af
-system_ext/lib64/lib-imsvtextutils.so|7fe2cf5ac5f84c3c61b4458099efcf900801c2e2
-system_ext/lib64/lib-imsvtutils.so|2d9f15c83f0403dc3d3c82d4868796d303d2a4a4
-system_ext/lib64/libimscamera_jni.so|d937e4d9ddbfbc21c79368f648287209d3f30306
-system_ext/lib64/libimsmedia_jni.so|a4d163195735c3f3af9848fa6a6fcb07a25c8431
 system_ext/lib64/vendor.qti.ims.callcapability@1.0.so|ab9cb9b300b564958dee02131c5d7944a916f8be
 system_ext/lib64/vendor.qti.ims.callinfo@1.0.so|1dd70408bc735e97b8b71fb85d38f18bc652fa95
 system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so|b641cd19f0e52fdb1f90dc441339ddce31b448bc
-system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|393c5affc1e8e36470705ec44396d1ffa603a541
 system_ext/lib64/vendor.qti.ims.factory@1.0.so|fbebef1b0de8dbb2a2d059175bf53fa08ef20623
 vendor/bin/ims_rtp_daemon|070bccd359e84a2edd42b0f19e2f366ba7a762dc
 vendor/bin/imsdatadaemon|641e98bf9a75a20a894665fcd7e5c1f03ea565eb
