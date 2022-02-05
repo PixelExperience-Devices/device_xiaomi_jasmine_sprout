@@ -148,6 +148,9 @@ PRODUCT_PACKAGES += \
     AntHalService-Soong \
     com.dsi.ant@1.0.vendor
 
+# APEX
+PRODUCT_COMPRESSED_APEX := false
+
 # Biometrics
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.jasmine_sprout
