@@ -379,7 +379,7 @@ TARGET_BOARD_PLATFORM := sdm660
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
-    android.hardware.power.stats@1.0-service.mock
+    android.hardware.power.stats@1.0-service
 
 # Perf
 PRODUCT_PACKAGES += \
