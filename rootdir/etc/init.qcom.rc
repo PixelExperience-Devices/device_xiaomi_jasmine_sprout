@@ -375,10 +375,12 @@ on post-fs-data
     mkdir /data/vendor/tui 0700 system drmrpc
 
 service nqnfcinfo /system/vendor/bin/nqnfcinfo
+    override
     class late_start
     group nfc
     user system
     oneshot
+    disabled
 
 service iop /system/vendor/bin/iop
     class main
@@ -505,11 +507,13 @@ service vendor.move_wifi_data /system/bin/move_wifi_data.sh
     oneshot
 
 service ptt_socket_app /system/vendor/bin/ptt_socket_app -d
+    override
     class main
     user wifi
     group wifi system inet net_admin
     capabilities NET_ADMIN
     oneshot
+    disabled
 
 service ptt_ffbm /system/vendor/bin/ptt_socket_app -f -d
     user root
@@ -599,9 +603,11 @@ on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
 
 service qvop-daemon /vendor/bin/qvop-daemon
+    override
     class late_start
     user system
     group system drmrpc
+    disabled
 
 service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
@@ -659,9 +665,11 @@ on property:persist.sys.qlogd=0
     stop qlogd
 
 service vm_bms /vendor/bin/vm_bms
+    override
     class main
     user root
     group system wakelock
+    disabled
 
 service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
     class core
@@ -698,14 +706,18 @@ service vendor.LKCore-rel /vendor/bin/LKCore
     group system log diag
 
 service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
+    override
     class late_start
     user system
     group system
+    disabled
 
 service esepmdaemon /system/vendor/bin/esepmdaemon
+    override
     class core
     user system
     group nfc
+    disabled
 
 on charger
     setprop persist.sys.usb.config mass_storage
@@ -739,11 +751,13 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     oneshot
 
 service chre /vendor/bin/chre
+    override
     class late_start
     user system
     group system
     socket chre seqpacket 0660 root system
     shutdown critical
+    disabled
 
 on property:vendor.chre.enabled=0
    stop chre
