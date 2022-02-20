@@ -15,6 +15,9 @@ vendor.camera.eis.gyro_name             u:object_r:camera_prop:s0
 vidc.enc.dcvs.extra-buff-count          u:object_r:vendor_default_prop:s0
 ro.camera.req.fmq.                      u:object_r:exported_default_prop:s0
 ro.camera.res.fmq.                      u:object_r:exported_default_prop:s0
+persist.vendor.bokeh.                   u:object_r:camera_prop:s0
+persist.vendor.imx376_ofilm.            u:object_r:camera_prop:s0
+persist.vendor.imx376_sunny.            u:object_r:camera_prop:s0
 
 # Fingerprint
 fpc_kpi                                 u:object_r:vendor_default_prop:s0
