@@ -18,6 +18,7 @@ ro.camera.res.fmq.                      u:object_r:exported_default_prop:s0
 persist.vendor.bokeh.                   u:object_r:camera_prop:s0
 persist.vendor.imx376_ofilm.            u:object_r:camera_prop:s0
 persist.vendor.imx376_sunny.            u:object_r:camera_prop:s0
+vendor.camera.skip_unconfigure.packagelist  u:object_r:camera_prop:s0
 
 # Fingerprint
 fpc_kpi                                 u:object_r:vendor_default_prop:s0
