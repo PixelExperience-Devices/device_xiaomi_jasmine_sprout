@@ -1118,9 +1118,6 @@ vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql|ee0756cfcfda2
 vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql|fccd99b4eee6c2e1762f56b812d7f5d4ca6ab182
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql|9c7e9a78f0890fb210d2eadbdd9c076cd3c43594
 
-# Radio - from nubia NX659J 20201109.121337
-system_ext/framework/qti-telephony-common.jar|ac67728c317dc56f5a98f11e9f0fd526bf725755
-
 # Radio - IMS - alioth-qssi-user-12-SKQ1.210908.001
 system_ext/lib64/lib-imsvideocodec.so|b7001bb1008106ccb9ef92dd2560e2052b40c325
 system_ext/lib64/lib-imsvt.so|e7816bfe27bfaf0e88c4b65d0973ddeca3478801
