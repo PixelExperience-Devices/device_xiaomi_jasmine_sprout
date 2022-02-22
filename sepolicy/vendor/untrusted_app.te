@@ -1,0 +1,4 @@
+allow untrusted_app_27 zygote:unix_stream_socket { getopt };
+allow untrusted_app zygote:unix_stream_socket { getopt };
+get_prop(untrusted_app, vendor_persist_camera_prop)
+allow untrusted_app proc_zoneinfo:file { read };
