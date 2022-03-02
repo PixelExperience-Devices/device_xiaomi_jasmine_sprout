@@ -152,6 +152,7 @@ PRODUCT_COMPRESSED_APEX := false
 
 # AuthSecret
 PRODUCT_PACKAGES += \
+    android.hardware.authsecret@1.0.vendor \
     android.hardware.authsecret@1.0-service
 
 # Biometrics
