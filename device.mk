@@ -201,6 +201,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.sdm660 \
     memtrack.sdm660 \
     libdisplayconfig \
+    libtinyxml.vendor \
     libtinyxml
 
 PRODUCT_PACKAGES += \
@@ -253,6 +254,7 @@ PRODUCT_COPY_FILES += \
 
 # GPS / Location
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.1.vendor \
     android.hardware.gnss@2.1-impl-qti \
     android.hardware.gnss@2.1-service-qti \
     libbatching \
@@ -328,7 +330,7 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0.vendor
+    android.hardware.keymaster@4.0.vendor
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -385,6 +387,7 @@ TARGET_BOARD_PLATFORM := sdm660
 
 # Power
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.2.vendor \
     android.hardware.power-service-qti \
     android.hardware.power.stats@1.0-service
 
@@ -427,6 +430,7 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor \
     libavservices_minijail.vendor \
     libjson \
+    libjson.vendor \
     libprotobuf-cpp-full \
     librmnetctl
 
