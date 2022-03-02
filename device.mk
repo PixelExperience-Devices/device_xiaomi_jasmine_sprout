@@ -150,6 +150,10 @@ PRODUCT_PACKAGES += \
 # APEX
 PRODUCT_COMPRESSED_APEX := false
 
+# AuthSecret
+PRODUCT_PACKAGES += \
+    android.hardware.authsecret@1.0-service
+
 # Biometrics
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.jasmine_sprout
