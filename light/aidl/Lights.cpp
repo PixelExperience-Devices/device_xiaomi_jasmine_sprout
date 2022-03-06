@@ -36,9 +36,6 @@ using ::android::base::WriteStringToFile;
 constexpr auto kDefaultMaxLedBrightness = 255;
 constexpr auto kDefaultMaxScreenBrightness = 4095;
 
-// Each step will stay on for 50ms by default.
-constexpr auto kRampStepDurationDefault = 50;
-
 // Write value to path and close file.
 bool WriteToFile(const std::string& path, uint32_t content) {
     return WriteStringToFile(std::to_string(content), path);
@@ -186,15 +183,14 @@ void Lights::applyNotificationState(const HwLightState& state) {
     uint32_t white_brightness = RgbaToBrightness(state.color, max_led_brightness_);
 
     // Turn off the leds (initially)
-    WriteToFile(WHITE_ATTR(blink), 0);
+    WriteToFile(WHITE_ATTR(breath), 0);
 
     if (state.flashMode == FlashMode::TIMED && state.flashOnMs > 0 && state.flashOffMs > 0) {
-        WriteToFile(WHITE_ATTR(ramp_step_ms),
-                    static_cast<uint32_t>(kRampStepDurationDefault)),
+
         // White
-        WriteToFile(WHITE_ATTR(start_idx), 0);
-        WriteToFile(WHITE_ATTR(pause_lo), static_cast<uint32_t>(state.flashOffMs));
-        WriteToFile(WHITE_ATTR(blink), 1);
+        WriteToFile(WHITE_ATTR(delay_off), static_cast<uint32_t>(state.flashOffMs));
+        WriteToFile(WHITE_ATTR(delay_on), static_cast<uint32_t>(state.flashOnMs));
+        WriteToFile(WHITE_ATTR(breath), 1);
     } else {
         WriteToFile(WHITE_ATTR(brightness), white_brightness);
     }
