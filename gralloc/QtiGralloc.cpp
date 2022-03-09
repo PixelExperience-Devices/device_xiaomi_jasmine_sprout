@@ -251,6 +251,8 @@ MetadataType getMetadataType(uint32_t in) {
       return MetadataType_ColorSpace;
     case QTI_YUV_PLANE_INFO:
       return MetadataType_YuvPlaneInfo;
+    case QTI_TIMED_RENDERING:
+      return MetadataType_TimedRendering;
     default:
       return MetadataType_Invalid;
   }
@@ -375,6 +377,10 @@ Error get(void *buffer, uint32_t type, void *param) {
     case QTI_YUV_PLANE_INFO:
       err = decodeYUVPlaneInfoMetadata(bytestream, reinterpret_cast<qti_ycbcr *>(param));
       break;
+    case QTI_TIMED_RENDERING:
+      err = static_cast<Error>(android::gralloc4::decodeUint32(
+          qtigralloc::MetadataType_TimedRendering, bytestream, reinterpret_cast<uint32_t *>(param)));
+      break;
     default:
       param = nullptr;
       return Error::UNSUPPORTED;
@@ -445,6 +451,11 @@ Error set(void *buffer, uint32_t type, void *param) {
       break;
     case QTI_VIDEO_TS_INFO:
       err = encodeVideoTimestampInfo(*reinterpret_cast<VideoTimestampInfo *>(param), &bytestream);
+      break;
+    case QTI_TIMED_RENDERING:
+      err = static_cast<Error>(
+          android::gralloc4::encodeUint32(qtigralloc::MetadataType_TimedRendering,
+                                          *reinterpret_cast<uint32_t *>(param), &bytestream));
       break;
     default:
       param = nullptr;
