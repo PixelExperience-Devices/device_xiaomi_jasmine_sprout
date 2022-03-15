@@ -340,8 +340,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.jasmine_sprout \
-    android.hardware.light@2.0.vendor
+    android.hardware.lights-service.jasmine_sprout
 
 # Media
 PRODUCT_COPY_FILES += \
