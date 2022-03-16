@@ -5,26 +5,10 @@
 //
 
 cc_binary {
-    defaults: ["hidl_defaults"],
-    name: "android.hardware.light@2.0-service.jasmine_sprout",
-    init_rc: ["hidl/android.hardware.light@2.0-service.jasmine_sprout.rc"],
-    vintf_fragments: ["hidl/android.hardware.light@2.0-service.jasmine_sprout.xml"],
-    srcs: ["hidl/service.cpp", "hidl/Light.cpp"],
-    shared_libs: [
-        "libbase",
-        "libhidlbase",
-        "libutils",
-        "android.hardware.light@2.0",
-    ],
-    relative_install_path : "hw",
-    vendor: true,
-}
-
-cc_binary {
     name: "android.hardware.lights-service.jasmine_sprout",
     relative_install_path: "hw",
-    init_rc: ["aidl/android.hardware.lights.jasmine_sprout.rc"],
-    vintf_fragments: ["aidl/android.hardware.lights.jasmine_sprout.xml"],
+    init_rc: ["android.hardware.lights.jasmine_sprout.rc"],
+    vintf_fragments: ["android.hardware.lights.jasmine_sprout.xml"],
     vendor: true,
     shared_libs: [
         "libbase",
@@ -34,7 +18,7 @@ cc_binary {
         "android.hardware.light-V1-ndk_platform",
     ],
     srcs: [
-        "aidl/Lights.cpp",
-        "aidl/main.cpp",
+        "Lights.cpp",
+        "main.cpp",
     ],
 }
