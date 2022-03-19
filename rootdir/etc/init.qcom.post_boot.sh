@@ -878,7 +878,7 @@ function configure_memory_parameters() {
 ProductName=`getprop ro.product.name`
 low_ram=`getprop ro.config.low_ram`
 
-if [ "$ProductName" == "msmnile" ] || [ "$ProductName" == "kona" ] || [ "$ProductName" == "sdmshrike_au" ]; then
+if [ "$ProductName" == "msmnile" ] || [ "$ProductName" == "kona" ] || [ "$ProductName" == "sdmshrike_au" ] || [ "$ProductName" == "sm6150" ]; then
       # Enable ZRAM
       configure_read_ahead_kb_values
       echo 0 > /proc/sys/vm/page-cluster
@@ -3358,7 +3358,7 @@ case "$target" in
         fi
 
         case "$soc_id" in
-            "355" | "369" | "377" | "380" | "384" )
+            "355" | "369" | "377" | "380" | "384" | "401" )
       target_type=`getprop ro.hardware.type`
       if [ "$target_type" == "automotive" ]; then
 	# update frequencies
@@ -3374,10 +3374,8 @@ case "$target" in
       echo 60 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
       echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
       echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
-      echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster
       echo 8 > /sys/devices/system/cpu/cpu0/core_ctl/task_thres
       echo 0 > /sys/devices/system/cpu/cpu6/core_ctl/enable
-
 
       # Setting b.L scheduler parameters
       # default sched up and down migrate values are 90 and 85
@@ -3387,10 +3385,18 @@ case "$target" in
       echo 85 > /proc/sys/kernel/sched_group_downmigrate
       echo 100 > /proc/sys/kernel/sched_group_upmigrate
       echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
+      echo 0 > /proc/sys/kernel/sched_coloc_busy_hysteresis_enable_cpus
+      echo 0 > /proc/sys/kernel/sched_busy_hysteresis_enable_cpus
+      echo 5 > /proc/sys/kernel/sched_ravg_window_nr_ticks
+
+      # disable unfiltering
+      echo 20000000 > /proc/sys/kernel/sched_task_unfilter_period
 
       # colocation v3 settings
-      echo 740000 > /proc/sys/kernel/sched_little_cluster_coloc_fmin_khz
-
+      echo 680000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/rtg_boost_freq
+      echo 0 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/rtg_boost_freq
+      echo 51 > /proc/sys/kernel/sched_min_task_util_for_boost
+      echo 35 > /proc/sys/kernel/sched_min_task_util_for_colocation
 
       # configure governor settings for little cluster
       echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
@@ -3415,8 +3421,9 @@ case "$target" in
       echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
       echo 85 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load
 
-      echo "0:1209600" > /sys/module/cpu_boost/parameters/input_boost_freq
-      echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
+      # configure input boost settings
+      echo "0:1209600" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+      echo 40 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
 
       # Set Memory parameters
       configure_memory_parameters
@@ -3426,7 +3433,7 @@ case "$target" in
       do
           for cpubw in $device/*cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw
           do
-	      echo "bw_hwmon" > $cpubw/governor
+	      cat $cpubw/available_frequencies | cut -d " " -f 1 > $cpubw/min_freq
 	      echo "2288 4577 7110 9155 12298 14236" > $cpubw/bw_hwmon/mbps_zones
 	      echo 4 > $cpubw/bw_hwmon/sample_ms
 	      echo 68 > $cpubw/bw_hwmon/io_percent
@@ -3441,7 +3448,7 @@ case "$target" in
 
 	  for llccbw in $device/*cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw
 	  do
-	      echo "bw_hwmon" > $llccbw/governor
+	      cat $llccbw/available_frequencies | cut -d " " -f 1 > $llccbw/min_freq
 	      echo "1144 1720 2086 2929 3879 5931 6881" > $llccbw/bw_hwmon/mbps_zones
 	      echo 4 > $llccbw/bw_hwmon/sample_ms
 	      echo 68 > $llccbw/bw_hwmon/io_percent
