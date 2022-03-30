@@ -150,11 +150,8 @@ ro.hardware.vulkan=adreno
 
 # Media
 debug.stagefright.omx_default_rank=0
-media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.media.recorder-max-base-layer-fps=60
-vendor.vidc.dec.enable.downscalar=1
-vendor.vidc.enc.disable_bframes=1
-vendor.vidc.enc.disable.pq=true
+vidc.enc.dcvs.extra-buff-count=2
 
 # Netmgr
 persist.vendor.data.iwlan.enable=true
