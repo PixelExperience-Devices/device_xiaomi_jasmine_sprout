@@ -4,7 +4,6 @@ ro.bluetooth.a2dp_offload.supported=true
 vendor.audio.feature.a2dp_offload.enable=true
 
 # Bluetooth
-ro.bluetooth.library_name=libbluetooth_qti.so
 persist.vendor.bt.a2dp.aac_whitelist=false 
 
 # Blur
@@ -12,11 +11,7 @@ ro.sf.blurs_are_expensive=1
 ro.launcher.blur.appLaunch=false
 ro.surface_flinger.supports_background_blur=0
 
-# CNE
-persist.vendor.cne.feature=1
-
 # Data
-persist.data.df.dev_name=rmnet_usb0
 persist.vendor.data.profile_update=true
 
 # Incremental FS
@@ -29,12 +24,10 @@ ro.config.low_ram=false
 ro.netflix.bsp_rev=Q660-13149-1
 
 # Radio
-DEVICE_PROVISIONED=1
 persist.vendor.ims.disableADBLogs=1
 persist.vendor.ims.disableIMSLogs=1
 persist.vendor.radio.enable_temp_dds=true
 persist.vendor.radio.force_on_dc=true
-ril.subscription.types=RUIM
 persist.sys.fflag.override.settings_provider_model=false
 persist.vendor.radio.mt_sms_ack=30
 
