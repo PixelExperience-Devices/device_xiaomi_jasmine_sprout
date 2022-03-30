@@ -1,5 +1,3 @@
-# jasmine package version: V11.0.14.0.QDIMIXM, unless stated otherwise
-
 # ADSP - from S62Pro RKQ1.210406.002
 vendor/bin/adsprpcd|5e246a6f5d2dca27e29b233a17e4673532191b95
 vendor/etc/init/vendor.qti.adsprpc-service.rc|54588df8e7da58c66838028d2284986b966c2d37
@@ -27,7 +25,7 @@ vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so|b9f68e320d24e9c51871a20
 vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so|d2174a2a4a680e93ee4262b5e6d99fd3c398620c
 vendor/lib/rfsa/adsp/libscveT2T_skel.so|e8083e551a17e880acb9d72ceb725b762cadf0d2
 
-# ADSP modules - from jasmine
+# ADSP modules - from jasmine V11.0.28.0.QDIMIXM
 vendor/lib/rfsa/adsp/dirac_resource.dar|7728d5b2ee2927a01df5bd6d7edae3736186c844
 vendor/lib/rfsa/adsp/libdirac-capiv2.so|e56031dfaee094d5267e3cc16625cfceaa07cc27
 
@@ -51,12 +49,12 @@ vendor/lib/soundfx/libqcbassboost.so|8e92c5d40cd23f503840b055d71336e4c9daecc0
 vendor/lib/soundfx/libqcreverb.so|7e05f1f4bdd2947dac3aefd871437d289581078b
 vendor/lib/soundfx/libqcvirt.so|03a8b95eb77811e3861307ab1451f4144bba2572
 
-# Audio Power Amplifier - from jasmine
+# Audio Power Amplifier - from jasmine V11.0.28.0.QDIMIXM
 vendor/firmware/dbmd4_va_fw.bin|ee640f9f4e367d513f5fb7d95c85e226c9f75750
 vendor/firmware/tas2557_uCDSP.bin|d16fc1db241670307f5071e256c886ecd18d30f7
 vendor/firmware/tfa98xx.cnt|f8b5291feaebe7e3d18fda5d8960c313656b4a3a
 
-# Audio ACDB - from jasmine
+# Audio ACDB - from jasmine V11.0.28.0.QDIMIXM
 vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|57837ee3c6d7072ee1a919e592fab0d0e016eaed
 vendor/etc/acdbdata/MTP/MTP_General_cal.acdb|ec2636696cb39ef5eeba2d1b5196d017cd949dba
 vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb|0b3b101c8c48e1c5d463fba629dc597624859f93
@@ -661,7 +659,7 @@ vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|b17a82a9740832bd686c3d4c4e36d0e
 vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so|07bf28004086b972367c44703bd0247d7a78faf4
 vendor/lib64/vendor.qti.latency@2.0.so|dfec90dd5d12f653bb6067702682b5f610a83b67
 
-# Consumerir - from jasmine
+# Consumerir - from jasmine V11.0.28.0.QDIMIXM
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sdm660.so|d1f275a91557dfab52e82906986c5094fe078722
 
 # Display Calibration - from jasmine V9.6.17.0.ODIMIFE
@@ -733,17 +731,17 @@ vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so|7b67b47030f00af1c2e207995
 vendor/lib64/vendor.qti.esepowermanager@1.0.so|6585b5976a98053fb4d2b51c32337ebe8960d427
 vendor/lib64/vendor.qti.esepowermanager@1.1.so|61d7c35edb403f8de4be2e483431cb26109ef0ae
 
-# Fingerprint - from jasmine V10.0.2.0.PDIMIFJ
-vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.sdm660.so|a614d71107ce28380e8cdcab23e80fb7d014a22d
-vendor/lib64/hw/fingerprint.fpc.default.so|ac0285f2ee91037477771bac74436fa03828edf6
-vendor/lib64/hw/fingerprint.goodix.default.so|30a459e4ff9c047d1cc6a130885460cc07426826
-vendor/lib64/com.fingerprints.extension@1.0.so|2ae37b689b286921702cf9533e9f09ffe6736968
-vendor/lib64/libgf_ca.so|b7635dcbea9a7e7252e746914f995a5ffb92b5d0
-vendor/lib64/libgf_hal.so|d601b957f58e840d2ff5a69f7fda74aca93805b2
+# Fingerprint - from jasmine V11.0.28.0.QDIMIXM
+vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.sdm660.so|dfbcb6e002cca1331a26c8e921b3aeaa1764f304
+vendor/lib64/hw/fingerprint.fpc.default.so|cd0f115eef17a2f0e6e385257dd05de423f4ae34
+vendor/lib64/hw/fingerprint.goodix.default.so|ee9562c8c2fea3831fd2cb00b824e5bd12b0539d
+vendor/lib64/com.fingerprints.extension@1.0.so|599d712e9fbf0b046cfc28b2f33ddbce9965e5fb
+vendor/lib64/libgf_ca.so|5c179131d1d48e7db95bd9c911111eb4e4be76a7
+vendor/lib64/libgf_hal.so|56e3eb920f9d90df01345ec0a93413b905c2b1b7
 vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so|226eafb17998f7f4f97836934c6f1aad4321f940
-vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so|b47f3d59c111a97a47ed38d4cb05ddf59a47ebac
+vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so|9c1bccba438d5cf1274d2ce9e5f4af7bcb03a590
 
-# Fingerprint firmware - from jasmine V10.0.2.0.PDIMIFJ
+# Fingerprint firmware - from jasmine V11.0.28.0.QDIMIXM
 etc/firmware/goodixfp.b00:vendor/firmware/goodixfp.b00|c5c3594b47dffb3aadb81abced42518d24637893
 etc/firmware/goodixfp.b01:vendor/firmware/goodixfp.b01|35e6cc6108ee5f111741ef5d9f0b8e2ae1dfd63f
 etc/firmware/goodixfp.b02:vendor/firmware/goodixfp.b02|ae3a00bbd74309450344a86e94f28b12af0a7c09
@@ -753,15 +751,15 @@ etc/firmware/goodixfp.b05:vendor/firmware/goodixfp.b05|c179174508af81ad78b62d4a8
 etc/firmware/goodixfp.b06:vendor/firmware/goodixfp.b06|c179174508af81ad78b62d4a890abdba84d8c6f5
 etc/firmware/goodixfp.b07:vendor/firmware/goodixfp.b07|4983a219580ebdb1e2d0f8e914c3e1f28a1471a0
 etc/firmware/goodixfp.mdt:vendor/firmware/goodixfp.mdt|e525ffa879859bc8707529d251438a017a67777f
-vendor/firmware/fpctzappfingerprint.b00|2dac6ae3f521fdb514999c4ca76c684738335eb1
-vendor/firmware/fpctzappfingerprint.b01|ad070b8e3ea25be6ebf32c643b03e1db47206b0f
-vendor/firmware/fpctzappfingerprint.b02|cad94d286eb130f4ff17bf1be1fba1e1228ec107
-vendor/firmware/fpctzappfingerprint.b03|1b4af508df69686723aee2a3c60831541d67df82
-vendor/firmware/fpctzappfingerprint.b04|e3bf81d06e5bbe37e45b303090e0068964a1b082
-vendor/firmware/fpctzappfingerprint.b05|3e33546552f8ee4af98008f5907079a43f75d443
-vendor/firmware/fpctzappfingerprint.b06|3e33546552f8ee4af98008f5907079a43f75d443
-vendor/firmware/fpctzappfingerprint.b07|127342f5ddf0f91a9d62d133bfc04fb68fedd0d3
-vendor/firmware/fpctzappfingerprint.mdt|c149e27236e275fcef2cb243c3ab180e84197da2
+vendor/firmware/fpctzappfingerprint.b00|7ddcb716f2537eabfd7dc741db41f313e602b783
+vendor/firmware/fpctzappfingerprint.b01|49829cd98d8585726800417635ef93638963c1a7
+vendor/firmware/fpctzappfingerprint.b02|fe14d0c23fd5ce28552cc288d7d351cb454ddcad
+vendor/firmware/fpctzappfingerprint.b03|f6de743222e1d850798cc7eece48b74463bf5ff4
+vendor/firmware/fpctzappfingerprint.b04|4c4b8a49b6e73d754c1c18a4b8533e0251d8b34e
+vendor/firmware/fpctzappfingerprint.b05|8b2ba9380050139fcb54d45c1978e54c080e6e2c
+vendor/firmware/fpctzappfingerprint.b06|8b2ba9380050139fcb54d45c1978e54c080e6e2c
+vendor/firmware/fpctzappfingerprint.b07|cb22bc47816a9c456fda2fdbd24486ea925fda42
+vendor/firmware/fpctzappfingerprint.mdt|f709249da0d08cdcf43f561782ac3d6695a154ec
 
 # FM - from S62Pro RKQ1.210406.002
 system_ext/lib64/fm_helium.so|b2440e4feaae8a7f5e2269525520f9774b6962fc
@@ -770,7 +768,7 @@ system_ext/lib64/vendor.qti.hardware.fm@1.0.so|5eaf6d5d67361ff6236c1ec4f5225c618
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|05931b5d088bd7000b0b002ee650b0953e272cd7
 vendor/lib64/vendor.qti.hardware.fm@1.0.so|f6e23f902b7e15232b20af55161a24da93ffe25f
 
-# Gatekeeper - from jasmine
+# Gatekeeper - from jasmine V11.0.28.0.QDIMIXM
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|a189a50515831e6ac9a7e88a165ac979ae6ac077
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so|2edd1bfb811307ea81c46bb3dd7cb5af46fc8c42
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|eaf70216b4e53f409c22764b272b79cd60a4b714
@@ -882,7 +880,7 @@ vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 vendor/lib/hw/vulkan.adreno.so|139868cf11006199fffc109b7a207e4e7f4cbd18
 vendor/lib64/hw/vulkan.adreno.so|9215100009b574f71dc75272f22a499302ea121d
 
-# Graphics firmware - from jasmine
+# Graphics firmware - from jasmine V11.0.28.0.QDIMIXM
 vendor/firmware/a512_zap.b00|85a7fc0008f9a2071d8b3d0cc212b19141633267
 vendor/firmware/a512_zap.b01|e0b7818182fac232182bfb70a4f43ec3e36779b9
 vendor/firmware/a512_zap.b02|33cc074ca840ae59f310a0e217aa7409afb30ac2
@@ -895,7 +893,7 @@ vendor/firmware/a540_gpmu.fw2|3530f10b4825a3b08c79e0bcfaf6471ec8422f24
 # IRQ balance - from citrus V12.0.1.0.QJFMIXM
 vendor/bin/msm_irqbalance|dd8e65dae1f2f8ec1beb72f7115621f301eab85d
 
-# Keymaster - from jasmine
+# Keymaster - from jasmine V11.0.28.0.QDIMIXM
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti|22838e26f4a645a351bec32405ccf54b2271e13d
 vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc|573b7392c8997008204081165cfe81a11080745d
 vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so|595ba927e28accdb5c5e6927a7bb5ef17ad455a1
@@ -1200,8 +1198,8 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so|8555e548d142fad0238e74e57383bb5a65e
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|25517caf74691b812320b46b477a3f4161cc1bcf
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|346a6f516637632cce8297f78227172d54d26040
 
-# Sensors - from jasmine
-vendor/etc/sensors/sensor_def_qcomdev.conf|33214fd4ac19fc6ba500017095b205251573abea
+# Sensors - from jasmine V11.0.28.0.QDIMIXM
+vendor/etc/sensors/sensor_def_qcomdev.conf|2dde9725dd1be5cd864183e8a617c3455a7f6a17
 
 # Sensors - from S62Pro RKQ1.210406.002
 vendor/bin/sensors.qti|04d11860e030b6176056b6e862b9e4ee9ba2289a
