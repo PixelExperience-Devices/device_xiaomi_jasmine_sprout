@@ -63,10 +63,6 @@ function blob_fixup() {
         sed -i "s|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g" "${2}"
         ;;
 
-    vendor/lib/hw/camera.sdm660.so)
-        "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
-        ;;
-
     vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so)
         "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
         ;;
