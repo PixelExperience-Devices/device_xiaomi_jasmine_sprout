@@ -1213,17 +1213,17 @@ vendor/lib64/libsensor_reg.so|c09110fd11f384040c31b7fd5c2b187aa901168c
 vendor/lib64/libsensor1.so|9438649176e37dfa406f4d4858ad31441ad4c3aa
 vendor/lib64/sensors.ssc.so|6934f0fd9e5e74356d9f18af0cbaa28164e697f6
 
-# ServiceTracker -  from S62Pro RKQ1.210406.002
-vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service
-vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc
-vendor/lib/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
-vendor/lib/vendor.qti.hardware.servicetracker@1.0.so
-vendor/lib/vendor.qti.hardware.servicetracker@1.1.so
-vendor/lib/vendor.qti.hardware.servicetracker@1.2.so
-vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
-vendor/lib64/vendor.qti.hardware.servicetracker@1.0.so
-vendor/lib64/vendor.qti.hardware.servicetracker@1.1.so
-vendor/lib64/vendor.qti.hardware.servicetracker@1.2.so
+# ServiceTracker - from S62Pro RKQ1.210406.002
+vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service|3dc34099147372ce9436585afa1ea0b32c7c52a3
+vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc|7cf06148da895586c20aab7e6bd01b806d8128b6
+vendor/lib/hw/vendor.qti.hardware.servicetracker@1.2-impl.so|2444ac738eb0cac7c4b57c73307af01bc2379800
+vendor/lib/vendor.qti.hardware.servicetracker@1.0.so|79c2b84d7cfd216490c9d0b75282fe63f84806ca
+vendor/lib/vendor.qti.hardware.servicetracker@1.1.so|fb294b2008346128b686d19f07ea960f766492e4
+vendor/lib/vendor.qti.hardware.servicetracker@1.2.so|9b9019ae47759911f184ae47d154143fdbc2dba6
+vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so|2c6178adb7f63fe4765dc17e6ceb9522a2395fd8
+vendor/lib64/vendor.qti.hardware.servicetracker@1.0.so|a0b113cb206254b9618141984bc3f0fb5e17c14b
+vendor/lib64/vendor.qti.hardware.servicetracker@1.1.so|882130a0fd079f69eb7e2dbcaf6692f5426e2f4b
+vendor/lib64/vendor.qti.hardware.servicetracker@1.2.so|82a74faea8f0eb3a8ee6d82a03add453dc062185
 
 # Soter - from S62Pro RKQ1.210406.002
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|a6f1c35671a2f102ff95acecc70eefa3a7ebd432
