@@ -31,8 +31,14 @@ vendor/lib/rfsa/adsp/libdirac-capiv2.so|e56031dfaee094d5267e3cc16625cfceaa07cc27
 
 # Alarm - from S62Pro RKQ1.210406.002
 -product/app/PowerOffAlarm/PowerOffAlarm.apk|52e403ee5944bbb6c6952efa2814d98bd5bb8b17
+-system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar|6508f5708221399eb8bd9754dc49bad32a911e27
+system_ext/lib/vendor.qti.hardware.alarm@1.0.so|42ff7e58a7efdb2438fb44d7d983f1fffd90f208
+system_ext/lib64/vendor.qti.hardware.alarm@1.0.so|715aba7387661d86296a498d876e0eb1d2d65e66
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|586b142f9bc4bf3098b4962682c4de1c13810f9b
+vendor/bin/power_off_alarm|b8c7ddc1bed336753c3746925fd0f4a9925aa36c
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
+vendor/lib/hw/vendor.qti.hardware.alarm@1.0-impl.so|53d8f663b3a2785d2f897eaf99948ca8af587e72
+vendor/lib/vendor.qti.hardware.alarm@1.0.so|10eeadb351de95b81fe937dfb38e778224521b56
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|4129558506dc078c03679ba362acda4755457742
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|dcfdc04b4e0c6e6a4ffa60e1694268bd0327e65c
 
