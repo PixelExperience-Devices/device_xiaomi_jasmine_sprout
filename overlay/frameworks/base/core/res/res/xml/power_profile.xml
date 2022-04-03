@@ -16,6 +16,24 @@
         <value>1747000</value>
         <value>1843000</value>
     </array>
+    <array name="cpu.speeds.cluster0">
+        <value>633000</value>
+        <value>902000</value>
+        <value>1113000</value>
+        <value>1401000</value>
+        <value>1536000</value>
+        <value>1747000</value>
+        <value>1843000</value>
+    </array>
+    <array name="cpu.active.cluster0">
+        <value>34</value>
+        <value>60</value>
+        <value>85</value>
+        <value>128</value>
+        <value>163</value>
+        <value>202</value>
+        <value>253</value>
+    </array>
     <array name="cpu.core_power.cluster0">
         <value>12</value>
         <value>23</value>
@@ -31,8 +49,21 @@
         <value>1747200</value>
         <value>1958400</value>
         <value>2150000</value>
-        <value>2208000</value>
     </array>
+    <array name="cpu.speeds.cluster1">
+        <value>1113600</value>
+        <value>1401600</value>
+        <value>1747200</value>
+        <value>1958400</value>
+        <value>2150000</value>
+    </array>
+  <array name="cpu.active.cluster1">
+      <value>226</value>
+      <value>331</value>
+      <value>497</value>
+      <value>614</value>
+      <value>777</value>
+  </array>
     <array name="cpu.core_power.cluster1">
         <value>75</value>
         <value>110</value>
@@ -42,6 +73,7 @@
         <value>310</value>
     </array>
     <item name="cpu.suspend">5</item>
+    <item name="cpu.awake">1.6</item>
     <item name="cpu.idle">2</item>
     <item name="cpu.active">2</item>
     <item name="cpu.cluster_power.cluster0">2</item>
