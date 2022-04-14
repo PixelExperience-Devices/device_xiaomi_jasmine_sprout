@@ -42,16 +42,15 @@ vendor/lib/vendor.qti.hardware.alarm@1.0.so|10eeadb351de95b81fe937dfb38e77822452
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|4129558506dc078c03679ba362acda4755457742
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|dcfdc04b4e0c6e6a4ffa60e1694268bd0327e65c
 
-# Audio ACDB - from jasmine V11.0.28.0.QDIMIXM
-vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|57837ee3c6d7072ee1a919e592fab0d0e016eaed
-vendor/etc/acdbdata/MTP/MTP_General_cal.acdb|ec2636696cb39ef5eeba2d1b5196d017cd949dba
-vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb|0b3b101c8c48e1c5d463fba629dc597624859f93
-vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb|b95ed10e51cf7d255e355dfe59a91dcc9c012d2f
-vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb|cf7dbd5ccb31fa8ff87741f832e6f1c58c84b2ed
-vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb|e2072f38c4a1860d74cb788dd52874c9473fc717
-vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb|d4c98a463c0a7b147d08876b8347c514e881be29
-vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp|5b55bf4db3181950a8982483ae22d85ab7721155
-vendor/etc/acdbdata/adsp_avs_config.acdb|d9507f31b8970320233128fed24c39742ee53c67
+# ACDB - from S62Pro RKQ1.210406.002
+vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|4bd7f1b395dbde827b2c3a681086de87950bd7c8
+vendor/etc/acdbdata/MTP/MTP_General_cal.acdb|7d7f4a491ad0a80f1e40d5be886aa9c2d5950f0c
+vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb|a4140294b74e2e7b5bbd6a8e37876ca6e2516f4e
+vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb|39e16d5d5396633ddaf5bae89957d9c3fe7d448c
+vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb|874ecf3a5c4c989356ec714ad30a8565afe149a0
+vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb|d2465dec72ac40d410850dac2255ddab15ef108f
+vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb|0800218f0e72efe69f60e0650912851da5328973
+vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp|57f7d8e1fa238851b6e81fed05b7c9c15f9aefd3
 
 # Audio - from S62Pro RKQ1.210406.002
 vendor/lib/soundfx/libasphere.so|90940fca6f4b84794046513c6c6868eca9470066
