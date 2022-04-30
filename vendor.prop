@@ -104,6 +104,7 @@ persist.vendor.camera.eis.enable=1
 persist.vendor.camera.is_type=4
 persist.vendor.camera.is_type_preview=4
 persist.vendor.camera.mpo.disabled=1
+persist.vendor.camera.thirdpartyeis_enabled=1
 
 # Charger
 ro.charger.enable_suspend=true
