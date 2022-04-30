@@ -100,6 +100,10 @@ vendor.camera.aux.packageblacklist=com.discord
 camera.aux.packagelist=com.google.android.GoogleCamera,com.android.camera,org.codeaurora.snapcam
 persist.vendor.camera.isp.dualisp=1
 persist.vendor.camera.aux.camera=1
+persist.vendor.camera.eis.enable=1
+persist.vendor.camera.is_type=4
+persist.vendor.camera.is_type_preview=4
+persist.vendor.camera.mpo.disabled=1
 
 # Charger
 ro.charger.enable_suspend=true
