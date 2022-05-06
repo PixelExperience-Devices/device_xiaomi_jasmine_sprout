@@ -75,6 +75,8 @@
 #include <vector>
 #include <string>
 
+#define TIMED_RENDERING_METADATA_FEATURE 1
+
 namespace smomo {
 
 #define SMOMO_LIBRARY_NAME "libsmomo.qti.so"
