@@ -174,6 +174,7 @@ struct private_handle_t : public native_handle_t {
   uint64_t base_metadata;
   uint64_t gpuaddr;
   unsigned int reserved_size;
+  unsigned int custom_content_md_reserved_size;
   static const int kNumFds = 2;
   static const int kMagic = 'gmsm';
 
@@ -202,7 +203,8 @@ struct private_handle_t : public native_handle_t {
         base(0),
         base_metadata(0),
         gpuaddr(0),
-        reserved_size(0) {
+        reserved_size(0),
+        custom_content_md_reserved_size(0) {
     version = static_cast<int>(sizeof(native_handle));
     numInts = NumInts();
     numFds = kNumFds;
@@ -236,10 +238,11 @@ struct private_handle_t : public native_handle_t {
   static void Dump(const private_handle_t *hnd) {
     ALOGD("handle id:%" PRIu64
           " wxh:%dx%d uwxuh:%dx%d size: %d fd:%d fd_meta:%d flags:0x%x "
-          "usage:0x%" PRIx64 "  format:0x%x layer_count: %d reserved_size = %d",
+          "usage:0x%" PRIx64 "  format:0x%x layer_count: %d reserved_size = %d "
+          "custom_content_md_reserved_size = %u",
           hnd->id, hnd->width, hnd->height, hnd->unaligned_width, hnd->unaligned_height, hnd->size,
           hnd->fd, hnd->fd_metadata, hnd->flags, hnd->usage, hnd->format, hnd->layer_count,
-          hnd->reserved_size);
+          hnd->reserved_size, hnd->custom_content_md_reserved_size);
   }
 };
 #pragma pack(pop)

@@ -70,6 +70,7 @@
 #define QTI_BUFFER_PERMISSION 10026
 #define QTI_MEM_HANDLE 10027
 #define QTI_TIMED_RENDERING 10028
+#define QTI_CUSTOM_CONTENT_METADATA 10029
 
 // Used to indicate to framework that internal definitions are used instead
 #define COMPRESSION_QTI_UBWC 20001
