@@ -124,10 +124,6 @@ case "$target" in
              355|369|377|384)
                  setprop vendor.chre.enabled 0
                  ;;
-             401)
-                 # Disable adsprpcd_sensorspd daemon
-                 setprop vendor.fastrpc.disable.adsprpcd_sensorspd.daemon 1
-                 ;;
              *)
          esac
          ;;
