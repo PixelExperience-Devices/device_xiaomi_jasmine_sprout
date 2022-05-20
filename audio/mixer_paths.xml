@@ -2360,6 +2360,7 @@
         <ctl name="RDAC2 MUX" value="RX1" />
         <ctl name="EAR_S" value="Switch" />
         <ctl name="EAR PA Boost" value="ENABLE" />
+        <ctl name="RX1 Digital Volume" value="100" />
     </path>
 
     <path name="handset-mic">
