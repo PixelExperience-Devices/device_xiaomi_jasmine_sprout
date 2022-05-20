@@ -122,7 +122,7 @@ struct MetaData_t {
   /* Populated and used by adreno during buffer size calculation.
    * Set only for RGB formats. */
   GraphicsMetadata graphics_metadata;
-  /* Video hisogram stats populated by video decoder */
+  /* Video histogram stats populated by video decoder */
   struct VideoHistogramMetadata video_histogram_stats;
   /*
    * Producer (camera) will set cvp metadata and consumer (video) will
@@ -143,6 +143,8 @@ struct MetaData_t {
   /* Set by clients to indicate that timed rendering will be enabled
    * or disabled for this buffer. */
   uint32_t timedRendering;
+  /* Video transcode stat populated by video decoder */
+  struct VideoTranscodeStatsMetadata video_transcode_stats;
 };
 
 namespace qtigralloc {
