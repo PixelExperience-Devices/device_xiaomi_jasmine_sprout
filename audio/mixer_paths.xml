@@ -2862,6 +2862,14 @@
         <ctl name="INT0_MI2S_RX_DL_HL Switch" value="1" />
     </path>
 
+    <path name="bt-sco">
+        <ctl name="SLIM7_RX ADM Channels" value="Two" />
+    </path>
+
+    <path name="bt-sco-wb">
+        <ctl name="SLIM7_RX ADM Channels" value="Two" />
+    </path>
+
     <path name="bt-a2dp">
         <ctl name="SLIM7_RX ADM Channels" value="Two" />
     </path>
