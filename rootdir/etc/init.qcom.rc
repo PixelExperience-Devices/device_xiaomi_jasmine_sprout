@@ -380,12 +380,14 @@ service nqnfcinfo /system/vendor/bin/nqnfcinfo
     group nfc
     user system
     oneshot
+    task_profiles ServiceCapacityLow
     disabled
 
 service iop /system/vendor/bin/iop
     class main
     user root
     group root
+    task_profiles ServiceCapacityLow
     disabled
     socket iop seqpacket 0666 root system
 
@@ -393,6 +395,7 @@ service qcomsysd /system/vendor/bin/qcom-system-daemon
     class main
     user root
     group root diag oem_2901
+    task_profiles ServiceCapacityLow
     disabled
 
 on property:persist.vendor.qcomsysd.enabled=1
@@ -403,6 +406,7 @@ on property:persist.vendor.qcomsysd.enabled=0
 
 service vendor.ssr_setup /system/vendor/bin/ssr_setup
     oneshot
+    task_profiles ServiceCapacityLow
     disabled
 
 service vendor.ss_ramdump /system/vendor/bin/subsystem_ramdump
@@ -410,6 +414,7 @@ service vendor.ss_ramdump /system/vendor/bin/subsystem_ramdump
     user system
     group system
     ioprio rt 4
+    task_profiles ServiceCapacityLow
     disabled
 
 on property:ro.vendor.iocgrp.config=1
@@ -492,17 +497,20 @@ service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
     user vendor_qrtr
     group vendor_qrtr
     capabilities NET_BIND_SERVICE
+    task_profiles ServiceCapacityLow
 
 service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
     user root
     oneshot
+    task_profiles ServiceCapacityLow
 
 # Data Migration
 service vendor.move_wifi_data /system/bin/move_wifi_data.sh
     class main
     user  wifi
     group wifi
+    task_profiles ServiceCapacityLow
     disabled
     oneshot
 
@@ -513,11 +521,13 @@ service ptt_socket_app /system/vendor/bin/ptt_socket_app -d
     group wifi system inet net_admin
     capabilities NET_ADMIN
     oneshot
+    task_profiles ServiceCapacityLow
     disabled
 
 service ptt_ffbm /system/vendor/bin/ptt_socket_app -f -d
     user root
     group root
+    task_profiles ServiceCapacityLow
     disabled
     oneshot
 
@@ -525,6 +535,7 @@ service wifi_ftmd /system/vendor/bin/wifi_ftmd
     user system
     group system inet net_admin
     socket wififtmd_server dgram 0660 system system
+    task_profiles ServiceCapacityLow
     disabled
     oneshot
 
@@ -536,6 +547,7 @@ service cnss-daemon /system/vendor/bin/cnss-daemon -n -l
     user system
     group system inet net_admin wifi
     capabilities NET_ADMIN
+    task_profiles ServiceCapacityLow
 
 on property:sys.shutdown.requested=*
     write /sys/kernel/shutdown_wlan/shutdown 1
@@ -546,23 +558,28 @@ service ssgqmigd /vendor/bin/ssgqmigd
     user radio
     group radio gps system
     socket ssgqmig seqpacket 0660 radio inet
+    task_profiles ServiceCapacityLow
 
 service mlid /vendor/bin/mlid
     class late_start
     user gps
     group gps
     socket mlid stream 0666 gps gps
+    task_profiles ServiceCapacityLow
 
 service loc_launcher /system/vendor/bin/loc_launcher
     class late_start
     user gps
     group gps
+    task_profiles ServiceCapacityLow
 
 service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
     user root
     group root system radio
     oneshot
+    task_profiles ServiceCapacityLow
+
 # Remove since is deprecated but throws AVC denial.
 # service crashdata-sh /vendor/bin/init.qcom.crashdata.sh
 #    class late_start
@@ -573,12 +590,14 @@ service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     class late_start
     user root
     group root system wakelock graphics
+    task_profiles ServiceCapacityLow
     disabled
     oneshot
 
 service qti-testscripts /system/bin/sh /product/etc/init.qcom.testscripts.sh
     class late_start
     user root
+    task_profiles ServiceCapacityLow
     disabled
     oneshot
     seclabel u:r:qti-testscripts:s0
@@ -586,12 +605,14 @@ service qti-testscripts /system/bin/sh /product/etc/init.qcom.testscripts.sh
 service wifi-sdio-on /vendor/bin/init.qcom.sdio.sh
     class late_start
     group wifi inet
+    task_profiles ServiceCapacityLow
     disabled
     oneshot
 
 service wifi-crda /vendor/bin/init.crda.sh
    class late_start
    user root
+   task_profiles ServiceCapacityLow
    disabled
    oneshot
 
@@ -607,18 +628,21 @@ service qvop-daemon /vendor/bin/qvop-daemon
     class late_start
     user system
     group system drmrpc
+    task_profiles ServiceCapacityLow
     disabled
 
 service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
     user system
     group system radio
+    task_profiles ServiceCapacityLow
 
 service hostapd_fst /vendor/bin/hw/hostapd -dd -g /data/vendor/wifi/hostapd/global
     class main
     capabilities NET_ADMIN NET_RAW
     user wifi
     group wifi
+    task_profiles ServiceCapacityLow
     disabled
     oneshot
 
@@ -626,6 +650,7 @@ service profiler_daemon /system/bin/profiler_daemon
     class late_start
     user root
     group root
+    task_profiles ServiceCapacityLow
     disabled
 
 service charger /system/bin/charger
@@ -634,17 +659,20 @@ service charger /system/bin/charger
     group system graphics input
     capabilities SYS_BOOT
     seclabel u:r:charger:s0
+    task_profiles ServiceCapacityLow
 
 service vendor.ssr_diag /system/vendor/bin/ssr_diag
     class late_start
     user system
     group system
+    task_profiles ServiceCapacityLow
     disabled
 
 service diag_mdlog_start /system/vendor/bin/diag_mdlog
     class late_start
     user shell
     group system oem_2901 sdcard_rw sdcard_r media_rw
+    task_profiles ServiceCapacityLow
     disabled
     oneshot
 
@@ -652,12 +680,14 @@ service diag_mdlog_stop /system/vendor/bin/diag_mdlog -k
     class late_start
     user shell
     group system oem_2901 sdcard_rw sdcard_r media_rw
+    task_profiles ServiceCapacityLow
     disabled
     oneshot
 
 service qlogd /system/xbin/qlogd
     socket qlogd stream 0662 system system
     class main
+    task_profiles ServiceCapacityLow
     disabled
 on property:persist.sys.qlogd=1
     start qlogd
@@ -669,30 +699,35 @@ service vm_bms /vendor/bin/vm_bms
     class main
     user root
     group system wakelock
+    task_profiles ServiceCapacityLow
     disabled
 
 service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
     class core
     user root
     group root
+    task_profiles ServiceCapacityLow
     disabled
 
 service vendor.msm_irqbal_lb /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance_little_big.conf
     class core
     user root
     group root
+    task_profiles ServiceCapacityLow
     disabled
 
 service vendor.msm_irqbl_sdm630 /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance_sdm630.conf
     class core
     user root
     group root
+    task_profiles ServiceCapacityLow
     disabled
 
 # service for USERDEBUG
 service vendor.LKCore-dbg /vendor/bin/LKCore
     class late_start
     oneshot
+    task_profiles ServiceCapacityLow
     disabled
     user root
     group root system log diag net_raw
@@ -701,6 +736,7 @@ service vendor.LKCore-dbg /vendor/bin/LKCore
 service vendor.LKCore-rel /vendor/bin/LKCore
     class late_start
     oneshot
+    task_profiles ServiceCapacityLow
     disabled
     user system
     group system log diag
@@ -710,6 +746,7 @@ service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
     class late_start
     user system
     group system
+    task_profiles ServiceCapacityLow
     disabled
 
 service esepmdaemon /system/vendor/bin/esepmdaemon
@@ -717,6 +754,7 @@ service esepmdaemon /system/vendor/bin/esepmdaemon
     class core
     user system
     group nfc
+    task_profiles ServiceCapacityLow
     disabled
 
 on charger
@@ -728,6 +766,7 @@ service poweroffhandler /system/vendor/bin/poweroffhandler
     class core
     user media
     group graphics audio
+    task_profiles ServiceCapacityLow
     disabled
     oneshot
 
@@ -736,6 +775,7 @@ service time_daemon /vendor/bin/time_daemon
     user system
     group system
     capabilities SYS_TIME
+    task_profiles ServiceCapacityLow
 
 # Set vendor-ril lib path based on Meta version
 on property:vendor.rild.libpath=*
@@ -747,6 +787,7 @@ on property:ro.vendor.radio.noril=*
 service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core
     group system
+    task_profiles ServiceCapacityLow
     disabled
     oneshot
 
@@ -757,6 +798,7 @@ service chre /vendor/bin/chre
     group system
     socket chre seqpacket 0660 root system
     shutdown critical
+    task_profiles ServiceCapacityLow
     disabled
 
 on property:vendor.chre.enabled=0
@@ -764,6 +806,7 @@ on property:vendor.chre.enabled=0
 
 service bugreport /system/bin/dumpstate -d -p -B -z -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
     class main
+    task_profiles ServiceCapacityLow
     disabled
     oneshot
     keycodes 114 115 116
