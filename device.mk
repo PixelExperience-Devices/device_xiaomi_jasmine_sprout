@@ -155,9 +155,6 @@ PRODUCT_PACKAGES += \
     AntHalService-Soong \
     com.dsi.ant@1.0.vendor
 
-# APEX
-PRODUCT_COMPRESSED_APEX := false
-
 # AuthSecret
 PRODUCT_PACKAGES += \
     android.hardware.authsecret@1.0.vendor \
