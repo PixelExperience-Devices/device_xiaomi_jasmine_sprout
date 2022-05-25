@@ -448,7 +448,8 @@ PRODUCT_PACKAGES += \
     libjson \
     libjson.vendor \
     libprotobuf-cpp-full \
-    librmnetctl
+    librmnetctl \
+    libxml2
 
 # Sdcard
 PRODUCT_CHARACTERISTICS := nosdcard
