@@ -323,6 +323,10 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.verity.rc
 
+# Ion
+PRODUCT_PACKAGES += \
+    libion
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
