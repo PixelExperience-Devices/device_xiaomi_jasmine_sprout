@@ -988,6 +988,62 @@ void DeviceImpl::DeviceClientContext::ParseSetWiderModePreference(const ByteStre
   _hidl_cb(error, {}, {});
 }
 
+void DeviceImpl::DeviceClientContext::ParseGetFSCRGBOrder(const ByteStream &input_params,
+                                                          perform_cb _hidl_cb) {
+  const DisplayType *dpy;
+  ByteStream output_params;
+
+  const uint8_t *data = input_params.data();
+  dpy = reinterpret_cast<const DisplayType*>(data);
+
+  RGBOrder fsc_rgb_color_order = DisplayConfig::RGBOrder::kFSCUnknown;
+  int32_t error = intf_->GetFSCRGBOrder(*dpy, &fsc_rgb_color_order);
+  output_params.setToExternal(reinterpret_cast<uint8_t*>(&fsc_rgb_color_order), sizeof(RGBOrder));
+
+  _hidl_cb(error, output_params, {});
+}
+
+void DeviceImpl::DeviceClientContext::ParseEnableCAC(const ByteStream &input_params,
+                                                     perform_cb _hidl_cb) {
+  struct EnableCACParams enable_cac_data = {};
+
+  const uint8_t *data = input_params.data();
+  if (data) {
+    enable_cac_data = *reinterpret_cast<const EnableCACParams*>(data);
+  }
+  int32_t error = intf_->EnableCAC(enable_cac_data.disp_id, enable_cac_data.enable,
+                                   enable_cac_data.red, enable_cac_data.green,
+                                   enable_cac_data.blue);
+  _hidl_cb(error, {}, {});
+}
+
+void DeviceImpl::DeviceClientContext::ParseSetCacEyeConfig(const ByteStream &input_params,
+                                                           perform_cb _hidl_cb) {
+  const struct CacEyeConfigParams *cac_eye_config_data = nullptr;
+
+  const uint8_t *data = input_params.data();
+  if (data) {
+    cac_eye_config_data = reinterpret_cast<const CacEyeConfigParams*>(data);
+    int32_t error = intf_->SetCacEyeConfig(cac_eye_config_data->disp_id, cac_eye_config_data->left,
+                                           cac_eye_config_data->right);
+    _hidl_cb(error, {}, {});
+  } else {
+    _hidl_cb(-EINVAL, {}, {});
+  }
+}
+
+void DeviceImpl::DeviceClientContext::ParseSetSkewVsync(const ByteStream &input_params,
+                                                        perform_cb _hidl_cb) {
+  struct SkewVsyncParams skew_vsync_data = {};
+
+  const uint8_t *data = input_params.data();
+  if (data) {
+    skew_vsync_data = *reinterpret_cast<const SkewVsyncParams*>(data);
+  }
+  int32_t error = intf_->SetSkewVsync(skew_vsync_data.disp_id, skew_vsync_data.skew_vsync_val);
+  _hidl_cb(error, {}, {});
+}
+
 Return<void> DeviceImpl::perform(uint64_t client_handle, uint32_t op_code,
                                  const ByteStream &input_params, const HandleStream &input_handles,
                                  perform_cb _hidl_cb) {
@@ -1182,6 +1238,18 @@ Return<void> DeviceImpl::perform(uint64_t client_handle, uint32_t op_code,
       break;
     case kSetWiderModePref:
       client->ParseSetWiderModePreference(input_params, _hidl_cb);
+      break;
+    case kGetFSCRGBOrder:
+      client->ParseGetFSCRGBOrder(input_params, _hidl_cb);
+      break;
+    case kEnableCAC:
+      client->ParseEnableCAC(input_params, _hidl_cb);
+      break;
+    case kSetCacEyeConfig:
+      client->ParseSetCacEyeConfig(input_params, _hidl_cb);
+      break;
+    case kSetSkewVsync:
+      client->ParseSetSkewVsync(input_params, _hidl_cb);
       break;
     case kDummyOpcode:
       _hidl_cb(-EINVAL, {}, {});

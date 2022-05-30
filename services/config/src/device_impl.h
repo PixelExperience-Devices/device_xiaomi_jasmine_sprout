@@ -171,6 +171,10 @@ class DeviceImpl : public IDisplayConfig, public android::hardware::hidl_death_r
     void ParseSetPowerModeTiled(const ByteStream &input_params, perform_cb _hidl_cb);
     void ParseSetPanelBrightnessTiled(const ByteStream &input_params, perform_cb _hidl_cb);
     void ParseSetWiderModePreference(const ByteStream &input_params, perform_cb _hidl_cb);
+    void ParseGetFSCRGBOrder(const ByteStream &input_params, perform_cb _hidl_cb);
+    void ParseEnableCAC(const ByteStream &input_params, perform_cb _hidl_cb);
+    void ParseSetCacEyeConfig(const ByteStream &input_params, perform_cb _hidl_cb);
+    void ParseSetSkewVsync(const ByteStream &input_params, perform_cb _hidl_cb);
 
    private:
     ConfigInterface *intf_ = nullptr;

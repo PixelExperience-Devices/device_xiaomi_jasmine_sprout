@@ -27,6 +27,42 @@
 * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+/*
+ *  Changes from Qualcomm Innovation Center are provided under the following license:
+ *
+ *  Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted (subject to the limitations in the
+ *  disclaimer below) provided that the following conditions are met:
+ *
+ *      * Redistributions of source code must retain the above copyright
+ *        notice, this list of conditions and the following disclaimer.
+ *
+ *      * Redistributions in binary form must reproduce the above
+ *        copyright notice, this list of conditions and the following
+ *        disclaimer in the documentation and/or other materials provided
+ *        with the distribution.
+ *
+ *      * Neither the name of Qualcomm Innovation Center, Inc. nor the names of its
+ *        contributors may be used to endorse or promote products derived
+ *        from this software without specific prior written permission.
+ *
+ *  NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE
+ *  GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT
+ *  HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+ *   WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ *  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ *  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ *  ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+ *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ *  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+ *  IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+ *  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+ *  IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
 #include <string>
 #include <vector>
 
@@ -1151,6 +1187,70 @@ int ClientImpl::SetWiderModePreference(uint64_t physical_disp_id, WiderModePref 
   };
 
   display_config_->perform(client_handle_, kSetWiderModePref, input_params, {}, hidl_cb);
+
+  return error;
+}
+
+int ClientImpl::GetFSCRGBOrder(DisplayType dpy, RGBOrder *fsc_rgb_color_order) {
+  ByteStream input_params;
+  input_params.setToExternal(reinterpret_cast<uint8_t*>(&dpy), sizeof(DisplayType));
+  ByteStream output_params;
+  int error = 0;
+  auto hidl_cb = [&error, &output_params] (int32_t err, ByteStream params, HandleStream handles) {
+    error = err;
+    output_params = params;
+  };
+
+  display_config_->perform(client_handle_, kGetFSCRGBOrder, input_params, {}, hidl_cb);
+
+  if (!error) {
+    const uint8_t *data = output_params.data();
+    const RGBOrder *output = reinterpret_cast<const RGBOrder*>(data);
+    *fsc_rgb_color_order = *output;
+  }
+
+  return error;
+}
+
+int ClientImpl::EnableCAC(uint32_t disp_id, bool enable, float red, float green, float blue) {
+  struct EnableCACParams input = {disp_id, enable, red, green, blue};
+  ByteStream input_params;
+  input_params.setToExternal(reinterpret_cast<uint8_t*>(&input), sizeof(struct EnableCACParams));
+  int error = 0;
+  auto hidl_cb = [&error] (int32_t err, ByteStream params, HandleStream handles) {
+    error = err;
+  };
+
+  display_config_->perform(client_handle_, kEnableCAC, input_params, {}, hidl_cb);
+
+  return error;
+}
+
+int ClientImpl::SetCacEyeConfig(uint32_t disp_id, const CacEyeConfig &left,
+                                const CacEyeConfig &right) {
+  struct CacEyeConfigParams input = {disp_id, left, right};
+  ByteStream input_params;
+  input_params.setToExternal(reinterpret_cast<uint8_t*>(&input), sizeof(struct CacEyeConfigParams));
+  int error = 0;
+  auto hidl_cb = [&error] (int32_t err, ByteStream params, HandleStream handles) {
+    error = err;
+  };
+
+  display_config_->perform(client_handle_, kSetCacEyeConfig, input_params, {}, hidl_cb);
+
+  return error;
+}
+
+int ClientImpl::SetSkewVsync(uint32_t disp_id, uint32_t skew_vsync_val) {
+  struct SkewVsyncParams input = {disp_id, skew_vsync_val};
+  ByteStream input_params;
+  input_params.setToExternal(reinterpret_cast<uint8_t*>(&input), sizeof(struct SkewVsyncParams));
+  int error = 0;
+  auto hidl_cb = [&error] (int32_t err, ByteStream params, HandleStream handles) {
+    error = err;
+  };
+
+  display_config_->perform(client_handle_, kSetSkewVsync, input_params, {}, hidl_cb);
 
   return error;
 }
