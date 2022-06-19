@@ -70,27 +70,27 @@ vendor/firmware/dbmd4_va_fw.bin|ee640f9f4e367d513f5fb7d95c85e226c9f75750
 vendor/firmware/tas2557_uCDSP.bin|d16fc1db241670307f5071e256c886ecd18d30f7
 vendor/firmware/tfa98xx.cnt|f8b5291feaebe7e3d18fda5d8960c313656b4a3a
 
-# Bluetooth (A2DP) - from ginkgo 21.8.18
+# Bluetooth (A2DP) - from ginkgo RKQ1.201004.002/V12.5.2.0.RCOMIXM
 vendor/lib/hw/audio.bluetooth_qti.default.so|c4a39c069213853448ef9c8df917a74e70be2943
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|c8c79a54c30c525b7bcdce7642ee733d8b8b21af
 vendor/lib/btaudio_offload_if.so|f191ea7ab220e9cca53e017aa99fb10a08c27582
 vendor/lib/libbluetooth_audio_session_qti.so|4c24625126384af08cd670858cdbebd0a780efe1
 
-# Bluetooth (aptX) - from ginkgo 21.8.18
+# Bluetooth (aptX) - from ginkgo RKQ1.201004.002/V12.5.2.0.RCOMIXM
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so|59cbdf5d84ba2ff64014941f3ad9e6c2c35e2c06
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so|e25f1087edc95d2ff76c1e37787ca37aae2cf175
 
-# Bluetooth (Configstore) - from ginkgo 21.8.18
+# Bluetooth (Configstore) - from ginkgo RKQ1.201004.002/V12.5.2.0.RCOMIXM
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|fc6265cb719afac0ff0bf6722d7f4cb4b408fd7b
 
-# Bluetooth - from ginkgo 21.8.18
+# Bluetooth - from ginkgo RKQ1.201004.002/V12.5.2.0.RCOMIXM
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|c2ea0d91006c5a12efa07d42cae47b3008124571
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|ea763a5951a646dc018489dfb368cc72829fff44
 vendor/lib64/libbt-hidlclient.so|da867a59f05832dcd5c116fc69e692b6a4d8c77b
 vendor/lib64/libbtnv.so|086a227f793822ef3eed15aea21a207c68feb7a9
 
-# Bluetooth (SAR) - from ginkgo 21.8.18
+# Bluetooth (SAR) - from ginkgo RKQ1.201004.002/V12.5.2.0.RCOMIXM
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|624ac893ea428a29df50336f6fe08879b1bb5c21
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|64de735684377aba4a33a3bb0bee25f7999bafcd
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|32c763b353882c9a711a641ff9eb99fe1b0e164d
@@ -583,7 +583,7 @@ vendor/lib64/libsysmon_cdsp_skel.so|6b07100c3294c76402e2d064d463629c9468d6a9
 # Charger - from S62Pro RKQ1.210406.002
 vendor/bin/hvdcp_opti|0af1d3a59fd10acd7a614662c341421d9267014c
 
-# CNE - from ginkgo 21.8.18
+# CNE - from ginkgo RKQ1.201004.002/V12.5.2.0.RCOMIXM
 system_ext/framework/com.quicinc.cne.api-V1.1-java.jar|e71f1a060bc65eb373beb6d33158c0e2b37e2a70
 system_ext/framework/com.quicinc.cne.constants-V1.0-java.jar|e0e0bb8ed025b0682483c395de6ec42b5b3c0058
 system_ext/framework/com.quicinc.cne.constants-V2.0-java.jar|12730a1700afbe8afa6534d4e10ade07808b5398
@@ -609,7 +609,7 @@ system_ext/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so|132a301ff5ef78459bbd
 system_ext/lib64/vendor.qti.hardware.data.iwlan@1.0.so|c2f6dba484ae7b040f2353114c86353df80a799c
 system_ext/lib64/vendor.qti.hardware.data.qmi@1.0.so|638e86dd871ebf37517c5f29ce5c65e95f36ffdf
 -vendor/app/CneApp/CneApp.apk|9a5ec1727f7b6ab01c85c44872b596024910bcce
--vendor/app/IWlanService/IWlanService.apk|6532ea66d8ba41d42687c0a8398e49a178b3e46b
+-vendor/app/IWlanService/IWlanService.apk|d5d794acbee6fe2679fffdef2d6325fc7fe0226f
 vendor/bin/cnd|9577ccb2ae1eb7c06436c800136162026e3bf7e4
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|578f3f8f56059bfdbef926bcc68d01c15e06951f
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|1fb42c672a12b6660bdce3ea94e0c43719dd9de8
@@ -671,7 +671,7 @@ vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sdm660.so|d1f27
 vendor/etc/qdcm_calib_data_jdi_nt36672_fhd_video_mode_dsi_panel.xml|b3ebd0fcd2ed93e621b9a5c13a76ffca7b2c232d
 vendor/etc/qdcm_calib_data_tianma_nt36672_fhd_video_mode_dsi_panel.xml|e6632fbcb6af3082c4cd17afe26a4aab1e63c6ed
 
-# DPM - from ginkgo 21.8.18
+# DPM - from ginkgo RKQ1.201004.002/V12.5.2.0.RCOMIXM
 system_ext/bin/dpmd|0f22b5229c85007681abd3f6d81a41a7f32462a7
 system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
 system_ext/etc/init/dpmd.rc|738b638ff04cda368e22c03e16baf90ba157a6fc
@@ -779,7 +779,7 @@ vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so|2edd1bfb811307ea81c46bb3dd7cb5af46fc8c42
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|eaf70216b4e53f409c22764b272b79cd60a4b714
 
-# GPS - from ginkgo 21.8.18
+# GPS - from ginkgo RKQ1.201004.002/V12.5.2.0.RCOMIXM
 vendor/bin/garden_app|4f61dffac228425593cb5c108cb02b28a5f37c72
 vendor/bin/loc_launcher|fe6f061abe050d8884a0a49967ad89596065952d
 vendor/bin/lowi-server|e3cc615760cd28dbbe37dcfd783e789640cf0050
@@ -1015,7 +1015,7 @@ vendor/lib64/vendor.display.color@1.1.so|3cf0d256372bd418462326e6067b4e121322619
 vendor/lib64/vendor.display.color@1.2.so|8184e5d3e404864b1a1518b4d4e2012a5839660b
 vendor/lib64/vendor.display.postproc@1.0.so|86ef4e868f7abb95d555a4d086a8c4193920803f
 
-# QMI - from ginkgo 21.8.18
+# QMI - from ginkgo RKQ1.201004.002/V12.5.2.0.RCOMIXM
 system_ext/etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
 system_ext/etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
 vendor/bin/irsc_util|966036e114c22cb34be4104a4f8c985429e441fd
@@ -1054,7 +1054,7 @@ vendor/lib64/libqmi_encdec.so|34fc1f05d8b63b6e6d7fe8411d8c60b067281d52
 vendor/lib64/libqmi_legacy.so|19877ccb10e64b86277cac9fb0f4c186fbee66c3
 vendor/lib64/libqmiservices.so|28d1432ef6a333c3a8ae867dca049803762fbbc4
 
-# Radio - from ginkgo 21.8.18
+# Radio - from ginkgo RKQ1.201004.002/V12.5.2.0.RCOMIXM
 -system_ext/app/DeviceInfo/DeviceInfo.apk|9f0039d6a431055d59a3f70d6237481dc0794908
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|20da64a1fbb4d9c04c763333c4d9a0b7c1053fb9
 -system_ext/app/embms/embms.apk|41dff63c1adb97aba9220e9942aac4575421146e
@@ -1101,7 +1101,7 @@ vendor/lib64/libqcrilFramework.so|e5486de27b6e1680db73f240e1e0ec81ac366b6d
 vendor/lib64/libqcrildatactl.so|e4a1b8ce0cfca855e19b107ef2ef84d46d96fddb
 vendor/lib64/libqrtr.so|4d38375cf2f78890325695b7cac6b33577ea3c0a
 vendor/lib64/libqsocket.so|5b6c52203d24b14a7203dfef298599c156c0fc06
-vendor/lib64/libril-qc-hal-qmi.so|e79c13a2dcc7757d0dd2899c9a86cd8699c250a9
+vendor/lib64/libril-qc-hal-qmi.so|71c7d6863dfc822946188eaff7de28659683fc0a
 vendor/lib64/libril-qc-logger.so|1ba2cb76ae427dee250649f95ef8302613da0909
 vendor/lib64/libril-qc-ltedirectdisc.so|812007c8f1bd51a337dcf0d5f87aa92a583411d3
 vendor/lib64/libril-qc-radioconfig.so|21f680829d0a2cd8d1ada8c4e9db3dda2d98668d
@@ -1130,7 +1130,7 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so|a2ac667a8307cfa0
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so|3bc12fe68e1b14e545f8ebac8b206f2dc98ce62b
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so|046d398614f94080298cf75498910355e4fe123c
 vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so|843d8af5a4cea318d5328b52f11c988a57b37da8
-vendor/radio/qcril_database/upgrade/0_initial.sql|b4682d0dc8cbe9162991fc2672cd217111799c8c
+vendor/radio/qcril_database/upgrade/0_initial.sql|d4d8d478a6f260f34b53301f9723b7862a0bfc8f
 vendor/radio/qcril_database/upgrade/1_version_intro.sql|67b96cb3e94737bfe271b2519b9eb5fae17373a2
 vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql|b4a825ba20fea3e2f20c7f02c8bd64596c24a75e
 vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql|0571aacaf9fc0868c48bba2f7542f5b4e68c9022
@@ -1138,18 +1138,9 @@ vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql|0734c6a2863ed
 vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql|ee0756cfcfda2049a140a8de35a4c2c4f028e59a
 vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql|fccd99b4eee6c2e1762f56b812d7f5d4ca6ab182
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql|9c7e9a78f0890fb210d2eadbdd9c076cd3c43594
-vendor/radio/qcril_database/qcril.db|6e968c4973a7a3cd0194bad9ebaa7463503b7dd1
+vendor/radio/qcril_database/qcril.db|f9f2367228c4a45e9d8acfd9fed618c3858fd4ab
 
-# Radio - IMS - alioth-qssi-user-12-SKQ1.210908.001
-system_ext/lib64/lib-imsvideocodec.so|b7001bb1008106ccb9ef92dd2560e2052b40c325
-system_ext/lib64/lib-imsvt.so|e7816bfe27bfaf0e88c4b65d0973ddeca3478801
-system_ext/lib64/lib-imsvtextutils.so|16bed08e80919635fcb7ace934bd5f16f059c182
-system_ext/lib64/lib-imsvtutils.so|bb9f9b8c4030e616027440996f71edae6ba5ec84
-system_ext/lib64/libimscamera_jni.so|ff3d65093f5bf19fba95798b0a121ee510b0f72e
-system_ext/lib64/libimsmedia_jni.so|3c625b6216237f1df44e0c75fcc6894f1a296847
-system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|0c11ff5a7a671073ee40e17d46aa8b7acbf1dc0a
-
-# Radio - IMS - from ginkgo 21.8.18
+# Radio - IMS - from ginkgo RKQ1.201004.002/V12.5.2.0.RCOMIXM
 -system_ext/app/imssettings/imssettings.apk|7eddaa57cbab2aed139a754be674ae1101a66680
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml|bd9fc166b542b4e730f194ebc996957770d9d497
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml|b40fc74f7d5e58b4e918f952b89a79cf2a5c4088
@@ -1170,10 +1161,18 @@ system_ext/lib64/com.qualcomm.qti.imscmservice@2.2.so|e679307d8ab7b5181b9d288dcd
 system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so|c2b5190987e63067e97f6cdbdc4069ecbeead891
 system_ext/lib64/com.qualcomm.qti.uceservice@2.1.so|1e60a4eb4f157303f1ca14066e5cf5654f209245
 system_ext/lib64/com.qualcomm.qti.uceservice@2.2.so|f1a0fb08c5bf39ce25b8e2d8f63b872860ca585b
+system_ext/lib64/lib-imsvideocodec.so|6e2ea8e43d23353011b4b9fbc48d8051965c22b1
+system_ext/lib64/lib-imsvt.so|2a1398979ccf62e2fe6059fc7fd54297b8a9a4af
+system_ext/lib64/lib-imsvtextutils.so|7fe2cf5ac5f84c3c61b4458099efcf900801c2e2
+system_ext/lib64/lib-imsvtutils.so|2d9f15c83f0403dc3d3c82d4868796d303d2a4a4
+system_ext/lib64/libimscamera_jni.so|d937e4d9ddbfbc21c79368f648287209d3f30306
+system_ext/lib64/libimsmedia_jni.so|a4d163195735c3f3af9848fa6a6fcb07a25c8431
 system_ext/lib64/vendor.qti.ims.callcapability@1.0.so|ab9cb9b300b564958dee02131c5d7944a916f8be
 system_ext/lib64/vendor.qti.ims.callinfo@1.0.so|1dd70408bc735e97b8b71fb85d38f18bc652fa95
 system_ext/lib64/vendor.qti.ims.factory@1.0.so|fbebef1b0de8dbb2a2d059175bf53fa08ef20623
 system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so|b641cd19f0e52fdb1f90dc441339ddce31b448bc
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|393c5affc1e8e36470705ec44396d1ffa603a541
+-system_ext/priv-app/ims/ims.apk|3bf7a4886917f317b5d352e0ca425d5dfdc55b96
 vendor/bin/ims_rtp_daemon|070bccd359e84a2edd42b0f19e2f366ba7a762dc
 vendor/bin/imsdatadaemon|641e98bf9a75a20a894665fcd7e5c1f03ea565eb
 vendor/bin/imsqmidaemon|c27008915bf75077c0ac62568ff7012b8ac3db5c
@@ -1218,9 +1217,6 @@ vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|d844356bf32944fdd0864b3fbc6d73f304f
 vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so|8555e548d142fad0238e74e57383bb5a65e67bbc
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|346a6f516637632cce8297f78227172d54d26040
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|25517caf74691b812320b46b477a3f4161cc1bcf
-
-# Radio - IMS - from nubia NX659J 20201109.121337
--system_ext/priv-app/ims/ims.apk|3dae438ef192086a8913c06d24c055802c25f2a6
 
 # Sensors - from jasmine V11.0.28.0.QDIMIXM
 vendor/etc/sensors/sensor_def_qcomdev.conf|2dde9725dd1be5cd864183e8a617c3455a7f6a17
