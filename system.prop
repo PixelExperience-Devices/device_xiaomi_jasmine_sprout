@@ -60,6 +60,8 @@ ro.hwui.text_small_cache_width=1024
 ro.hwui.text_small_cache_height=1024
 ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=2048
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
 
 # Keygaurd Animation
 persist.wm.enable_remote_keyguard_animation=0
