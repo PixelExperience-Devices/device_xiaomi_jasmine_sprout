@@ -158,7 +158,7 @@ ro.vendor.perf-hal.ver=2.2
 vendor.power.pasr.enabled=true
 
 # RCS
-persist.rcs.supported=0
+persist.rcs.supported=1
 
 # Radio
 persist.radio.multisim.config=dsds
