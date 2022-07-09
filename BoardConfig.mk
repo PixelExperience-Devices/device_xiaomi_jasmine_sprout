@@ -120,6 +120,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/xiaomi/jasmine_sprout
 TARGET_KERNEL_CONFIG := vendor/jasmine_sprout_defconfig
 TARGET_KERNEL_VERSION := 4.19
+BOARD_RAMDISK_USE_LZ4 := true
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
