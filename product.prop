@@ -6,11 +6,6 @@ vendor.audio.feature.a2dp_offload.enable=true
 # Bluetooth
 persist.vendor.bt.a2dp.aac_whitelist=false 
 
-# Blur
-ro.sf.blurs_are_expensive=1
-ro.launcher.blur.appLaunch=false
-ro.surface_flinger.supports_background_blur=0
-
 # Data
 persist.vendor.data.profile_update=true
 
