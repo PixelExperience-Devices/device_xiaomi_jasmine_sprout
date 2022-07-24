@@ -469,10 +469,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/task_profiles/cgroups_26.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
     $(DEVICE_PATH)/configs/task_profiles/task_profiles_26.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
-# Tethering
-PRODUCT_PACKAGES += \
-    TetheringConfigOverlay
-
 # Telephony
 PRODUCT_PACKAGES += \
     qti-telephony-utils \
