@@ -40,15 +40,10 @@
       <value>777</value>
       <value>800</value>
   </array>
-    <item name="cpu.suspend">5</item>
-    <item name="cpu.awake">1.6</item>
     <item name="cpu.idle">2</item>
     <item name="cpu.active">2</item>
-    <item name="cpu.cluster_power.cluster0">2</item>
-    <item name="cpu.cluster_power.cluster1">2</item>
     <item name="battery.capacity">3010</item>
     <item name="bluetooth.active">70</item>
-    <item name="bluetooth.at">2</item>
     <item name="bluetooth.on">2</item>
     <item name="wifi.on">2</item>
     <item name="wifi.active">175</item>
@@ -64,5 +59,4 @@
         <value>8</value>
         <value>6</value>
     </array>
-    <item name="battery.capacity">2910</item>
 </device>
