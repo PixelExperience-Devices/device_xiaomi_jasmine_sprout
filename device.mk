@@ -114,7 +114,12 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libssrec \
     libtinycompress \
-    libvolumelistener
+    libvolumelistener \
+    libbatterylistener  \
+    libcomprcapture \
+    libexthwplugin \
+    libspkrprot \
+    libstdc++.vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
