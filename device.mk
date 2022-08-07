@@ -476,7 +476,13 @@ PRODUCT_PACKAGES += \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-hidl-wrapper-prd \
     qti_telephony_hidl_wrapper_prd.xml \
-    telephony-ext
+    telephony-ext \
+    qti-telephony-utils-prd \
+    qti_telephony_utils_prd.xml \
+    extphonelib \
+    extphonelib-product \
+    extphonelib.xml \
+    extphonelib_product.xml
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
