@@ -270,7 +270,9 @@ PRODUCT_PACKAGES += \
     libgeofencing \
     libgnss \
     libsensorndkbridge \
-    libwifi-hal-ctrl
+    libwifi-hal-ctrl \
+    android.hardware.gnss.measurement_corrections@1.1.vendor \
+    android.hardware.gnss.visibility_control@1.0.vendor
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/gps/etc/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
