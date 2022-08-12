@@ -216,12 +216,6 @@
         <fqname>@1.0::IQSEECom/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.qteeconnector</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IAppConnector/default</fqname>
-        <fqname>@1.0::IGPAppConnector/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.radio.am</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IQcRilAudio/slot1</fqname>
