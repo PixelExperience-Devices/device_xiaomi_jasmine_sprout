@@ -70,30 +70,27 @@ vendor/firmware/dbmd4_va_fw.bin|ee640f9f4e367d513f5fb7d95c85e226c9f75750
 vendor/firmware/tas2557_uCDSP.bin|d16fc1db241670307f5071e256c886ecd18d30f7
 vendor/firmware/tfa98xx.cnt|f8b5291feaebe7e3d18fda5d8960c313656b4a3a
 
-# Bluetooth (A2DP) - from ginkgo RKQ1.201004.002/V12.5.2.0.RCOMIXM
-vendor/lib/hw/audio.bluetooth_qti.default.so|c4a39c069213853448ef9c8df917a74e70be2943
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|c8c79a54c30c525b7bcdce7642ee733d8b8b21af
-vendor/lib/btaudio_offload_if.so|f191ea7ab220e9cca53e017aa99fb10a08c27582
-vendor/lib/libbluetooth_audio_session_qti.so|4c24625126384af08cd670858cdbebd0a780efe1
+# Bluetooth (A2DP) - from S62Pro RKQ1.210406.002
+vendor/lib/hw/audio.bluetooth_qti.default.so|0fc8e709075ba7e984a4d5a1e9f7143698a78f98
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so|54479a9db73b61be3473178fe92142b05ea35463
+vendor/lib/btaudio_offload_if.so|752c3e774c1585f7842ecbd85180365d85fc789f
+vendor/lib/libbluetooth_audio_session_qti.so|9a86488113e10594e0a3d4a36b436c6b7fd59317
+vendor/lib/libbluetooth_audio_session_qti_2_1.so|d9f83086774e22c8a09b02fa87850fae7382fdf1
 
-# Bluetooth (aptX) - from ginkgo RKQ1.201004.002/V12.5.2.0.RCOMIXM
-vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so|59cbdf5d84ba2ff64014941f3ad9e6c2c35e2c06
-vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so|e25f1087edc95d2ff76c1e37787ca37aae2cf175
+# Bluetooth (Configstore) - from S62Pro RKQ1.210406.002
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|cfc982fd153084781f540bcc4a31b6b05a9ced19
 
-# Bluetooth (Configstore) - from ginkgo RKQ1.201004.002/V12.5.2.0.RCOMIXM
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|fc6265cb719afac0ff0bf6722d7f4cb4b408fd7b
-
-# Bluetooth - from ginkgo RKQ1.201004.002/V12.5.2.0.RCOMIXM
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|c2ea0d91006c5a12efa07d42cae47b3008124571
+# Bluetooth - from S62Pro RKQ1.210406.002
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|07d96d0d3c4a500b14ea3c97e02b9eb5ee2bbc4d
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|ea763a5951a646dc018489dfb368cc72829fff44
-vendor/lib64/libbt-hidlclient.so|da867a59f05832dcd5c116fc69e692b6a4d8c77b
-vendor/lib64/libbtnv.so|086a227f793822ef3eed15aea21a207c68feb7a9
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|c6be436d0f66aafd5be3aa51431d4fc02c50971d
+vendor/lib64/libbt-hidlclient.so|ff301380cf3c0ff68d2b7fcda3ba428ebf0a859e
+vendor/lib64/libbtnv.so|0c74a43550b939b9496b03b3285fa950cf560c48
 
-# Bluetooth (SAR) - from ginkgo RKQ1.201004.002/V12.5.2.0.RCOMIXM
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|624ac893ea428a29df50336f6fe08879b1bb5c21
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|64de735684377aba4a33a3bb0bee25f7999bafcd
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|32c763b353882c9a711a641ff9eb99fe1b0e164d
+# Bluetooth (SAR) - from S62Pro RKQ1.210406.002
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|156ec51ccb53f667605cf99422abf9357888b4b6
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|23706dcfa35cc6f7dee934e13886c19a56a9aa12
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|ece3dafc4447e8302109851c3a6b0d3978b3506d
 
 # Camera Actuators - from jasmine V11.0.28.0.QDIMIXM
 vendor/lib/libactuator_wayne_imx376_ofilm_back_ii_dw9763.so|e594f902ccd19fb55a47f935bfca67a8e622b348
