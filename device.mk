@@ -437,6 +437,10 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/perf/perfservice.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/perfservice.policy \
     $(DEVICE_PATH)/configs/perf/wlc_model.tflite:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/perf/wlc_model.tflite
 
+PRODUCT_PACKAGES += \
+   libtflite \
+   libtextclassifier_hash
+
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
