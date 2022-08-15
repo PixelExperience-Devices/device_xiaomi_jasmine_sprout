@@ -67,8 +67,10 @@ vendor/lib/libqtigef.so|977cbb704f6b2bae7f4e2f17b8c15146a6cacffb
 
 # Audio Power Amplifier - from jasmine V11.0.28.0.QDIMIXM
 vendor/firmware/dbmd4_va_fw.bin|ee640f9f4e367d513f5fb7d95c85e226c9f75750
-vendor/firmware/tas2557_uCDSP.bin|d16fc1db241670307f5071e256c886ecd18d30f7
 vendor/firmware/tfa98xx.cnt|f8b5291feaebe7e3d18fda5d8960c313656b4a3a
+
+# Audio Power Amplifier - from S62Pro RKQ1.210406.002
+vendor/firmware/tas2557_uCDSP.bin|f82fa435a709b8471f3c187a063415aeeb6e5d4b
 
 # Bluetooth (A2DP) - from S62Pro RKQ1.210406.002
 vendor/lib/hw/audio.bluetooth_qti.default.so|0fc8e709075ba7e984a4d5a1e9f7143698a78f98
