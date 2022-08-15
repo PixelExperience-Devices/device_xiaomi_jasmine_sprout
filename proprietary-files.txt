@@ -943,6 +943,8 @@ vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so|2c05d2902c757410aec30c6a5d0bf7
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so|0c4bb0c8ba1cbf357bb0b5117e93db0382ffcf49
 
 # Perf - from S62Pro RKQ1.210406.002
+system_ext/bin/perfservice|356e01334f4e1c526ac18f02568e688663288367
+system_ext/etc/init/perfservice.rc|7d4732437d2204e06ea09db85f169fef693086e8
 system_ext/lib/libqti-perfd-client_system.so|e7efdcc9a641b5058d92ce94a3e352123da22571
 system_ext/lib/libqti-util_system.so|54b769e9e9d922b7394b0009545c68d3a5b162c7
 system_ext/lib/libqti_performance.so|1f40960488f61ce5e5415e5d835805f48d7fea62
