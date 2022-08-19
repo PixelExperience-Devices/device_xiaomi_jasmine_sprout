@@ -5,6 +5,7 @@ vendor.audio.feature.a2dp_offload.enable=true
 
 # Bluetooth
 persist.vendor.bt.a2dp.aac_whitelist=false 
+bluetooth.device.class_of_device=90,2,12
 
 # Data
 persist.vendor.data.profile_update=true
