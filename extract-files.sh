@@ -66,6 +66,10 @@ function blob_fixup() {
     vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so)
         "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
         ;;
+
+    product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml|product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
+        sed -i 's/version="2.0"/version="1.0"/g' "${2}"
+        ;;
     esac
 }
 
