@@ -71,10 +71,10 @@ vendor/firmware/tfa98xx.cnt|f8b5291feaebe7e3d18fda5d8960c313656b4a3a
 
 # Bluetooth (A2DP) - from S62Pro RKQ1.210406.002
 vendor/lib/hw/audio.bluetooth_qti.default.so|0fc8e709075ba7e984a4d5a1e9f7143698a78f98
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so|54479a9db73b61be3473178fe92142b05ea35463
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so|d8859302411af7f59fd5d94491633b45adbee3ea
 vendor/lib/btaudio_offload_if.so|752c3e774c1585f7842ecbd85180365d85fc789f
 vendor/lib/libbluetooth_audio_session_qti.so|9a86488113e10594e0a3d4a36b436c6b7fd59317
-vendor/lib/libbluetooth_audio_session_qti_2_1.so|d9f83086774e22c8a09b02fa87850fae7382fdf1
+vendor/lib/libbluetooth_audio_session_qti_2_1.so|4c071476ef7c4e9b6abad509dcf1575fbbf0537d
 
 # Bluetooth (Configstore) - from S62Pro RKQ1.210406.002
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|cfc982fd153084781f540bcc4a31b6b05a9ced19
@@ -819,13 +819,13 @@ vendor/firmware/fpctzappfingerprint.mdt|f709249da0d08cdcf43f561782ac3d6695a154ec
 
 # Fingerprint - from jasmine V11.0.28.0.QDIMIXM
 vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.sdm660.so|dfbcb6e002cca1331a26c8e921b3aeaa1764f304
-vendor/lib64/hw/fingerprint.fpc.default.so|cd0f115eef17a2f0e6e385257dd05de423f4ae34
+vendor/lib64/hw/fingerprint.fpc.default.so|bb75b67403781b3284543207fa50f9f2cc9b4803
 vendor/lib64/hw/fingerprint.goodix.default.so|ee9562c8c2fea3831fd2cb00b824e5bd12b0539d
-vendor/lib64/com.fingerprints.extension@1.0.so|599d712e9fbf0b046cfc28b2f33ddbce9965e5fb
+vendor/lib64/com.fingerprints.extension@1.0.so|7d751c85823619ae43531d1a271592c76e335f4c
 vendor/lib64/libgf_ca.so|5c179131d1d48e7db95bd9c911111eb4e4be76a7
 vendor/lib64/libgf_hal.so|56e3eb920f9d90df01345ec0a93413b905c2b1b7
-vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so|226eafb17998f7f4f97836934c6f1aad4321f940
-vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so|9c1bccba438d5cf1274d2ce9e5f4af7bcb03a590
+vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so|2bd9cfcb3b7a06e82cc7ceca2dcf507eb49cf96a
+vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so|7a97ed9b486dd08c99ddcc53200eb327b65a2937
 
 # FM - from S62Pro RKQ1.210406.002
 system_ext/lib64/fm_helium.so|b2440e4feaae8a7f5e2269525520f9774b6962fc
@@ -838,7 +838,7 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so|f6e23f902b7e15232b20af55161a24da93ffe
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so|335cc2f4e263b4c20b2b7ad5cd6c39c68cdea7ba
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|eaf70216b4e53f409c22764b272b79cd60a4b714
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|9bba980a251528cf998b000b702242be7c2efea0
 
 # GPS - from ginkgo RKQ1.201004.002/V12.5.2.0.RCOMIXM
 vendor/bin/garden_app|4f61dffac228425593cb5c108cb02b28a5f37c72
@@ -905,8 +905,8 @@ vendor/firmware/a530_pm4.fw|b1cf625b5552b99839687f479c124ac5daca2ca2
 vendor/firmware/a540_gpmu.fw2|3530f10b4825a3b08c79e0bcfaf6471ec8422f24
 
 # Graphics - from S62Pro RKQ1.210406.002
-lib/libsdm-disp-apis.so|68c45b0a37115ffe0bc503873cbc3b6a9ae913d9
-lib64/libsdm-disp-apis.so|131b769dcda8e95cd999f912a9fa48636c792092
+lib/libsdm-disp-apis.so|1d489728e153a642b145ccd4b151be7daff7f05d
+lib64/libsdm-disp-apis.so|cdd5a70f8d21c27d48f41b4ce23f8839040f3389
 vendor/lib/libC2D2.so|7ffbb30a7b99d532eaf20b4a117fd908f1acdc01
 vendor/lib/libCB.so|233dd32c4e3004324901c0c12fd9b688b4a4f1d2
 vendor/lib/libOpenCL.so|84bf30e06f738179363c71b8ffc6864042fe4527
@@ -1019,12 +1019,12 @@ vendor/lib/libmmosal.so|a2203f5be5dc1ee10d2f5da8f167a46acb0a660e
 vendor/lib64/libmmosal.so|595faff0767dc2bd0a344a98ab65a239bed14826
 
 # Mlipay - from wayne V11.0.3.0.PDCCNXM
-vendor/bin/mlipayd@1.1|4c30cfd1b32f99ff3043eadca8e7a4b7b9a00c79
+vendor/bin/mlipayd@1.1|035249e2ee388064597e21275fbe8284b68a819c
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|b5ab5bcd031fe4d9781b5911c0595eaeac8b80ea
-vendor/lib64/libmlipay.so|c988ff04fcd90621cf46d219bdbc7eef341d1ce6
-vendor/lib64/libmlipay@1.1.so|7d07b19faa36c62babf39a41b2baf8de370d706c
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so|2c05d2902c757410aec30c6a5d0bf77b016583fa
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so|0c4bb0c8ba1cbf357bb0b5117e93db0382ffcf49
+vendor/lib64/libmlipay.so|3d78c8a99c9248df20ad7ebc2c9abbd4c579d38c
+vendor/lib64/libmlipay@1.1.so|885d0c6eba14c5d2da5e245844bea3c3ae1540af
+vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so|792fa2595558ebe45b29e7e0af85088ab3bbec64
+vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so|9b3d01f174feda1ce86e2b1595d53d48ed651ad1
 
 # Perf - from S62Pro RKQ1.210406.002
 system_ext/bin/perfservice|356e01334f4e1c526ac18f02568e688663288367
@@ -1072,8 +1072,8 @@ vendor/bin/pm-service|b0a5d3491615ef9a237d93a393082105e3c0097c
 vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 
 # Postprocessing - from S62Pro RKQ1.210406.002
-vendor/bin/hw/vendor.display.color@1.0-service|a1640ca55a67e701003fa1f6f92bd127f180d2b2
-vendor/bin/mm-pp-dpps|a265b90d727a3a8716796bbfc632e0307172b3dc
+vendor/bin/hw/vendor.display.color@1.0-service|7ba0374cebe8e85c0dbaa6ea9e8feaa9f05c3284
+vendor/bin/mm-pp-dpps|eda5d9286f2e0b72c15dd32e163ef4e163acb1c4
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
 vendor/lib64/libdisp-aba.so|c4d6c0afc8878f6bd6bb59b857ef89a498ec274c
 vendor/lib64/vendor.display.color@1.0.so|09cb45881528c6d4675754c88c108f30dd1da12a
@@ -1487,9 +1487,9 @@ vendor/lib64/libsensor_reg.so|c09110fd11f384040c31b7fd5c2b187aa901168c
 vendor/lib64/sensors.ssc.so|6934f0fd9e5e74356d9f18af0cbaa28164e697f6
 
 # Soter - from S62Pro RKQ1.210406.002
-vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|a6f1c35671a2f102ff95acecc70eefa3a7ebd432
+vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|1c1f9ed46dc3ec39319ddb71659856129721029f
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
-vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|032e38d60840b5ac7ca21eece486ca5acab7f203
+vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|4ee7f45d730664a1606e023a81efbe736cad7c03
 vendor/lib64/vendor.qti.hardware.soter@1.0.so|5496f7816036ef71aec0116864032f8a6078aee7
 
 # Thermal - from S62Pro RKQ1.210406.002
