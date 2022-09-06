@@ -507,6 +507,10 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl:64 \
     android.hardware.sensors@1.0-service
 
+# Sqlite
+PRODUCT_PACKAGES += \
+    sqlite3
+
 # System restart
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ssr.restart_level=ALL_ENABLE
