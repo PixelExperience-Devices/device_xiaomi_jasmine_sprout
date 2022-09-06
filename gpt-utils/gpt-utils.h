@@ -79,8 +79,7 @@ extern "C" {
 #define AB_SLOT_A_SUFFIX                "_a"
 #define AB_SLOT_B_SUFFIX                "_b"
 #define PTN_XBL                         "xbl"
-#define PTN_XBL_CFG                     "xbl_config"
-#define PTN_SWAP_LIST                   PTN_XBL, PTN_XBL_CFG, \
+#define PTN_SWAP_LIST                   PTN_XBL, \
         "abl", "cmnlib", "cmnlib64", "devcfg", "dsp", "hyp", "keymaster", \
         "mdtp", "mdtpsecapp", "pmic", "rpm", "tz", "vbmeta"
 #define AB_PTN_LIST PTN_SWAP_LIST, "boot", "system", "vendor", "modem", "bluetooth"
