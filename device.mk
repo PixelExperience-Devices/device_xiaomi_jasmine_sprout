@@ -26,6 +26,9 @@ PRODUCT_SHIPPING_API_LEVEL := 27
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
 
+QCOM_SOONG_NAMESPACE := \
+    $(DEVICE_PATH)/qcom-caf
+
 # Permissions
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
