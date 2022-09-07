@@ -31,8 +31,8 @@ LOCAL_C_INCLUDES+= $(kernel_includes)
 LOCAL_C_INCLUDES += \
     $(LOCAL_PATH)/../ \
     $(LOCAL_PATH)/../../stack/mm-camera-interface/inc \
-    $(call project-path-for,qcom-media)/libstagefrighthw \
-    $(call project-path-for,qcom-media)/mm-core/inc
+    device/xiaomi/jasmine_sprout/qcom-caf/media/libstagefrighthw \
+    device/xiaomi/jasmine_sprout/qcom-caf/media/mm-core/inc
 
 LOCAL_HEADER_LIBRARIES := libhardware_headers
 LOCAL_HEADER_LIBRARIES += libbinder_headers
