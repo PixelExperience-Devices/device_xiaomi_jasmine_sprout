@@ -1,3 +1,4 @@
 allow kernel self:capability kill;
 allow kernel kernel:capability { kill };
 allow kernel kernel:qipcrtr_socket create;
+allow kernel system_data_file:file { read };
