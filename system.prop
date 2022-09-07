@@ -120,9 +120,6 @@ ro.vendor.sensors.pmd=true
 ro.vendor.sensors.sta_detect=true
 ro.vendor.sensors.mot_detect=true
 
-# STM
-persist.debug.coresight.config=stm-events
-
 # Time-Services
 persist.timed.enable=true
 
