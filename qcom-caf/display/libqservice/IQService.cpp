@@ -75,7 +75,7 @@ public:
     }
 };
 
-IMPLEMENT_META_INTERFACE(QService, "android.display.IQService");
+DO_NOT_DIRECTLY_USE_ME_IMPLEMENT_META_INTERFACE(QService, "android.display.IQService");
 
 // ----------------------------------------------------------------------
 

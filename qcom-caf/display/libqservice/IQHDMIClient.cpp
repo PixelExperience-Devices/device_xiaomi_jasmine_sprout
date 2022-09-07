@@ -67,7 +67,7 @@ public:
     }
 };
 
-IMPLEMENT_META_INTERFACE(QHDMIClient,
+DO_NOT_DIRECTLY_USE_ME_IMPLEMENT_META_INTERFACE(QHDMIClient,
         "android.display.IQHDMIClient");
 
 status_t BnQHDMIClient::onTransact(uint32_t code, const Parcel& data,
