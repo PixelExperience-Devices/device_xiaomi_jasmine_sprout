@@ -11,6 +11,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Pixel Experience stuff
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+TARGET_INCLUDE_STOCK_ARCORE := false
 
 # We are a phone
 IS_PHONE := true
