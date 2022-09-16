@@ -197,6 +197,8 @@
          <MediaCodec name="c2.android.mpeg4.decoder" update="true">
             <Type name="video/mp4v-es">
                 <Limit name="measured-frame-rate-176x144" range="350-370" />
+                <Limit name="measured-frame-rate-480x360" range="150-400" />
+                <Limit name="measured-frame-rate-1280x720" range="50-100" />
             </Type>
          </MediaCodec>
     </Decoders>
