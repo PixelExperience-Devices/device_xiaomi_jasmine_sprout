@@ -372,6 +372,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0.vendor
 
+# Keystore
+PRODUCT_PACKAGES += \
+    android.system.keystore2
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.jasmine_sprout
