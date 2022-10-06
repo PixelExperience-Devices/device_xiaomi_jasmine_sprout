@@ -1023,8 +1023,6 @@ vendor/bin/mlipayd@1.1|035249e2ee388064597e21275fbe8284b68a819c
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|b5ab5bcd031fe4d9781b5911c0595eaeac8b80ea
 vendor/lib64/libmlipay.so|3d78c8a99c9248df20ad7ebc2c9abbd4c579d38c
 vendor/lib64/libmlipay@1.1.so|885d0c6eba14c5d2da5e245844bea3c3ae1540af
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so|792fa2595558ebe45b29e7e0af85088ab3bbec64
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so|9b3d01f174feda1ce86e2b1595d53d48ed651ad1
 
 # Perf - from S62Pro RKQ1.210406.002
 system_ext/bin/perfservice|356e01334f4e1c526ac18f02568e688663288367
