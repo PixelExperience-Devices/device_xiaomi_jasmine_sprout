@@ -177,10 +177,6 @@ PRODUCT_PACKAGES += \
     android.hardware.authsecret@1.0.vendor \
     android.hardware.authsecret@1.0-service
 
-# Biometrics
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.jasmine_sprout
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     BluetoothQti \
@@ -265,6 +261,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.4-service.clearkey \
     android.hardware.drm@1.4.vendor
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.3-service.xiaomi
+
 # Framework detect
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
@@ -346,7 +346,8 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc \
     fstab.qcom \
-    init.verity.rc
+    init.verity.rc \
+    init.fingerprint.rc
 
 # Ion
 PRODUCT_PACKAGES += \
