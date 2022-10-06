@@ -25,7 +25,8 @@ PRODUCT_SHIPPING_API_LEVEL := 27
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
-    vendor/qcom/opensource/usb/etc
+    vendor/qcom/opensource/usb/etc \
+    hardware/xiaomi
 
 QCOM_SOONG_NAMESPACE := \
     $(DEVICE_PATH)/qcom-caf
