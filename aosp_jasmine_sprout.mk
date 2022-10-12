@@ -32,5 +32,3 @@ PRODUCT_MODEL := Mi A2
 PRODUCT_NAME := aosp_jasmine_sprout
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-TARGET_VENDOR_PRODUCT_NAME := jasmine
