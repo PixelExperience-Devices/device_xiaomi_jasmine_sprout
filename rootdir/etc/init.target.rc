@@ -93,7 +93,7 @@ on early-boot
     chmod 0664 /mnt/vendor/persist/sensors/sensors_settings
 
 on boot
-    start vendor.rmt_storage
+    start rmt_storage
     start rfs_access
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/foreground/cpus 0-7
