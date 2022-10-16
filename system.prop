@@ -4,9 +4,6 @@ audio.offload.video=true
 audio.deep_buffer.media=true
 ro.af.client_heap_size_kbyte=7168
 
-# Bluetooth
-ro.bluetooth.library_name=libbluetooth_qti.so
-
 # Cable
 ro.qualcomm.cabl=2
 ro.vendor.display.cabl=2
