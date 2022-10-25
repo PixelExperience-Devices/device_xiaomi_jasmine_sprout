@@ -24,3 +24,4 @@ set_prop(hal_fingerprint_default, hal_fingerprint_prop)
 
 dontaudit hal_fingerprint_default storage_file:dir search;
 allow hal_fingerprint_default sysfs_wakeup:file { write };
+allow hal_fingerprint_default rootfs:dir { open read };
