@@ -167,7 +167,7 @@ on boot
     setprop vendor.usb.rmnet.func.name "gsi"
     setprop vendor.usb.rmnet.inst.name "rmnet"
     setprop vendor.usb.dpl.inst.name "dpl"
-    setprop vendor.usb.qdss.inst.name "qdss_sw"
+    setprop vendor.usb.qdss.inst.name "qdss"
     setprop vendor.usb.use_gadget_hal "0"
     setprop vendor.usb.use_ffs_mtp "0"
     setprop vendor.usb.controller "a800000.dwc3"
