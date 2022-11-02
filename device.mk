@@ -267,7 +267,11 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
-    libvndfwk_detect_jni.qti.vendor
+    libvndfwk_detect_jni.qti.vendor \
+    libvndfwk_detect_jni.qti_system \
+    libvndfwk_detect_jni.qti_vendor \
+    libqti_vndfwk_detect_system \
+    libqti_vndfwk_detect_vendor
 
 # Freeform Multiwindow
 PRODUCT_COPY_FILES += \
