@@ -838,6 +838,7 @@ vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so|335cc2f4e263b4c20b2b7a
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|9bba980a251528cf998b000b702242be7c2efea0
 
 # GPS - from S62Pro RKQ1.210406.002
+system_ext/bin/qccsyshalservice|cc7b5fcc8d1b2e5b8c10078649cf7f34c2e683d3
 system_ext/etc/permissions/com.qti.location.sdk.xml|fac5922b978d83a00cd9ec0ddcf2c5d7ab26d492
 system_ext/etc/permissions/com.qualcomm.location.xml|1d36e7cf8e16813aa13ee6b3fca8d8687b543828
 system_ext/etc/permissions/izat.xt.srv.xml|e7dddfa669a19e5f300641f695f563fdf22897c0
