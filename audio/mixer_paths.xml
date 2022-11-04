@@ -2442,6 +2442,7 @@
         <ctl name="EAR_S" value="Switch" />
         <ctl name="EAR PA Boost" value="ENABLE" />
         <ctl name="RX1 Digital Volume" value="100" />
+        <ctl name="EAR PA Gain" value="POS_6_DB" />
     </path>
 
     <path name="ultrasound-proximity">
