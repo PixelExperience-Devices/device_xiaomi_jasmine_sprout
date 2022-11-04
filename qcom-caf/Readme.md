@@ -1,5 +1,10 @@
 # HALS
 
-All the hals that is here are from [HERE](https://github.com/PixelExperience-mia2-mi6x)
+All the hals that is here are from here below.
 
-Currently the hals are based on LA.UM.10.2.1.r1-04300-sdm660.0 tag where as display hal is alone based on LA.UM.10.2.1.r1-04600-sdm660 (because as of today the branch doesnt exist on other repos and also its the same changes in the tag so the tag doesnt gets merged)
+[Display](https://github.com/iamimmanuelraj/android_hardware_qcom-caf_sdm660_display/)
+[Camera](https://github.com/iamimmanuelraj/android_hardware_qcom-caf_sdm660_camera/)
+[Audio](https://github.com/iamimmanuelraj/android_hardware_qcom-caf_sdm660_audio/)
+[Media](https://github.com/iamimmanuelraj/android_hardware_qcom-caf_sdm660_media/)
+
+Currently the hals are based on LA.UM.11.2.1.r1-02100-sdm660.0 tag
