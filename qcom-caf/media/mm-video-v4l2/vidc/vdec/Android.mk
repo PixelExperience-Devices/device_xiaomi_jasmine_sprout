@@ -82,18 +82,18 @@ include $(CLEAR_VARS)
 # Common Includes
 libmm-vdec-inc          := $(LOCAL_PATH)/inc
 libmm-vdec-inc          += $(LIBION_HEADER_PATHS)
-libmm-vdec-inc          += $(call project-path-for,qcom-media)/mm-video-v4l2/vidc/common/inc
-libmm-vdec-inc          += $(call project-path-for,qcom-media)/mm-core/inc
+libmm-vdec-inc          += device/xiaomi/jasmine_sprout/qcom-caf/media/mm-video-v4l2/vidc/common/inc
+libmm-vdec-inc          += device/xiaomi/jasmine_sprout/qcom-caf/media/mm-core/inc
 libmm-vdec-inc          += $(TARGET_OUT_HEADERS)/adreno
-libmm-vdec-inc      	+= $(call project-path-for,qcom-media)/libc2dcolorconvert
-libmm-vdec-inc          += $(call project-path-for,qcom-media)/hypv-intercept
+libmm-vdec-inc      	+= device/xiaomi/jasmine_sprout/qcom-caf/media/libc2dcolorconvert
+libmm-vdec-inc          += device/xiaomi/jasmine_sprout/qcom-caf/media/hypv-intercept
 libmm-vdec-inc          += $(TARGET_OUT_HEADERS)/mm-video/SwVdec
 libmm-vdec-inc          += $(TARGET_OUT_HEADERS)/mm-video/swvdec
 libmm-vdec-inc          += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 
 ifeq ($(PLATFORM_SDK_VERSION), 18)  #JB_MR2
 libmm-vdec-def += -DANDROID_JELLYBEAN_MR2=1
-libmm-vdec-inc += $(call project-path-for,qcom-media)/libstagefrighthw
+libmm-vdec-inc += device/xiaomi/jasmine_sprout/qcom-caf/media/libstagefrighthw
 endif
 
 # Common Dependencies
