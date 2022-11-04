@@ -45,6 +45,13 @@
     <ctl name="Voip Evrc Min Max Rate Config" id="1" value="4" />
     <ctl name="Voip Dtx Mode" value="0" />
     <ctl name="TTY Mode" value="OFF" />
+    <ctl name="Ultrasound Event" value="0" />
+    <ctl name="Ultrasound Mode" value="0" />
+    <ctl name="Ultrasound Suspend" value="0" />
+    <ctl name="Ultrasound Enable" value="Off" />
+    <ctl name="Ultrasound Rx Port" value="Off" />
+    <ctl name="Ultrasound RampDown" value="Off" />
+    <ctl name="Ultrasound Microphone Index" value="0" />
     <ctl name="PRI_MI2S_RX Port Mixer INT3_MI2S_TX" value="0" />
     <ctl name="INT4_MI2S_RX Port Mixer INT3_MI2S_TX" value="0" />
     <ctl name="SLIMBUS_7_RX Audio Mixer MultiMedia1" value="0" />
@@ -2435,6 +2442,53 @@
         <ctl name="EAR_S" value="Switch" />
         <ctl name="EAR PA Boost" value="ENABLE" />
         <ctl name="RX1 Digital Volume" value="100" />
+    </path>
+
+    <path name="ultrasound-proximity">
+        <ctl name="Ultrasound Enable" value="On" />
+        <ctl name="Ultrasound Mode" value="614" />
+        <ctl name="Ultrasound Debug Mode" value="1" />
+        <ctl name="Ultrasound Log Level" value="7" />
+    </path>
+
+    <path name="ultrasound-proximity-output">
+
+    </path>
+
+    <path name="ultrasound-proximity-input">
+        <ctl name="Ultrasound Microphone Index" value="1" />
+    </path>
+
+    <path name="ultrasound-output">
+	    <path name="handset" />
+		<ctl name="INT0_MI2S_RX Channels" value="One" />
+		<!--ctl name="INT0_MI2S_RX SampleRate" value="KHZ_96" /-->
+    </path>
+
+    <path name="ultrasound-input">
+        <path name="speaker-mic" />
+    </path>
+
+    <path name="ultrasound-output-stereo">
+    </path>
+
+    <path name="ultrasound-secondary-input">
+    </path>
+
+    <path name="ultrasound-rampdown">
+        <ctl name="Ultrasound RampDown" value="On" />
+    </path>
+
+    <path name="ultrasound-screen-on">
+         <ctl name="Ultrasound Event" value="1" />
+    </path>
+
+    <path name="ultrasound-on">
+        <ctl name="Ultrasound Rx Port" value="On" />
+    </path>
+
+    <path name="ultrasound-suspend">
+        <ctl name="Ultrasound Suspend" value="1" />
     </path>
 
     <path name="handset-mic">
