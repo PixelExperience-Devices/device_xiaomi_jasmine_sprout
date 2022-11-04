@@ -525,10 +525,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     sqlite3
 
-# System restart
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.ssr.restart_level=ALL_ENABLE
-
 # Task profiles
 PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
