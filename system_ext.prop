@@ -20,7 +20,4 @@ persist.vendor.dpm.feature=11
 
 # DEX Flags
 pm.dexopt.boot=verify
-pm.dexopt.first-boot=quicken
 pm.dexopt.install=speed-profile
-pm.dexopt.bg-dexopt=everything
-pm.dexopt.ab-ota=quicken
