@@ -59,7 +59,7 @@ public:
     }
 };
 
-IMPLEMENT_META_INTERFACE(QClient, "android.display.IQClient");
+DO_NOT_DIRECTLY_USE_ME_IMPLEMENT_META_INTERFACE(QClient, "android.display.IQClient");
 
 // ----------------------------------------------------------------------
 //Stub implementation - nothing needed here
