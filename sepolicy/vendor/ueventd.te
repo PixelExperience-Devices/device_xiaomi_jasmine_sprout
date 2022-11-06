@@ -1,1 +1,2 @@
 allow ueventd ueventd:capability kill;
+r_dir_file(ueventd, metadata_file);
