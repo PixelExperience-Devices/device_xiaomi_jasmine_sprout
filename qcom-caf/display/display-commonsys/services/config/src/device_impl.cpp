@@ -701,9 +701,12 @@ void DeviceImpl::DeviceClientContext::ParseGetDebugProperty(const ByteStream &in
   std::string value;
   ByteStream output_params;
 
+  if (input_params.size() == 0) {
+    _hidl_cb(-ENODATA, {}, {});
+     return;
+  }
   const uint8_t *data = input_params.data();
   const char *name = reinterpret_cast<const char *>(data);
-  name[input_params.size()-1] = '\0';
   std::string prop_name(name);
   int32_t error = intf_->GetDebugProperty(prop_name, &value);
   value += '\0';
@@ -1022,6 +1025,7 @@ void DeviceImpl::DeviceClientContext::ParseGetSupportedDisplayRefreshRates(
   if (input_params.size() != sizeof(DisplayType)) {
     _hidl_cb(-ENODATA, {}, {});
     return;
+  }
   const uint8_t *data = input_params.data();
   const DisplayType *dpy = reinterpret_cast<const DisplayType *>(data);
   int32_t error = intf_->GetSupportedDisplayRefreshRates(*dpy, &refresh_rates);
