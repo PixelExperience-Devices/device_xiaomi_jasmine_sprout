@@ -1,3 +1,3 @@
 # Kernel
 
-This is a kernel https://github.com/Atom-X-Devs/android_kernel_xiaomi_scarlet/releases/tag/v6.0
+This is a kernel from https://github.com/PixelExperience-MiA2-Mi6X/kernel_xiaomi_jasmine_sprout/commits/thirteen
