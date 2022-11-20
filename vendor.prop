@@ -138,7 +138,6 @@ ro.telephony.iwlan_operation_mode=legacy
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
-ro.vendor.perf-hal.ver=2.2
 
 # RCS
 persist.rcs.supported=1

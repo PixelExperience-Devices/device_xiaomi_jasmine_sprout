@@ -26,7 +26,9 @@ PRODUCT_SHIPPING_API_LEVEL := 27
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
     vendor/qcom/opensource/usb/etc \
-    hardware/xiaomi
+    hardware/xiaomi \
+    hardware/google/interfaces \
+    hardware/google/pixel
 
 QCOM_SOONG_NAMESPACE := \
     $(DEVICE_PATH)/qcom-caf
@@ -192,7 +194,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.5:64 \
     android.hardware.camera.provider@2.4-impl:32 \
     android.hardware.camera.provider@2.4-service \
-    android.hardware.camera.provider@2.5:64 \
     android.hardware.camera.provider@2.6:64 \
     libdng_sdk.vendor \
     vendor.qti.hardware.camera.device@1.0:64 \
@@ -348,7 +349,8 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc \
     fstab.qcom \
     init.verity.rc \
-    init.fingerprint.rc
+    init.fingerprint.rc \
+    init.qcom.power.rc
 
 # Ion
 PRODUCT_PACKAGES += \
@@ -424,7 +426,9 @@ PRODUCT_PACKAGES += \
 
 # Neural network
 PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.3.vendor
+    android.hardware.neuralnetworks@1.3.vendor \
+    libtflite \
+    libtextclassifier_hash
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -441,6 +445,9 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# Perf
+PRODUCT_PACKAGES += \
+    libqti-perfd-client
 
 # Platform
 TARGET_BOARD_PLATFORM := sdm660
@@ -455,25 +462,11 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
     android.hardware.power@1.3 \
     android.hardware.power@1.3.vendor \
-    android.hardware.power-service-qti \
+    android.hardware.power-service.xiaomi-libperfmgr \
     android.hardware.power.stats@1.0-service
 
-# Perf
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
-    $(DEVICE_PATH)/configs/perf/commonsysnodesconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonsysnodesconfigs.xml \
-    $(DEVICE_PATH)/configs/perf/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml \
-    $(DEVICE_PATH)/configs/perf/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml \
-    $(DEVICE_PATH)/configs/perf/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
-    $(DEVICE_PATH)/configs/perf/targetconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetconfig.xml \
-    $(DEVICE_PATH)/configs/perf/targetresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetresourceconfigs.xml \
-    $(DEVICE_PATH)/configs/perf/perfservice.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/perfservice.policy \
-    $(DEVICE_PATH)/configs/perf/wlc_model.tflite:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/perf/wlc_model.tflite \
-    $(DEVICE_PATH)/configs/perf/perf-profile0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perf-profile0.conf
-
-PRODUCT_PACKAGES += \
-   libtflite \
-   libtextclassifier_hash
+    $(LOCAL_PATH)/configs/powerhint/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Protobuf
 PRODUCT_PACKAGES += \
