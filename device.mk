@@ -25,7 +25,6 @@ PRODUCT_SHIPPING_API_LEVEL := 27
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
-    vendor/qcom/opensource/usb/etc \
     hardware/xiaomi \
     hardware/google/interfaces \
     hardware/google/pixel
@@ -560,7 +559,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.3-service-qti
+    android.hardware.usb@1.0-service.basic
 
 # Vibrator
 PRODUCT_PACKAGES += \

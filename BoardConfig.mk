@@ -241,9 +241,6 @@ PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 # Treble
 BOARD_VNDK_VERSION := current
 
-# USB
-TARGET_USES_USB_GADGET_HAL := true
-
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_WLAN_DEVICE := qcwcn
