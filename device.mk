@@ -229,6 +229,11 @@ PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings
 
+PRODUCT_PACKAGES += \
+     cppreopts.sh
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.cp_system_other_odex=1
+
 # Display
 PRODUCT_PACKAGES += \
     gralloc.sdm660 \
