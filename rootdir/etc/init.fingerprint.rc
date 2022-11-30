@@ -38,6 +38,6 @@ on init
     chmod 0700 /sys/bus/platform/devices/soc:fpc1020/device_prepare
     chmod 0700 /sys/bus/platform/devices/soc:fpc1020/vendor
 
-on postfsdata
+on post-fs-data
     mkdir /data/vendor/fpc 0770 system system
     mkdir /data/vendor/goodix 0770 system system
