@@ -1,3 +1,9 @@
+type hal_fingerprint_default, domain;
+hal_server_domain(hal_fingerprint_default, hal_fingerprint)
+
+type hal_fingerprint_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_fingerprint_default)
+
 allow hal_fingerprint_default {
     fingerprint_device
     tee_device
@@ -24,4 +30,6 @@ set_prop(hal_fingerprint_default, hal_fingerprint_prop)
 
 dontaudit hal_fingerprint_default storage_file:dir search;
 allow hal_fingerprint_default sysfs_wakeup:file { write };
-allow hal_fingerprint_default rootfs:dir { open read };
+allow hal_fingerprint_default rootfs:dir { read open };
+allow hal_fingerprint_default system_data_root_file:file r_file_perms;
+allow hal_fingerprint_default system_data_root_file:dir { read open };
