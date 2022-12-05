@@ -9,10 +9,6 @@ DEVICE_PATH := device/xiaomi/jasmine_sprout
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
-# OEM Unlock reporting
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.oem_unlock_supported=1
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
@@ -188,9 +184,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    bluetooth.device.default_name=Mi A2
-
 # Camera
 PRODUCT_PACKAGES += \
     GCamGOPrebuilt
@@ -230,8 +223,6 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 
 PRODUCT_PACKAGES += \
      cppreopts.sh
-PRODUCT_PROPERTY_OVERRIDES += \
-     ro.cp_system_other_odex=1
 
 # Display
 PRODUCT_PACKAGES += \
@@ -274,9 +265,6 @@ PRODUCT_PACKAGES += \
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.fastbootd.available=true
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -498,10 +486,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
     libprotobuf-cpp-lite-vendorcompat
-
-# Proximity
-PRODUCT_PROPERTY_OVERRIDES += \
-    gsm.proximity.enable=true
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
