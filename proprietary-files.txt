@@ -424,23 +424,6 @@ vendor/lib/libchromatix_wayne_imx486_sunny_cn_iii_weixin_video_3a.so|11a107831ab
 vendor/lib/libchromatix_wayne_imx486_sunny_cn_iii_zsl_preview_3a.so|dceec522958863b2ec192f6f99aaa15933e21811
 vendor/lib/libchromatix_wayne_imx486_sunny_cn_iii_zsl_video_3a.so|62c34fcd5a349bf8254d3ed8d42a6af0628adc6e
 
-# Camera chromatix - from Cat/S62Pro/S62Pro:11/RKQ1.210406.002/1.015.00:user/release-keys
-vendor/lib/libchromatix_imx376_common.so|504345be05f7db898331ddca329e28ab965fadbd
-vendor/lib/libchromatix_imx376_cpp_liveshot.so|03963dd90e015f361e1d1d7c036c37613783c3a4
-vendor/lib/libchromatix_imx376_cpp_preview.so|2f339e64edfe21898a6771e2087fde90f6d89b69
-vendor/lib/libchromatix_imx376_cpp_snapshot.so|5ca13a65e88ba1958d9e81612140ceb3cebe041b
-vendor/lib/libchromatix_imx376_cpp_snapshot_downscale.so|c14b812dad3f71979607ddc45b25509916f0c847
-vendor/lib/libchromatix_imx376_cpp_snapshot_upscale.so|c8fcff26f2b3226fa775ec64eb35c2e0460bb8c0
-vendor/lib/libchromatix_imx376_cpp_video.so|fb68f2f1c48896960367efd34369f2c22fbb4e38
-vendor/lib/libchromatix_imx376_cpp_video_default.so|aaef82ffe18992888f6f58a37a808d26718571a1
-vendor/lib/libchromatix_imx376_default_preview_3a.so|542d908ed43387f7940f8d1bc626727ae9a19fc1
-vendor/lib/libchromatix_imx376_default_video_3a.so|6f357017ffedf7e31b55595c61f3cc60a1186cf6
-vendor/lib/libchromatix_imx376_fullsize_preview_3a.so|6aa3b844f590b97a6b8f19d3186fe02918858916
-vendor/lib/libchromatix_imx376_fullsize_video_3a.so|529f0ae1fa85e41c0e5512857c41700a7218f844
-vendor/lib/libchromatix_imx376_postproc.so|ce03327acd90bb6ecee4790989da1bf7ff742435
-vendor/lib/libchromatix_imx376_snapshot.so|159d6d463719421c266d071466202140b7b5148a
-vendor/lib/libchromatix_imx376_video_default.so|7198b9291b145156ee3bd98455712f6e980b283c
-
 # Camera configs - from jasmine V11.0.28.0.QDIMIXM
 vendor/etc/camera/wayne_imx376_ofilm_cn_back_ii_chromatix.xml|a4853858d26d7b6fe627714b1a3ef3524a8c05c3
 vendor/etc/camera/wayne_imx376_ofilm_cn_front_ii_chromatix.xml|62a13e3f5b39a933bd7cf270d0e53412dfc1da2b
@@ -450,9 +433,6 @@ vendor/etc/camera/wayne_imx376_sunny_cn_front_i_chromatix.xml|fa4a5e59d58ba562e8
 vendor/etc/camera/wayne_imx486_ofilm_cn_ii_chromatix.xml|e6c50451196539ab6b38eeb99cbffb19637363e3
 vendor/etc/camera/wayne_imx486_sunny_cn_i_chromatix.xml|44db526a441661acc7c7be4e926aada1ee781cb8
 vendor/etc/camera/wayne_imx486_sunny_cn_iii_chromatix.xml|933f8a316ef0e8f608e5a10ca4936dea4ae6982f
-
-# Camera configs - from Cat/S62Pro/S62Pro:11/RKQ1.210406.002/1.015.00:user/release-keys
-vendor/etc/camera/imx376_chromatix.xml|3977e93bf9f84773f146a060f8384f64c02dafd2
 
 # Camera eeprom - from jasmine V11.0.28.0.QDIMIXM
 vendor/lib/libmmcamera_wayne_imx376_ofilm_back_ii_eeprom.so|6424a3e5cb3a185724fef9e19b88885d3a0b4f1a
@@ -579,9 +559,6 @@ vendor/lib/libmmcamera_wayne_imx376_sunny_front_i.so|ddd187791ed900ca71da7367ee4
 vendor/lib/libmmcamera_wayne_imx486_ofilm_ii.so|192ae5688933af0c5fa7a4abcb2f96856e85049e
 vendor/lib/libmmcamera_wayne_imx486_sunny_i.so|09d6c72bd7808be2365b3d726f77532250c71b25
 vendor/lib/libmmcamera_wayne_imx486_sunny_iii.so|140da52cbabfa80f74be0dd798a889f7bcdcc293
-
-# Camera sensors - from Cat/S62Pro/S62Pro:11/RKQ1.210406.002/1.015.00:user/release-keys
-vendor/lib/libmmcamera_imx376.so|cd12f9144e70922564b68d304bbd3ffa8f9afdc5
 
 # CDSP - from Cat/S62Pro/S62Pro:11/RKQ1.210406.002/1.015.00:user/release-keys
 system_ext/lib/libcdsprpc_system.so|78b3fc57248a97ad0498a070487d58875aa2fe3b
