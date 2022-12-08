@@ -204,13 +204,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
-    android.hardware.camera.device@3.5:64 \
-    android.hardware.camera.provider@2.4-impl:32 \
+    android.hardware.camera.device@3.5 \
+    android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
-    android.hardware.camera.provider@2.5:64 \
-    android.hardware.camera.provider@2.6:64 \
+    android.hardware.camera.provider@2.5 \
+    android.hardware.camera.provider@2.6 \
     libdng_sdk.vendor \
-    vendor.qti.hardware.camera.device@1.0:64 \
+    vendor.qti.hardware.camera.device@1.0 \
     camera.sdm660 \
     libmm-qcamera
 
@@ -257,7 +257,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
-    android.hardware.graphics.composer@2.1-impl:64 \
+    android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
@@ -437,7 +437,7 @@ PRODUCT_PACKAGES += \
 
 # Mlipay
 PRODUCT_PACKAGES += \
-    vendor.xiaomi.hardware.mlipay@1.1.vendor:64
+    vendor.xiaomi.hardware.mlipay@1.1.vendor
 
 # Net
 PRODUCT_PACKAGES += \
@@ -546,7 +546,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl:64 \
+    android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service
 
 # Sqlite
