@@ -211,8 +211,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6 \
     libdng_sdk.vendor \
     vendor.qti.hardware.camera.device@1.0 \
-    camera.sdm660 \
-    libmm-qcamera
+    camera.sdm660
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml
