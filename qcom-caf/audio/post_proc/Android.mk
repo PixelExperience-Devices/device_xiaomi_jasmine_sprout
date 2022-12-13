@@ -74,7 +74,7 @@ LOCAL_SHARED_LIBRARIES := \
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_MODULE_RELATIVE_PATH := soundfx
-LOCAL_MODULE:= libqcompostprocbundle
+LOCAL_MODULE := libqcompostprocbundle
 LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_OWNER := qti
 
@@ -140,7 +140,7 @@ ifeq ($(strip $(AUDIO_FEATURE_ENABLED_DTS_EAGLE)), true)
 LOCAL_CFLAGS += -DHW_ACC_HPX
 endif
 
-LOCAL_MODULE:= libhwacceffectswrapper
+LOCAL_MODULE := libhwacceffectswrapper
 LOCAL_VENDOR_MODULE := true
 
 ifneq ($(filter kona lahaina holi,$(TARGET_BOARD_PLATFORM)),)
@@ -188,7 +188,7 @@ LOCAL_SHARED_LIBRARIES := \
         libaudioutils
 
 LOCAL_MODULE_RELATIVE_PATH := soundfx
-LOCAL_MODULE:= libvolumelistener
+LOCAL_MODULE := libvolumelistener
 LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_OWNER := qti
 
@@ -241,7 +241,7 @@ LOCAL_SHARED_LIBRARIES := \
     libdl
 
 LOCAL_MODULE_RELATIVE_PATH := soundfx
-LOCAL_MODULE:= libmalistener
+LOCAL_MODULE := libmalistener
 LOCAL_MODULE_OWNER := google
 LOCAL_PROPRIETARY_MODULE := true
 
