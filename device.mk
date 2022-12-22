@@ -9,10 +9,6 @@ DEVICE_PATH := device/xiaomi/jasmine_sprout
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay
-
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # PRODUCT_SHIPPING_API_LEVEL indicates the first api level, device has been commercially launched on.
@@ -461,6 +457,15 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# Overlays
+PRODUCT_PACKAGES += \
+   CarrierConfigOverlay \
+   FrameworksOverlay \
+   SettingsOverlay \
+   SettingsProviderResOverlay \
+   SystemUIOverlay \
+   TelephonyOverlay \
+   WifiOverlay
 
 # Platform
 TARGET_BOARD_PLATFORM := sdm660
