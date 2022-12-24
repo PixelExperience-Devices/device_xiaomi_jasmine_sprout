@@ -13,7 +13,10 @@ bluetooth.profile.pan.nap.enabled?=true
 bluetooth.profile.pan.panu.enabled?=true
 bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
-bluetooth.hardware.power.operating_voltage_mv=3300
+bluetooth.hardware.power.operating_voltage_mv=3700
+bluetooth.hardware.power.idle_cur_ma=3
+bluetooth.hardware.power.rx_cur_ma=20
+bluetooth.hardware.power.tx_cur_ma=33
 
 # DPM
 persist.vendor.dpm.feature=11
