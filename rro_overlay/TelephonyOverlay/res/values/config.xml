@@ -48,4 +48,7 @@
 
     <!-- Package name for the call-based number verification app -->
     <string name="platform_number_verification_package" translatable="false">com.google.android.gms</string>
+
+    <!-- Flag indicating whether the device supports RTT (real-time text) -->
+    <bool name="config_support_rtt">true</bool>
 </resources>
