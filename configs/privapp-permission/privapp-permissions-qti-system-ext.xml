@@ -31,6 +31,8 @@ It allows additional grants on top of privapp-permissions-platform.xml
 
     <privapp-permissions package="com.qualcomm.qti.services.systemhelper">
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.MANAGE_USERS"/>
     </privapp-permissions>
 
 </permissions>
