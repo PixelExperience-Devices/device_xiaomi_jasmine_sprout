@@ -42,6 +42,7 @@ on charger
     write /config/usb_gadget/g1/strings/0x409/product ${vendor.usb.product_string}
     setprop sys.usb.config mass_storage
     setprop sys.usb.configfs 1
+    start vendor.power_off_alarm
 
 on boot
     mount configfs none /config
