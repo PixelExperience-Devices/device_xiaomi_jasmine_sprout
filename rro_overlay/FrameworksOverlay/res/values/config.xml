@@ -354,4 +354,7 @@
 
     <!-- Boost Framework -->
     <bool name="config_supportsBoostFramework">true</bool>
+
+    <!-- Whether device supports gestures on fingerprint sensor -->
+    <bool name="config_supportsGesturesOnFingerprintSensor">false</bool>
 </resources>
