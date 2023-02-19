@@ -202,3 +202,6 @@ MultitouchSettleInterval=1ms
 MultitouchMinDistance=1px
 TapInterval=1ms
 TapSlop=1px
+
+#misc 
+debug.sf.disable_client_composition_cache=1
