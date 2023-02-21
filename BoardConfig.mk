@@ -138,6 +138,7 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/bt_firmware:/bt_firmware \
     /mnt/vendor/persist:/persist
 TARGET_USERIMAGES_USE_F2FS := true
+BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 BOARD_USES_METADATA_PARTITION := true
 BOARD_EXT4_SHARE_DUP_BLOCKS := true
 BOARD_SUPER_PARTITION_GROUPS := jasmine_dynamic_partitions
