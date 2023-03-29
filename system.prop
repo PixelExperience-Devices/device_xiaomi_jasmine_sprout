@@ -92,6 +92,7 @@ debug.hwui.renderer=skiagl
 renderthread.skia.reduceopstasksplitting=true
 debug.sf.disable_backpressure=1
 ro.hwui.render_ahead=20
+debug.hwui.skia_atrace_enabled=false
 
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
