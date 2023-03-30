@@ -177,6 +177,9 @@ persist.vendor.radio.enableadvancedscan=false
 # USB
 persist.vendor.usb.config=diag,serial_cdev,rmnet,adb
 vendor.usb.diag.func.name=diag
+sys.usb.mtp.batchcancel=1
+vendor.usb.use_ffs_mtp=1
+vendor.usb.use_gadget_hal=0
 
 # VoLTE
 persist.dbg.volte_avail_ovr=1
