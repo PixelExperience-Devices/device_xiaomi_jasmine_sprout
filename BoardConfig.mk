@@ -52,6 +52,7 @@ AUDIO_FEATURE_ENABLED_EXT_AMPLIFIER := false
 
 # Board stuff
 BOARD_EGL_CFG := $(DEVICE_PATH)/configs/egl/egl.cfg
+TARGET_USES_UM_4_19 := true
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2160
