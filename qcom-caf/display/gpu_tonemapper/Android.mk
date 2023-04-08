@@ -12,6 +12,11 @@ LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps) $(kernel_deps)
 
 LOCAL_CFLAGS              := $(version_flag) -Wno-missing-field-initializers -Wall \
                              -Wno-unused-parameter -Wno-unreachable-code-loop-increment -DLOG_TAG=\"GPU_TONEMAPPER\"
+
+ifneq ($(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE),false)
+    LOCAL_CFLAGS += -DGRALLOC_HANDLE_HAS_RESERVED_SIZE
+endif
+
 LOCAL_SRC_FILES           := TonemapFactory.cpp \
                              glengine.cpp \
                              EGLImageBuffer.cpp \
