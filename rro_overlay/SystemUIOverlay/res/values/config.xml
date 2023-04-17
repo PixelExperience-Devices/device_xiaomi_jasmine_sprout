@@ -41,5 +41,5 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <bool name="doze_double_tap_proximity_check">false</bool>
 
     <!-- Unlock ripple animation -->
-    <bool name="config_enableUnlockRippleAnimation">true</bool>
+    <bool name="config_enableUnlockRippleAnimation">false</bool>
 </resources>
