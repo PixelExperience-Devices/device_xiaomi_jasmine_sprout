@@ -446,6 +446,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
 
+# NGA
+PRODUCT_PACKAGES += \
+    NgaResources \
+    nga
+
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
