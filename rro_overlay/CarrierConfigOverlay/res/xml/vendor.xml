@@ -7143,6 +7143,7 @@
         <boolean name="carrier_rtt_supported_on_vtcalls" value="false" />
         <boolean name="carrier_rtt_upgrade_supported" value="false" />
         <boolean name="carrier_rtt_downgrade_supported" value="false" />
+        <int name="lte_plus_threshold_bandwidth_khz_int" value="0"/>
     </carrier_config>
     <carrier_config mcc="405" mnc="840">
         <boolean name="video_call_use_ext" value="false" />
