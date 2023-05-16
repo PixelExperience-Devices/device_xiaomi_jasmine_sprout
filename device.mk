@@ -137,7 +137,8 @@ PRODUCT_PACKAGES += \
     libcomprcapture \
     libexthwplugin \
     libspkrprot \
-    libstdc++.vendor
+    libstdc++.vendor \
+    libtinyalsa
 
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
