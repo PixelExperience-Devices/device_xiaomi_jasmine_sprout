@@ -49,10 +49,6 @@ ro.product.mod_device                   u:object_r:telephony_status_prop:s0
 persist.sys.thermal.                    u:object_r:thermal_engine_prop:s0
 sys.thermal.                            u:object_r:thermal_engine_prop:s0
 
-# USB
-vendor.sys.usb.                         u:object_r:vendor_usb_prop:s0
-ro.vendor.usb.                          u:object_r:vendor_usb_prop:s0
-
 # Wlan
 persist.vendor.wigig.npt.enable         u:object_r:vendor_default_prop:s0
 
