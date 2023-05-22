@@ -456,9 +456,13 @@ on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
     #Enable UFS clock scaling back
     write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 1
-    #Reset read ahead for dm-0 and dm-1 to 512kb
-    write /sys/block/dm-0/queue/read_ahead_kb 512
-    write /sys/block/dm-1/queue/read_ahead_kb 512
+    #Reset read ahead to 128kb
+    write /sys/block/dm-0/queue/read_ahead_kb 128
+    write /sys/block/dm-1/queue/read_ahead_kb 128
+    write /sys/block/dm-2/queue/read_ahead_kb 128
+    write /sys/block/dm-3/queue/read_ahead_kb 128
+    write /sys/block/dm-4/queue/read_ahead_kb 128
+    write /sys/block/mmcblk0/queue/read_ahead_kb 128
     #WDSP FW boot sysfs node used by STHAL
     chown media audio /sys/kernel/wdsp0/boot
     chown media audio /sys/kernel/wcd_cpe0/fw_name
@@ -828,23 +832,3 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     ioprio rt 4
     task_profiles ProcessCapacityHigh HighPerformance
     onrestart restart audioserver
-
-on property:vendor.post_boot.parsed=1
-    # Override readahead to 128KiB.
-    write /sys/block/dm-0/queue/read_ahead_kb 128
-    write /sys/block/dm-1/queue/read_ahead_kb 128
-    write /sys/block/dm-2/queue/read_ahead_kb 128
-    write /sys/block/dm-3/queue/read_ahead_kb 128
-    write /sys/block/dm-4/queue/read_ahead_kb 128
-    write /sys/block/dm-5/queue/read_ahead_kb 128
-    write /sys/block/dm-6/queue/read_ahead_kb 128
-    write /sys/block/dm-7/queue/read_ahead_kb 128
-    write /sys/block/dm-8/queue/read_ahead_kb 128
-    write /sys/block/dm-9/queue/read_ahead_kb 128
-    write /sys/block/mmcblk0/queue/read_ahead_kb 128
-    write /sys/block/sda/queue/read_ahead_kb 128
-    write /sys/block/sdb/queue/read_ahead_kb 128
-    write /sys/block/sdc/queue/read_ahead_kb 128
-    write /sys/block/sdd/queue/read_ahead_kb 128
-    write /sys/block/sde/queue/read_ahead_kb 128
-    write /sys/block/sdf/queue/read_ahead_kb 128
