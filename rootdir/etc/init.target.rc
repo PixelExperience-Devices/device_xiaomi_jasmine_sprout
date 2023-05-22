@@ -515,8 +515,6 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuset/background/cpus 0-1
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/restricted/cpus 0-3
-    write /sys/module/cpu_boost/parameters/input_boost_freq 0:1401600
-    write /sys/module/cpu_boost/parameters/input_boost_ms 200
 
 on property:vendor.post_boot.parsed=1
     # Back to default VM settings
