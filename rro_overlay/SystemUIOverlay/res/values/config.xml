@@ -38,7 +38,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <bool name="config_vibrateOnIconAnimation">true</bool>
 
     <!-- Doze: does the double tap sensor need a proximity check? -->
-    <bool name="doze_double_tap_proximity_check">false</bool>
+    <bool name="doze_double_tap_proximity_check">true</bool>
 
     <!-- Unlock ripple animation -->
     <bool name="config_enableUnlockRippleAnimation">false</bool>
