@@ -34,6 +34,7 @@ on early-init
     chmod 0755 /sys/kernel/debug
     mount tracefs tracefs /sys/kernel/tracing
     chmod 0755 /sys/kernel/tracing
+    chown system system /sys/kernel/debug
 
   # Change ownership of hw_recovery related nodes
     chown system graphics /sys/kernel/debug/dri/0/debug/dump
