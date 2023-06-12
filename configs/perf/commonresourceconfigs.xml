@@ -97,7 +97,6 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x28" Node="/proc/sys/kernel/sched_sync_hint_enable" />
         <Minor OpcodeValue="0x29" Node="/proc/sys/kernel/sched_ravg_window_nr_ticks" />
         <Minor OpcodeValue="0x2A" Node="/proc/sys/kernel/sched_prefer_spread" />
-        <Minor OpcodeValue="0x2B" Node="/dev/cpuctl/top-app/cpu.uclamp.min" />
         <Minor OpcodeValue="0x2C" Node="/proc/%d/sched_boost" Supported="yes" /> <!-- enable sched_task_boost for top-app render thread-->
         <Minor OpcodeValue="0x2D" Node="/proc/%d/sched_boost" Supported="yes" /> <!-- disable sched_task_boost for top-app render thread-->
         <Minor OpcodeValue="0x2E" Node="/proc/sys/walt/sched_task_unfilter_period" />
@@ -112,8 +111,6 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x37" Node="/dev/stune/foreground/schedtune.prefer_idle" />
         <Minor OpcodeValue="0x38" Node="/proc/sys/kernel/%s" Supported="no"/>
         <Minor OpcodeValue="0x39" Node="/dev/stune/top-app/schedtune.colocate" />
-        <Minor OpcodeValue="0x3A" Node="/dev/cpuctl/top-app/cpu.uclamp.latency_sensitive" />
-        <Minor OpcodeValue="0x3B" Node="/dev/cpuctl/foreground/cpu.uclamp.latency_sensitive" />
     <!-- sched major end -->
 
     <!-- core hotplug major start -->
