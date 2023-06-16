@@ -117,6 +117,7 @@ vendor.display.idle_time=32767
 vendor.gralloc.disable_ahardware_buffer=1
 persist.log.tag.OpenGLRenderer=S
 debug.sf.auto_latch_unsignaled=true
+debug.sf.treat_170m_as_sRGB=1debug.sf.treat_170m_as_sRGB=1
 
 # DPM
 persist.vendor.dpmhalservice.enable=1
