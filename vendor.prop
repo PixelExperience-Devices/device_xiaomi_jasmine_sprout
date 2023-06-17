@@ -92,7 +92,6 @@ persist.vendor.camera.isp.dualisp=1
 persist.vendor.camera.thirdpartyeis_enabled=1
 
 # Chipset
-ro.soc.manufacturer=QTI
 ro.soc.model=SDM660
 
 # Crypto
@@ -100,9 +99,6 @@ ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.filenames_mode=aes-256-cts
 ro.crypto.volume.metadata.method=dm-default-key
 ro.crypto.volume.options=::v2
-
-# Dalvik
-dalvik.vm.dex2oat64.enabled=true
 
 # Dexpreopt
 ro.cp_system_other_odex=1
@@ -135,9 +131,6 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # FS-verity
 ro.apk_verity.mode=2
-
-# Fwk detect
-ro.vendor.qti.va_aosp.support=1
 
 # Graphics
 ro.hardware.egl=adreno
