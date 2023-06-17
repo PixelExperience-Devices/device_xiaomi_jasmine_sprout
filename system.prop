@@ -8,9 +8,6 @@ ro.af.client_heap_size_kbyte=7168
 ro.qualcomm.cabl=2
 ro.vendor.display.cabl=2
 
-# Charger
-ro.charger.enable_suspend=true
-
 # Charging
 persist.chg.max_volt_mv=9000
 
@@ -93,9 +90,6 @@ debug.sf.disable_backpressure=1
 ro.hwui.render_ahead=20
 debug.hwui.skia_atrace_enabled=false
 debug.sf.enable_transaction_tracing=false
-
-# Fwk detect
-ro.vendor.qti.va_aosp.support=1
 
 # GPS
 persist.backup.ntpServer="0.pool.ntp.org"
