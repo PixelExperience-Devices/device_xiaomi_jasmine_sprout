@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/xiaomi/jasmine_sprout
+QCOMCOMMON_PATH := device/qcom/common
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sdm660
@@ -162,6 +163,9 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
+
+# QCOM Common
+include $(QCOMCOMMON_PATH)/BoardConfigQcom.mk
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
