@@ -492,6 +492,7 @@ PRODUCT_COPY_FILES += \
 
 # QCOM Common
 $(call inherit-product, device/qcom/common/common.mk)
+TARGET_USE_SDM660_4_1_9_HALS := true
 
 # RIL
 PRODUCT_PACKAGES += \
