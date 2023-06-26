@@ -693,7 +693,6 @@ system_ext/lib64/vendor.qti.hardware.data.qmi@1.0.so|dbede1bf4e67724b1215beda05d
 -vendor/app/CACertService/CACertService.apk|08036cf609286ab2626ed89e3a7f976b96ce7fa3
 -vendor/app/CneApp/CneApp.apk|c228e10dcfa07acc1eeedc5557573d3fc5f09f37
 -vendor/app/IWlanService/IWlanService.apk|ba85c316c0106173f7b2d14d38da5fabad6a8ddd
-vendor/bin/ATFWD-daemon|8ffa27be4a6d54d158382beca0292c4bc3e1f702
 vendor/bin/adpl|71fa114f37e68a5afbd3f77abc664c8f7347e3e4
 vendor/bin/cnd|67a5c1fa6e74863086bc0d258543006df55decef
 vendor/bin/mutualex|f3d55634adc76dede67ef0a852abd637e5f55359
@@ -737,7 +736,6 @@ vendor/etc/init/imsqmidaemon.rc|dda16d842b7c65296e97bc9921b723a43b152ba3
 vendor/etc/init/imsrcsd.rc|2dc42ff6e4b6dd389bd3bc9a7af30dec2f1a45df
 vendor/etc/init/init-qcril-data.rc|890ac72fa49d0e52a263175a7b5b550539287800
 vendor/etc/init/mutualex.rc|d6d6673e59abfdb53232d502842285bae8f323f1
-vendor/etc/seccomp_policy/atfwd@2.0.policy|74fdb7d47bdb6d0cb06b13701a96a76c9171ab5d
 vendor/lib/libcne.so|a6d2cb3c90266038a8aa5e8b8e86f61eaf420b50
 vendor/lib/libcneapiclient.so|53b050525385d3716268a4daf890fea14f1f8ecc
 vendor/lib/libcneoplookup.so|f285b53f3e79af6b1ff764ed5dd2e1dc1cb1a625
@@ -1402,7 +1400,6 @@ vendor/lib/qtibus.so|2c0887d1f1800aa643e4c5d0b0058dcf889e8cfc
 vendor/lib/qtimutex.so|e48df9681689a352688c46eb18d44a656e3bcef9
 vendor/lib/vendor.qti.hardware.mwqemadapter@1.0.so|ac6fb6552aefce004b4fa27524d14b5b6f3131c9
 vendor/lib/vendor.qti.hardware.radio.am@1.0.so|567ce8038559019dcda474d85745a8d8f52bebf5
-vendor/lib/vendor.qti.hardware.radio.atcmdfwd@1.0.so|9916c5f80f4f8f5db2629fe6b0cc5614c13a6c46
 vendor/lib/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so|16eba7bb674f29146e2615dac0fe9efad2d11d73
 vendor/lib/vendor.qti.hardware.radio.lpa@1.0.so|251eec65ee96d2a3b380e768bc7c70d8f06aa5cd
 vendor/lib/vendor.qti.hardware.radio.lpa@1.1.so|0a17eeab009c008a69c4d738db35a1a616c8fdf3
@@ -1453,7 +1450,6 @@ vendor/lib64/qtibus.so|cef56e2d40f69b6b6c60b93edb612744395f7359
 vendor/lib64/qtimutex.so|026d9acf29b23ab0419abfe3066bd4c9f13bf7ae
 vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so|c041dbfc99643e791e52c4e7f3a87050a8cd6c93
 vendor/lib64/vendor.qti.hardware.radio.am@1.0.so|3d84dfd841e6bc918b8e92f3e8f4e45d2051708b
-vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so|ed5b893fc89f0f754bc0377ee8c02bd0b88157d7
 vendor/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so|fc4ababd2cc8ff9f1f253194a5998a0596cf83aa
 vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so|cff3174157c2a536e1d4b69b2cd43e4c2c873f5d
 vendor/lib64/vendor.qti.hardware.radio.lpa@1.1.so|9164fa7d396bb8acb6abd5c703e4a840149b3812
