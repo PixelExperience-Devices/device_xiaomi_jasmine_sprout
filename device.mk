@@ -254,7 +254,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
-    android.hardware.graphics.allocator@3.0.vendor \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@1.1.vendor \
