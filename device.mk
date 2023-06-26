@@ -224,12 +224,10 @@ PRODUCT_PACKAGES += \
     hwcomposer.sdm660 \
     memtrack.sdm660 \
     libdisplayconfig \
-    libtinyxml.vendor \
     libtinyxml \
     libgralloc.qti \
     libqdMetaData \
-    libqdMetaData.system \
-    libqdMetaData.vendor
+    libqdMetaData.system
 
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
@@ -486,7 +484,6 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor \
     libavservices_minijail.vendor \
     libjson \
-    libjson.vendor \
     libprotobuf-cpp-full \
     librmnetctl \
     libxml2
