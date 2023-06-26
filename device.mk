@@ -212,7 +212,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.5 \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
-    android.hardware.camera.provider@2.5 \
     android.hardware.camera.provider@2.6 \
     libdng_sdk.vendor \
     vendor.qti.hardware.camera.device@1.0 \
@@ -260,7 +259,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@3.0.vendor \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.mapper@2.0.vendor \
-    vendor.qti.hardware.display.mapper@1.0.vendor \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
