@@ -774,19 +774,6 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     disabled
     oneshot
 
-service chre /vendor/bin/chre
-    override
-    class late_start
-    user system
-    group system
-    socket chre seqpacket 0660 root system
-    shutdown critical
-    task_profiles ServiceCapacityLow
-    disabled
-
-on property:vendor.chre.enabled=0
-   stop chre
-
 service bugreport /system/bin/dumpstate -d -p -B -z -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
     class main
     task_profiles ServiceCapacityLow
