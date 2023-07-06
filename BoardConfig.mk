@@ -91,6 +91,9 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 GNSS_HIDL_VERSION := 2.1
 LOC_HIDL_VERSION := 4.0
 
+# HALS
+TARGET_HALS_PATH := $(DEVICE_PATH)/qcom-caf
+
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifests/framework_manifest.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifests/manifest.xml
