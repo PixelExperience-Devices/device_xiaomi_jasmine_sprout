@@ -467,7 +467,7 @@ PRODUCT_COPY_FILES += \
 
 # QCOM Common
 $(call inherit-product, device/qcom/common/common.mk)
-TARGET_COMMON_QTI_COMPONENTS := alarm
+TARGET_COMMON_QTI_COMPONENTS := alarm av
 
 # RIL
 PRODUCT_PACKAGES += \
