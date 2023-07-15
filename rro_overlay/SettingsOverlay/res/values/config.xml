@@ -16,6 +16,9 @@
     <bool name="config_show_mobile_plan">false</bool>
 
 
-<!-- Whether memory from app_info_settings is available or not. -->
+    <!-- Whether memory from app_info_settings is available or not. -->
     <bool name="config_show_app_info_settings_memory">true</bool>
+
+    <!-- Whether to show the Preference for Adaptive connectivity -->
+    <bool name="config_show_adaptive_connectivity">false</bool>
 </resources>
