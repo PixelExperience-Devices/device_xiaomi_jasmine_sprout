@@ -225,7 +225,9 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     SettingsGoogle
 
 PRODUCT_PACKAGES += \
-     cppreopts.sh
+    cppreopts.sh
+
+USE_DEX2OAT_DEBUG := false
 
 # Display
 PRODUCT_PACKAGES += \
