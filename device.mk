@@ -219,6 +219,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
 
 # Dex Flags
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
 DONT_DEXPREOPT_PREBUILTS := true
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 PRODUCT_DEXPREOPT_SPEED_APPS += \
