@@ -168,6 +168,9 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 PRODUCT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+BOARD_SEPOLICY_M4DEFS += \
+    hal_perf_default=vendor_hal_perf_default \
+    hal_perf_hwservice=vendor_hal_perf_hwservice
 
 # Treble
 BOARD_VNDK_VERSION := current
