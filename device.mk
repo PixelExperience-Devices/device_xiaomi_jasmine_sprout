@@ -447,7 +447,7 @@ PRODUCT_COPY_FILES += \
 
 # QCOM Common
 $(call inherit-product, device/qcom/common/common.mk)
-TARGET_COMMON_QTI_COMPONENTS := alarm av perf vibrator
+TARGET_COMMON_QTI_COMPONENTS := alarm av perf qseecomd vibrator
 
 # RIL
 PRODUCT_PACKAGES += \
