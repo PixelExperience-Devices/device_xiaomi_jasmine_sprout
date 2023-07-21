@@ -92,7 +92,6 @@ debug.hwui.skia_atrace_enabled=false
 debug.sf.enable_transaction_tracing=false
 
 # GPS
-persist.backup.ntpServer="0.pool.ntp.org"
 persist.vendor.overlay.izat.optin=rro
 
 # Hwui
