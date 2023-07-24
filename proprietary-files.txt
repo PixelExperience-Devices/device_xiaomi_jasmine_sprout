@@ -937,24 +937,6 @@ vendor/firmware/a540_gpmu.fw2|3530f10b4825a3b08c79e0bcfaf6471ec8422f24
 vendor/lib/libmm-hdcpmgr.so|02cc65f79a951f9006ebc05b0edec2c5a296a684
 vendor/lib64/libmm-hdcpmgr.so|eb7db96305875b80971fec7b93ea800b6c9a1a77
 
-# Graphics (HDR)
-vendor/lib/libhdr_tm.so|a2292af314f9fa86b9ec2bb11ad72bf85e959842
-vendor/lib64/libhdr_tm.so|a1b9bbad12217e6b79951774801aa54be6460fd6
-
-# Graphics (SDM)
-vendor/lib/libqseed3.so|1a67e4c3e7d904dc3d3af35c0f516fe13ed88bcb
-vendor/lib/libsdm-color.so|43bfdb63147740a728e704b35c659301bca7ede2
-vendor/lib/libsdm-diag.so|a2b532158e12562e1fb74695bf829de1b94c2cde
--vendor/lib/libsdm-disp-vndapis.so|501f1b94c95f885e1e2bfab4d5f6804456473d79
-vendor/lib/libsdmextension.so|499d9b9be4fb53b2410f65976ea94f2c154b9f11
-vendor/lib/libtinyxml2_1.so|aec76b36890b163f9cf1be594d6b082887f0a9b2
-vendor/lib64/libqseed3.so|a858c83fb38ef7acd21ea0a23f36ef22ba8c06ef
-vendor/lib64/libsdm-color.so|69cea5fdff6c3ef05a17390b9031d9e0054bc2ad
-vendor/lib64/libsdm-diag.so|2ba98c20d05e34501a4423f55bec4da3f27711ad
--vendor/lib64/libsdm-disp-vndapis.so|80170ba42ef766a8217500e49c4943be91cf0749
-vendor/lib64/libsdmextension.so|2d7469450bfaadb304a8080e384f72601442d078
-vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
-
 # Graphics (Vulkan)
 vendor/lib/hw/vulkan.adreno.so|139868cf11006199fffc109b7a207e4e7f4cbd18
 vendor/lib64/hw/vulkan.adreno.so|9215100009b574f71dc75272f22a499302ea121d
@@ -1057,12 +1039,6 @@ vendor/lib/libperipheral_client.so|8f7e9ebd1a8dc6afc878b97c078a3deb97963d68
 vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
 
 # Postprocessing
-system_ext/lib/vendor.display.color@1.0.so|92f2e464473065fc7b8c9bbc2be29bbf24e5995e
-system_ext/lib/vendor.display.color@1.1.so|564bfa4659f3ecf8268ee8d20d26f80cf87226e1
-system_ext/lib/vendor.display.color@1.2.so|6b93c14d77d104243683fc4b482875626487d71a
-system_ext/lib64/vendor.display.color@1.0.so|285a872d9de41b6de48dd1b3d288e7de56c35ba6
-system_ext/lib64/vendor.display.color@1.1.so|241abd3090b46d3ab83ff3be229352b1bb83fbda
-system_ext/lib64/vendor.display.color@1.2.so|7bc8f248db4656ffeb8043f480890ed12171cd55
 vendor/bin/hw/vendor.display.color@1.0-service|a1640ca55a67e701003fa1f6f92bd127f180d2b2
 vendor/bin/mm-pp-dpps|a265b90d727a3a8716796bbfc632e0307172b3dc
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
@@ -1199,7 +1175,6 @@ vendor/lib/libpdnotifier.so|9bfcb1a3dd8295fc965f0220014a9332969af806
 vendor/lib/libqcmaputils.so|5bb013bc5a0a8fa96bfa5e0a166ee6cf3923ddee
 vendor/lib/libqcrilFramework.so|85f90f00994a3f4cea62e4cb01644df8689f92d9
 vendor/lib/libqcrildatactl.so|0978b5976a92a575168e62544c1b78d05e699596
-vendor/lib/libqrtr.so|2ad39d181ebbc2e7d61194859ab58d6a469c15f3
 vendor/lib/libqsocket.so|50079ff493b17465ff8f44d8210d26e3c7279065
 vendor/lib/libril-qc-hal-qmi.so|3dc3ff559b61d1f917676852805321fe726f105b
 vendor/lib/libril-qc-logger.so|5fdaa83ca67e4428af13a4bf18b5b16ecebd661c
@@ -1249,7 +1224,6 @@ vendor/lib64/libpdnotifier.so|665da78ebcc71682a19e4635209e6718741b0512
 vendor/lib64/libqcmaputils.so|42729b851912ac2cd899b3ddc2e52e1156ea0426
 vendor/lib64/libqcrilFramework.so|dc62bd4f3685c420d43f4f5f4141d5908212df86
 vendor/lib64/libqcrildatactl.so|612f31db78dd262a349c093c1a5071e4fd89450d
-vendor/lib64/libqrtr.so|b22ee7df87b35ba88b518f0b821cc601cd612183
 vendor/lib64/libqsocket.so|3fa01c9aff6ed96a5ea9886c7696a046c929e339
 vendor/lib64/libril-qc-hal-qmi.so|73cb43f5628dd2536d6c3a3a0ec047225fcbe4cc
 vendor/lib64/libril-qc-logger.so|5622a5aa1eb7fc6c6241c0033e27272084d235c6

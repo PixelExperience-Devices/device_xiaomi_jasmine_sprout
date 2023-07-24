@@ -44,7 +44,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
-    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-0.xml \
@@ -224,18 +223,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gralloc.sdm660 \
     hwcomposer.sdm660 \
-    memtrack.sdm660 \
-    libdisplayconfig \
-    libtinyxml \
-    libgralloc.qti \
-    libqdMetaData \
-    libqdMetaData.system
+    memtrack.sdm660
 
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
     vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.mapper@2.0.vendor \
-    vendor.qti.hardware.display.mapper@1.1.vendor \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.graphics.composer@2.1-impl \
@@ -425,7 +417,7 @@ PRODUCT_COPY_FILES += \
 
 # QCOM Common
 $(call inherit-product, device/qcom/common/common.mk)
-TARGET_COMMON_QTI_COMPONENTS := alarm av gps media perf qseecomd vibrator
+TARGET_COMMON_QTI_COMPONENTS := alarm av display gps media perf qseecomd vibrator
 
 # RIL
 PRODUCT_PACKAGES += \
