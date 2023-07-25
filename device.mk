@@ -433,12 +433,10 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-   CarrierConfigOverlay \
    FrameworksOverlay \
    SettingsOverlay \
    SettingsProviderResOverlay \
    SystemUIOverlay \
-   TelephonyOverlay \
    WifiOverlay
 
 # Platform
@@ -467,7 +465,7 @@ PRODUCT_COPY_FILES += \
 
 # QCOM Common
 $(call inherit-product, device/qcom/common/common.mk)
-TARGET_COMMON_QTI_COMPONENTS := alarm perf usb vibrator
+TARGET_COMMON_QTI_COMPONENTS := alarm overlay perf usb vibrator
 
 # RIL
 PRODUCT_PACKAGES += \
