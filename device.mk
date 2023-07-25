@@ -324,6 +324,9 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
+# Kernel
+TARGET_KERNEL_VERSION := 4.19
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
