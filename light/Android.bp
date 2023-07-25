@@ -6,6 +6,7 @@
 
 cc_binary {
     name: "android.hardware.lights-service.jasmine_sprout",
+    overrides: ["android.hardware.lights-service.qti"],
     relative_install_path: "hw",
     init_rc: ["android.hardware.lights.jasmine_sprout.rc"],
     vintf_fragments: ["android.hardware.lights.jasmine_sprout.xml"],
