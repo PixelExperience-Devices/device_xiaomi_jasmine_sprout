@@ -412,7 +412,7 @@ PRODUCT_COPY_FILES += \
 
 # QCOM Common
 $(call inherit-product, device/qcom/common/common.mk)
-TARGET_COMMON_QTI_COMPONENTS := adreno alarm av display gps media overlay perf qseecomd vibrator
+TARGET_COMMON_QTI_COMPONENTS := adreno alarm av display dsprpcd gps media overlay perf qseecomd vibrator
 
 # RIL
 PRODUCT_PACKAGES += \

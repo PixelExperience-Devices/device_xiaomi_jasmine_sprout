@@ -46,22 +46,11 @@ vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp|baf806a136c5ad71423cb28422124cf8b
 # ADSP
 system_ext/lib/libadsprpc_system.so|fd315da148c4ab2930401b867778b2f9a7f09d79
 system_ext/lib64/libadsprpc_system.so|77e5d1452f0f86185093fa34529b9b5f818a75ef
-vendor/bin/adsprpcd|5e246a6f5d2dca27e29b233a17e4673532191b95
 vendor/etc/init/vendor.qti.adsprpc-service.rc|54588df8e7da58c66838028d2284986b966c2d37
-vendor/lib/libadsp_default_listener.so|c822c536d9776ca2d60bf5a158531544f20c4829
 vendor/lib/libadsp_hvx_callback_skel.so|349803cd69d676e386b2a923c128c49aeefdeb4a
 vendor/lib/libadsp_hvx_stub.so|59e9f81b8d3a41a69badf201acee57615f822013
-vendor/lib/libadsprpc.so|3da7471cbfb2f26bb997d21098282697ee1965e4
 vendor/lib/libfastcvadsp_stub.so|6e9d2b6e08188daba1d2f96ab708146391594280
-vendor/lib/libfastcvopt.so|4f4a2297c4071c3b22b967000ecc1f4ea1b9d203
-vendor/lib/libmdsprpc.so|50380552c78713d9678978b6654c20401b5040f6
-vendor/lib/libsdsprpc.so|dcff191dcb9af4cc6f9a54c4eca6664bf6f965a4
-vendor/lib64/libadsp_default_listener.so|41f91a64209c0431d87cee08999c5cfdc5dedb38
-vendor/lib64/libadsprpc.so|14348488a9d8a30f6787d5b11bf4d4857d23e58e
 vendor/lib64/libfastcvadsp_stub.so|3de1763ac58a705dfba9b517169ee2683699eb7c
-vendor/lib64/libfastcvopt.so|7d117c620711872774e3d822b4816c516982c25f
-vendor/lib64/libmdsprpc.so|d0252bb9747bb90cbb7e8788a9906ecbed44cb60
-vendor/lib64/libsdsprpc.so|58ee0bd2d4b5c40afeb7d654dd020f09676fe9d9
 
 # ADSP modules
 vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so|f4d8675a46c5e52add8f8e90e35b29cd33ac582b
@@ -595,16 +584,8 @@ vendor/lib/libmmcamera_wayne_imx486_sunny_iii.so|140da52cbabfa80f74be0dd798a889f
 # CDSP
 system_ext/lib/libcdsprpc_system.so|78b3fc57248a97ad0498a070487d58875aa2fe3b
 system_ext/lib64/libcdsprpc_system.so|2fddb95160c8d803d28ed3b4b9f4146812d65280
-vendor/bin/cdsprpcd|ea126ed2f1b11622547239f331b8013320c59ad2
-vendor/etc/init/vendor.qti.cdsprpc-service.rc|36772b70216796e8ef19376d9c6a81ee9ffff549
-vendor/lib/libcdsp_default_listener.so|1c24530e998d6ea908b86afd20470e7e3d0a48c0
-vendor/lib/libcdsprpc.so|4ef30602663e13d44e1c7dd09db927fa4e6947ae
 vendor/lib/libfastrpc_utf_stub.so|945a41ea68452806d1a5add3584d34b30c7f9a95
-vendor/lib/libsysmon_cdsp_skel.so|8a23e64a696517679e7c336fc31f3b912f4ca32a
-vendor/lib64/libcdsp_default_listener.so|96d722b324c4d1a554d0f018d8cbbb8c4e4519b8
-vendor/lib64/libcdsprpc.so|891066a404b155c545ff7f4bf23cb7e042f29f28
 vendor/lib64/libfastrpc_utf_stub.so|15243b9539bb74069d6ee59bd70340b0ea0ec338
-vendor/lib64/libsysmon_cdsp_skel.so|6b07100c3294c76402e2d064d463629c9468d6a9
 
 # Charger
 vendor/bin/hvdcp_opti|0af1d3a59fd10acd7a614662c341421d9267014c
@@ -829,11 +810,6 @@ system_ext/lib/vendor.qti.hardware.dsp@1.0.so|4a5b835bc386a71f1922b6ffa7a58947e4
 system_ext/lib64/libmdsprpc_system.so|b5ea6a8e2b9d99cb85b6d313a8d7bf2a28c82c7f
 system_ext/lib64/libsdsprpc_system.so|cde1ea070efa2f8ab4b3b5dfeeb26b732ce1017d
 system_ext/lib64/vendor.qti.hardware.dsp@1.0.so|cb00ecf199d18de8e2ce3ca4e75e2042504fa772
-vendor/bin/dspservice|a8eb76af6150bbf29c12b76b00ab469b99f563f7
-vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc|fbf2bb38ca6bdddf98c7123da9e1f263a4eec55f
-vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5fc95e118f56a8ac15d
-vendor/lib/vendor.qti.hardware.dsp@1.0.so|f902e821229cd1fff50ebfba99b0a068cbf74a56
-vendor/lib64/vendor.qti.hardware.dsp@1.0.so|223a9268bd92bd80dab3df02fbef38ea86bcbadd
 
 # Fingerprint firmware - from jasmine V11.0.28.0.QDIMIXM
 etc/firmware/goodixfp.b00:vendor/firmware/goodixfp.b00|c5c3594b47dffb3aadb81abced42518d24637893
@@ -1402,7 +1378,6 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|a5f9d28f7adbfbf349e6f5
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9494fd
 
 # Sensors
-vendor/bin/sensors.qti|04d11860e030b6176056b6e862b9e4ee9ba2289a
 vendor/etc/sensors/hals.conf|bf3677cbfa5ce5735662e8c259cb027969f65c87
 vendor/lib/libsensor1.so|0b74f64339245b2bb9e08aa97a78bd8d344463c5
 vendor/lib/libsensor_reg.so|40a7b8e675352be825806017766b4fed3a3e128d
