@@ -40,12 +40,6 @@ ro.telephony.block_binder_thread_on_incoming_calls=false
 # Shutdown
 ro.build.shutdown_timeout=2
 
-# Telephony
-persist.vendor.ims.disableADBLogs=1
-persist.vendor.ims.disableDebugLogs=1
-persist.vendor.ims.disableIMSLogs=1
-persist.vendor.ims.disableQXDMLogs=1
-
 # Time
 persist.vendor.delta_time.enable=true
 

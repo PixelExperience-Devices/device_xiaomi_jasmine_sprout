@@ -11,9 +11,6 @@ ro.vendor.display.cabl=2
 # Charging
 persist.chg.max_volt_mv=9000
 
-# CNE
-persist.vendor.cne.feature=1
-
 # Camera
 persist.radio.VT_CAM_INTERFACE=2
 persist.vendor.qti.telephony.vt_cam_interface=1
@@ -127,10 +124,6 @@ vendor.vidc.enc.disable_bframes=1
 vendor.vidc.enc.disable.pq=false
 vidc.enc.dcvs.extra-buff-count=2
 
-# Netmgr
-persist.vendor.data.mode=concurrent
-ro.vendor.use_data_netmgrd=true
-
 # Proximity
 gsm.proximity.enable=true
 
@@ -145,11 +138,6 @@ persist.rild.nitz_short_ons_0=
 persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
-ril.subscription.types=NV,RUIM
-DEVICE_PROVISIONED=1
-ro.telephony.default_network=22,20
-telephony.lteOnCdmaDevice=1
-persist.vendor.radio.enableadvancedscan=false
 rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so
 persist.radio.cust_ds_ui=ss
 

@@ -18,9 +18,6 @@ bluetooth.hardware.power.idle_cur_ma=3
 bluetooth.hardware.power.rx_cur_ma=20
 bluetooth.hardware.power.tx_cur_ma=33
 
-# DPM
-persist.vendor.dpm.feature=11
-
 # DEX Flags
 pm.dexopt.boot=verify
 pm.dexopt.install=speed-profile
