@@ -330,6 +330,12 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/media/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml \
     $(DEVICE_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_ODM)/etc/media_profiles_V1_0.xml # This is media/media_profiles.xml from qcom/common
 
+PRODUCT_COPY_FILES += \
+    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml \
+
 # Mlipay
 PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.mlipay@1.1.vendor
@@ -389,7 +395,7 @@ PRODUCT_COPY_FILES += \
 
 # QCOM Common
 $(call inherit-product, device/qcom/common/common.mk)
-TARGET_COMMON_QTI_COMPONENTS := adreno alarm av display dsprpcd gps media overlay perf qseecomd telephony usb vibrator
+TARGET_COMMON_QTI_COMPONENTS := adreno alarm av display dsprpcd gps overlay perf qseecomd telephony usb vibrator
 
 # RIL
 PRODUCT_PACKAGES += \
