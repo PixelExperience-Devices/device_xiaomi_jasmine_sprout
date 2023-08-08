@@ -17,5 +17,5 @@
     <overlay
       android:targetPackage="org.protonaosp.deviceconfig"
       android:isStatic="true"
-      android:priority="1"/>
+      android:priority="800"/>
 </manifest>
