@@ -110,13 +110,11 @@ persist.wm.enable_remote_keyguard_animation=0
 
 # Media
 media.aac_51_output_enabled=true
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 media.stagefright.enable-player=true
 media.stagefright.enable-http=true
 media.stagefright.enable-aac=true
 media.stagefright.enable-qcp=true
 media.stagefright.enable-scan=true
-media.stagefright.thumbnail.prefer_hw_codecs=true
 mmp.enable.3g2=true
 persist.mm.enable.prefetch=true
 vidc.dec.enable.downscalar=0
@@ -125,7 +123,6 @@ vendor.vidc.dec.enable.downscalar=1
 vendor.vidc.enc.disable_bframes=1
 vendor.vidc.enc.disable.pq=false
 vidc.enc.dcvs.extra-buff-count=2
-ro.media.recorder-max-base-layer-fps=60
 
 # Proximity
 gsm.proximity.enable=true
