@@ -1,4 +1,4 @@
-# Copyright (c) 2013-2018, The Linux Foundation. All rights reserved.
+# Copyright (c) 2013-2018, 2020 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -27,6 +27,15 @@
 #
 #
 
+import /vendor/etc/init/hw/init.target_dap.rc
+import /vendor/etc/init/hw/init.fingerprint.rc
+
+on early-init
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_apr audio_wglink audio_adsp_loader audio_q6_pdr audio_q6_notifier audio_q6 audio_usf audio_native audio_pinctrl_wcd audio_pinctrl_lpi audio_swr audio_platform audio_hdmi audio_wcd_spi audio_stub audio_digital_cdc audio_analog_cdc audio_msm_sdw audio_wcd_cpe audio_cpe_lsm audio_wcd9335 audio_machine_sdm660 audio_wcd934x audio_mbhc audio_wcd9xxx audio_wcd_core
+    mkdir /firmware 0771 system system
+    mkdir /bt_firmware 0771 system system
+    mkdir /dsp 0771 media media
+
 on init
     write /dev/stune/foreground/schedtune.sched_boost_no_override 1
     write /dev/stune/top-app/schedtune.sched_boost_no_override 1
@@ -35,56 +44,29 @@ on init
     write /dev/stune/system-background/schedtune.colocate 0
     write /dev/stune/foreground/schedtune.colocate 0
     write /dev/stune/top-app/schedtune.colocate 1
-
-on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
-    mount_all --early /vendor/etc/fstab.qcom
-    swapon_all /vendor/etc/fstab.qcom
-    chown root system /mnt/vendor/persist
-    chmod 0771 /mnt/vendor/persist
-    mkdir /mnt/vendor/persist/data 0700 system system
-    mkdir /mnt/vendor/persist/bms 0700 root system
-    restorecon_recursive /mnt/vendor/persist
-    write /sys/kernel/boot_adsp/boot 1
+    start vendor.qseecomd
+    start keymaster-4-0
 
-    mkdir /mnt/vendor/dsp 0770 root root
-    copy /vendor/dsp/cdsp/fastrpc_shell_3 /mnt/vendor/dsp/fastrpc_shell_3
-    chmod 0644 /mnt/vendor/dsp/fastrpc_shell_3
-    mount none /mnt/vendor/dsp/fastrpc_shell_3 /vendor/dsp/cdsp/fastrpc_shell_3 bind
-
-on late-fs
-    mount_all --late /vendor/etc/fstab.qcom
+on early-fs
+    start vold
 
 on post-fs
-    start vendor.qseecomd
-    wait_for_prop vendor.sys.listeners.registered true
+    write /dev/ipa 1
 
 on init
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
-
-on late-init
-    # Start services for bootanim
-    start surfaceflinger
-    start bootanim
-    start vendor.hwcomposer-2-3
-    start vendor.configstore-hal
-    start vendor.qti.hardware.display.allocator
 
 on post-fs-data
     mkdir /data/vendor/tombstones/modem 0771 system system
     mkdir /data/vendor/tombstones/lpass 0771 system system
     mkdir /data/vendor/tombstones/wcnss 0771 system system
     mkdir /data/vendor/tombstones/dsps 0771 system system
+    mkdir /data/vendor/hbtp 0750 system system
     mkdir /data/vendor/misc/seemp 0700 system system
 
-    mkdir /mnt/vendor/persist/fpc 0770 system system
-    copy /data/vendor/fpc/user.db /data/vendor_de/0/fpdata/user.db
-    chown system system /data/vendor_de/0/fpdata/user.db
-    rm /data/vendor/fpc/user.db
-
 on early-boot
-    write /dev/ipa 1
     chown system system /mnt/vendor/persist/sensors
     chown system system /mnt/vendor/persist/sensors/sns.reg
     chown system system /mnt/vendor/persist/sensors/sensors_settings
@@ -92,6 +74,7 @@ on early-boot
 
 on boot
     start rmt_storage
+    start rfs_access
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/foreground/cpus 0-7
     write /dev/cpuset/foreground/boost/cpus 0-7
@@ -115,46 +98,11 @@ on boot
     chown system system /persist/speccfg/submask
     chown system system /persist/speccfg/partition
 
-    # Camera
-    chmod 0660 /sys/android_camera/sensor
-    chown system system /sys/android_camera/sensor
-
-    # Flash
-    chmod 0660 /sys/class/leds/led:flash_0/brightness
-    chmod 0660 /sys/class/leds/led:flash_1/brightness
-    chmod 0660 /sys/class/leds/led:flash_2/brightness
-    chmod 0660 /sys/class/leds/led:torch_0/brightness
-    chmod 0660 /sys/class/leds/led:torch_1/brightness
-    chmod 0660 /sys/class/leds/led:torch_2/brightness
-    chmod 0660 /sys/class/leds/led:switch_0/brightness
-    chmod 0660 /sys/class/leds/led:switch_1/brightness
-    chmod 0660 /sys/class/leds/flashlight/brightness
-    chown system system /sys/class/leds/led:flash_0/brightness
-    chown system system /sys/class/leds/led:flash_1/brightness
-    chown system system /sys/class/leds/led:flash_2/brightness
-    chown system system /sys/class/leds/led:torch_0/brightness
-    chown system system /sys/class/leds/led:torch_1/brightness
-    chown system system /sys/class/leds/led:torch_2/brightness
-    chown system system /sys/class/leds/led:switch_0/brightness
-    chown system system /sys/class/leds/led:switch_1/brightness
-    chown system system /sys/class/leds/flashlight/brightness
-
-    # IR
-    chmod 0660 /dev/spidev7.1
-    chown system system /dev/spidev7.1
-
-    # Power supply
-    chmod 0660 /sys/class/power_supply/battery/input_suspend
-    chmod 0660 /sys/class/power_supply/battery/charging_enabled
-    chown system system /sys/class/power_supply/battery/input_suspend
-    chown system system /sys/class/power_supply/battery/charging_enabled
-
-    # Thermal
-    chmod 0770 /sys/class/power_supply/battery/device/thermalcall
-    chown system system /sys/class/power_supply/battery/device/thermalcall
-
 #Create folder dump yuv images while debugging
     mkdir /data/vendor/camera 0770 camera camera
+
+#Load WLAN driver
+   insmod /vendor/lib/modules/qca_cld3_wlan.ko
 
 #USB controller configuration
     setprop vendor.usb.rndis.func.name "rndis_bam"
@@ -165,12 +113,6 @@ on boot
     setprop vendor.usb.controller a800000.dwc3
     setprop sys.usb.configfs 1
     write /sys/module/usb_f_qcrndis/parameters/rndis_dl_max_xfer_size 15916
-
-    # Touchpanel
-    chown system system /sys/touchpanel/capacitive_keys
-    chown system system /sys/touchpanel/double_tap
-    chmod 0600 /sys/touchpanel/double_tap
-    chown system system /sys/touchpanel/reversed_keys
 
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
@@ -268,6 +210,17 @@ service thermal-engine /system/vendor/bin/thermal-engine
 #   user media
 #   group media
 
+service hbtp /system/vendor/bin/hbtp_daemon
+    class main
+    user system
+    group system
+    disabled
+
+service audiod /system/vendor/bin/audiod
+   class late_start
+   user system
+   group system
+
 #service vendor.cdsprpcd /vendor/bin/cdsprpcd
 #   class main
 #   user system
@@ -337,6 +290,10 @@ service thermal-engine /system/vendor/bin/thermal-engine
 #
 #
 #
+service vendor-sensor-sh /vendor/bin/init.qcom.sensors.sh
+    class core
+    user root
+    oneshot
 #
 #service mdm_helper /system/bin/mdm_helper
 #    class core
@@ -383,13 +340,19 @@ service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
     user system
     group system
+    disabled
+
+
+service energy-awareness /system/vendor/bin/energy-awareness
+    class main
+    user system
+    group system
+    oneshot
 
 service mdtpd /system/vendor/bin/mdtpd
-    override
     class late_start
     user root
     group system radio drmrpc
-    disabled
 
 service vendor.pd_mapper /system/vendor/bin/pd-mapper
      class core
@@ -457,8 +420,6 @@ on charger
     setprop vendor.usb.controller a800000.dwc3
     setprop sys.usb.configfs 1
     start vendor.power_off_alarm
-    chown system system /sys/class/leds/red/brightness
-    write /sys/class/leds/red/brightness 255
 
 #
 #service nqs /system/bin/nqs
@@ -480,37 +441,14 @@ on charger
 #    group system
 
 service seempd /system/bin/seempd
-    override
     class late_start
     user system
     group system sdcard_rw
     socket seempdw dgram 0666 system system
-    disabled
 
 service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
      class main
      user root
      group system wakelock
 
-# Workaround for camera HAL can not read sys property
-on property:sys.camera.face.unlock=*
-    setprop vendor.camera.face.unlock ${sys.camera.face.unlock}
 
-on property:sys.boot_completed=1
-    write /proc/sys/vm/page-cluster 0
-    write /proc/sys/vm/swappiness 100
-    swapon_all /vendor/etc/fstab.qcom
-
-# Restrict permissions to socket file
-# to hide Magisk & co.
-    chmod 440 /proc/net/unix
-
-on property:vendor.post_boot.parsed=1
-    write /dev/cpuset/background/cpus 0-1
-    write /dev/cpuset/system-background/cpus 0-3
-    write /dev/cpuset/restricted/cpus 0-3
-
-on property:vendor.post_boot.parsed=1
-    # Back to default VM settings
-    write /proc/sys/vm/dirty_expire_centisecs 3000
-    write /proc/sys/vm/dirty_background_ratio 10

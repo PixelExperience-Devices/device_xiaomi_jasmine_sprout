@@ -333,16 +333,14 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
-    init.qti.dcvs.sh \
-    init.qcom.rc \
-    init.qcom.sh \
-    init.recovery.qcom.rc \
-    init.target.rc \
-    ueventd.qcom.rc \
     fstab.qcom \
-    init.fingerprint.rc
+    init.fingerprint.rc \
+    init.jasmine_sprout.rc \
+    init.qcom.sensors.sh \
+    init.qti.dcvs.sh \
+    init.target_dap.rc \
+    init.target.rc \
+    ueventd.jasmine_sprout.rc
 
 # Ion
 PRODUCT_PACKAGES += \
@@ -465,7 +463,7 @@ PRODUCT_COPY_FILES += \
 
 # QCOM Common
 $(call inherit-product, device/qcom/common/common.mk)
-TARGET_COMMON_QTI_COMPONENTS := alarm overlay perf usb vibrator
+TARGET_COMMON_QTI_COMPONENTS := alarm init overlay perf usb vibrator
 
 # RIL
 PRODUCT_PACKAGES += \
