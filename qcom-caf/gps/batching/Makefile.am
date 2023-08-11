@@ -39,6 +39,6 @@ lib_LTLIBRARIES = libbatching.la
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = location-batching.pc
-sysconf_DATA = $(WORKSPACE)/hardware/qcom/gps/etc/flp.conf
+sysconf_DATA = $(WORKSPACE)/device/xiaomi/jasmine_sprout/qcom-caf/gps/etc/flp.conf
 EXTRA_DIST = $(pkgconfig_DATA)
 

@@ -46,8 +46,8 @@ LOCAL_C_INCLUDES += \
     external/skia/include/core \
     external/skia/include/images \
     $(TARGET_OUT_HEADERS)/qcom/display \
-    hardware/qcom-caf/sdm660/camera/QCamera2/stack/common \
-    hardware/qcom-caf/sdm660/camera/QCamera2/stack/mm-camera-interface/inc \
+    device/xiaomi/jasmine_sprout/qcom-caf/camera/QCamera2/stack/common \
+    device/xiaomi/jasmine_sprout/qcom-caf/camera/QCamera2/stack/mm-camera-interface/inc \
     $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 
 LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
