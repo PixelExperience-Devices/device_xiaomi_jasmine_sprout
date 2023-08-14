@@ -357,7 +357,6 @@ PRODUCT_PACKAGES += \
    FrameworksOverlay \
    SettingsOverlay \
    SettingsProviderResOverlay \
-   SimpleDeviceConfigOverlay \
    SystemUIOverlay \
    WifiOverlay
 
