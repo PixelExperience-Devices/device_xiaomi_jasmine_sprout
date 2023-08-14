@@ -480,8 +480,7 @@ PRODUCT_PACKAGES += \
    SettingsProviderResOverlay \
    SystemUIOverlay \
    TelephonyOverlay \
-   WifiOverlay \
-   SimpleDeviceConfigOverlay
+   WifiOverlay
 
 # Platform
 TARGET_BOARD_PLATFORM := sdm660
