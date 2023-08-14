@@ -4,3 +4,6 @@ allow system_app zygote:unix_stream_socket { getopt };
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file r_file_perms;
 allow system_app proc_pagetypeinfo:file { read open getattr };
+
+# we don't have google battery support, add dummy domain and let it return null by selinux denial
+dontaudit system_app hal_dummy_googlebattery_service:service_manager find;
