@@ -209,5 +209,5 @@ TARGET_USES_AOSP_FOR_AUDIO := false
 endif
 
 # Audio configuration file
--include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/$(TARGET_BOARD_PLATFORM)$(TARGET_BOARD_SUFFIX)/$(TARGET_BOARD_PLATFORM)$(TARGET_BOARD_SUFFIX).mk
+-include $(TARGET_HALS_PATH)/audio/configs/$(TARGET_BOARD_PLATFORM)$(TARGET_BOARD_SUFFIX)/$(TARGET_BOARD_PLATFORM)$(TARGET_BOARD_SUFFIX).mk
 
