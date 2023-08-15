@@ -67,9 +67,9 @@ vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so|d2174a2a4a680e93ee4262b5e
 vendor/lib/rfsa/adsp/libscveT2T_skel.so|e8083e551a17e880acb9d72ceb725b762cadf0d2
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so|2da97f61c1d14f1f9a38aecd8ab89a1f6fa8d991
 
-# ANT - rom S62Pro
-vendor/lib/hw/com.dsi.ant@1.0-impl.so
-vendor/lib64/hw/com.dsi.ant@1.0-impl.so|7f6c578587cd7fdbcc88bdc1af433c303f20e80e
+# ANT - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+vendor/lib/hw/com.dsi.ant@1.0-impl.so|9934368dc60b9fb688c89ded5a853b8d020b6d36
+vendor/lib64/hw/com.dsi.ant@1.0-impl.so|20cb53585f9cc23eb44c37d026a97dfcae84d64a
 
 # Audio
 system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
@@ -587,8 +587,8 @@ system_ext/lib64/libcdsprpc_system.so|2fddb95160c8d803d28ed3b4b9f4146812d65280
 vendor/lib/libfastrpc_utf_stub.so|945a41ea68452806d1a5add3584d34b30c7f9a95
 vendor/lib64/libfastrpc_utf_stub.so|15243b9539bb74069d6ee59bd70340b0ea0ec338
 
-# Charger
-vendor/bin/hvdcp_opti|0af1d3a59fd10acd7a614662c341421d9267014c
+# Charger - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+vendor/bin/hvdcp_opti|f796b2851846d4f24424a4a1c4fd97bada885bcf
 
 # CNE
 product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml|75e8a824d368cd4172985c884796381327d950da
@@ -757,17 +757,17 @@ vendor/lib64/libgf_hal.so|56e3eb920f9d90df01345ec0a93413b905c2b1b7
 vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so|2bd9cfcb3b7a06e82cc7ceca2dcf507eb49cf96a
 vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so|7a97ed9b486dd08c99ddcc53200eb327b65a2937
 
-# FM
-system_ext/lib/fm_helium.so|89b1d540475352172eac7265c97aba55d93c150e
-system_ext/lib/libfm-hci.so|b42ec9573f38587857ef01e7bdd88dd9bb6ae584
-system_ext/lib/vendor.qti.hardware.fm@1.0.so|af23f9986a1836a2f937320946a1267563a82e22
-system_ext/lib64/fm_helium.so|b2440e4feaae8a7f5e2269525520f9774b6962fc
-system_ext/lib64/libfm-hci.so|758c6e7cfafc964b5cd9d71806ec5455e0d78716
-system_ext/lib64/vendor.qti.hardware.fm@1.0.so|5eaf6d5d67361ff6236c1ec4f5225c6185a904a6
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|d70fd3dc8a12d778d538952710f96b82277c4a20
-vendor/lib/vendor.qti.hardware.fm@1.0.so|aad3ef11a2fa41bb5a2bf25f8960c53ac3e0f8a4
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|05931b5d088bd7000b0b002ee650b0953e272cd7
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|f6e23f902b7e15232b20af55161a24da93ffe25f
+# FM - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+system_ext/lib/fm_helium.so|4c4d1e86e0ffb02a2808b269c4841e121f61f87d
+system_ext/lib/libfm-hci.so|fa773b18c0081c383ced1f0ce9239929d15bd423
+system_ext/lib/vendor.qti.hardware.fm@1.0.so|05b2b5207d7ab6406785af3ea9e38d7a946f8144
+system_ext/lib64/fm_helium.so|917d8aed5dd0f25ebd0e9fa82a60823996fba586
+system_ext/lib64/libfm-hci.so|8911fc8c721338fc64e3a98c299e20162a9b0f53
+system_ext/lib64/vendor.qti.hardware.fm@1.0.so|45cbf1cf97dbd50d5535e9f0318927e661692fdd
+vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|c2a04e7b02ad5d7d1ac4abb7cda6c951468b59c7
+vendor/lib/vendor.qti.hardware.fm@1.0.so|d1c35853966025c6a72c20da1c2d336bba017ddf
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|f3d0cd85c9e0a88eafacbcdeff6d4e2b109b95f9
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|2eac8b243af9f225b0c68987b2b1844df9660e84
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
@@ -775,9 +775,9 @@ vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so|335cc2f4e263b4c20b2b7ad5cd6c39c68cdea7ba
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|9bba980a251528cf998b000b702242be7c2efea0
 
-# Graphics
-lib/libsdm-disp-apis.so|68c45b0a37115ffe0bc503873cbc3b6a9ae913d9
-lib64/libsdm-disp-apis.so|131b769dcda8e95cd999f912a9fa48636c792092
+# Graphics - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+lib/libsdm-disp-apis.so|2164647cdd4e72e8fba82dd6a01987c778359f0c
+lib64/libsdm-disp-apis.so|a5bc0c448966e5ba8447967dc02adda737b4ceb5
 
 # Graphics firmware - from jasmine V11.0.28.0.QDIMIXM
 vendor/firmware/a512_zap.b00|85a7fc0008f9a2071d8b3d0cc212b19141633267
@@ -789,9 +789,9 @@ vendor/firmware/a530_pfp.fw|d027c70fde64241ec13160d09ee1b6c272974a4b
 vendor/firmware/a530_pm4.fw|b1cf625b5552b99839687f479c124ac5daca2ca2
 vendor/firmware/a540_gpmu.fw2|3530f10b4825a3b08c79e0bcfaf6471ec8422f24
 
-# Graphics (HDCP)
-vendor/lib/libmm-hdcpmgr.so|02cc65f79a951f9006ebc05b0edec2c5a296a684
-vendor/lib64/libmm-hdcpmgr.so|eb7db96305875b80971fec7b93ea800b6c9a1a77
+# Graphics (HDCP) - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+vendor/lib/libmm-hdcpmgr.so|0e6c6b410f5f14b5cb1ae9bc7e4aff7354a6e57b
+vendor/lib64/libmm-hdcpmgr.so|6eb020e22b98becb011c9b8965fddafd8a80c37a
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti|002c638011b1936fecaa896874d3361ec68eaa46
@@ -878,25 +878,26 @@ vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|b5ab5bcd031fe4d9781
 vendor/lib64/libmlipay.so|3d78c8a99c9248df20ad7ebc2c9abbd4c579d38c
 vendor/lib64/libmlipay@1.1.so|885d0c6eba14c5d2da5e245844bea3c3ae1540af
 
-# Peripheral
-vendor/bin/pm-proxy|42383b9163716d8e6d81f0516e9cf09f22ea8b06
-vendor/bin/pm-service|b0a5d3491615ef9a237d93a393082105e3c0097c
-vendor/lib/libperipheral_client.so|8f7e9ebd1a8dc6afc878b97c078a3deb97963d68
-vendor/lib64/libperipheral_client.so|9bfd41e276e16b8f7c6808f3d87531fc5be4cdd5
+# Peripheral - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+vendor/bin/pm-proxy|e7b60d477d1c4f7a012408e0804e658bb255aef4
+vendor/bin/pm-service|8a638e73598be5c7470ae0e99a050bf8a4be8ae7
+vendor/lib/libperipheral_client.so|02d6790996e4902f5998537e39904f8754a8986d
+vendor/lib64/libperipheral_client.so|d31195fdcb56f7cba8034f5a7f7d38b401332c63
 
-# Postprocessing
-vendor/bin/hw/vendor.display.color@1.0-service|a1640ca55a67e701003fa1f6f92bd127f180d2b2
-vendor/bin/mm-pp-dpps|a265b90d727a3a8716796bbfc632e0307172b3dc
+# Postprocessing - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+vendor/bin/hw/vendor.display.color@1.0-service|1f1d5cba21378c81f1c23c78d987d06c7613b794
+vendor/bin/mm-pp-dpps|28414b7de56d3cf3ca584d4e61fde28348eb03d1
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
-vendor/lib/libdisp-aba.so|8415fa89d75bcb39b8743e4594899d23b66d85c0
-vendor/lib/vendor.display.color@1.0.so|9760632347eec152f659917e8fef4f0107c26202
-vendor/lib/vendor.display.color@1.1.so|b20a749499d34b408b8e446a89e7bd5b42e989ce
-vendor/lib/vendor.display.color@1.2.so|c4eb039fb221db05600aaeef75c225c97da842d4
-vendor/lib64/libdisp-aba.so|c4d6c0afc8878f6bd6bb59b857ef89a498ec274c
-vendor/lib64/vendor.display.color@1.0.so|09cb45881528c6d4675754c88c108f30dd1da12a
-vendor/lib64/vendor.display.color@1.1.so|3cf0d256372bd418462326e6067b4e1213226194
-vendor/lib64/vendor.display.color@1.2.so|8184e5d3e404864b1a1518b4d4e2012a5839660b
-vendor/lib64/vendor.display.postproc@1.0.so|86ef4e868f7abb95d555a4d086a8c4193920803f
+vendor/lib/libdisp-aba.so|2f86751d23416f0eef1417e8430b018ee41681c4
+vendor/lib/vendor.display.color@1.0.so|46149221b92b5981c81536b2e37e81684ee55aae
+vendor/lib/vendor.display.color@1.1.so|08b81d5255108a2f918f20b00fefeb730d08c740
+vendor/lib/vendor.display.color@1.2.so|dc855f344503d816dcacc7ec3e704fe0ff51d3be
+vendor/lib/vendor.display.postproc@1.0.so|f36cc390d03a152874fd7f12c2c36cf9d9c2dffc
+vendor/lib64/libdisp-aba.so|c20110306b9948d8ba143e7e9cc5c897a05aabf0
+vendor/lib64/vendor.display.color@1.0.so|e8bbe46ddd63cae90186f326934c68b4e3a6c8cb
+vendor/lib64/vendor.display.color@1.1.so|9b3e59308c98573bba8682d59f39f28c037629c9
+vendor/lib64/vendor.display.color@1.2.so|4130d4bf9fd9da125afd0c742c095df7329024dd
+vendor/lib64/vendor.display.postproc@1.0.so|ed6adca9ea4cb3db1e1f7d27b657115b2d37e0aa
 
 # QDMA
 vendor/etc/init/init.qdmastats.rc|837b16bf9600715345fc65d5d6c98ce97f2d4583
@@ -1167,38 +1168,46 @@ vendor/lib64/sensors.ssc.so|6934f0fd9e5e74356d9f18af0cbaa28164e697f6
 # Sensors - from jasmine V11.0.28.0.QDIMIXM
 vendor/etc/sensors/sensor_def_qcomdev.conf|2dde9725dd1be5cd864183e8a617c3455a7f6a17
 
-# Soter
-vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|a6f1c35671a2f102ff95acecc70eefa3a7ebd432
+# Soter - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+system_ext/framework/vendor.qti.hardware.soter-V1.0-java.jar|886e50c05e8a45ce51c1f8818bc37cac6b8a2c90
+system_ext/lib/vendor.qti.hardware.soter@1.0.so|b2306a69b70136be053d26fad1e2865a7a92fc35
+system_ext/lib64/vendor.qti.hardware.soter@1.0.so|97512f2e5bcf0510be5311d1270f14e0797fe2a7
+vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|5b6550323096beb5db94658ac2d6a28e301d0acb
+vendor/bin/vendor.qti.hardware.soter@1.0-provision|49a4e9f81c31110eff404262855e8c2ca5920a97
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
-vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|032e38d60840b5ac7ca21eece486ca5acab7f203
-vendor/lib64/vendor.qti.hardware.soter@1.0.so|5496f7816036ef71aec0116864032f8a6078aee7
+vendor/lib/hw/vendor.qti.hardware.soter@1.0-impl.so|76286c26f851a4f127c1e43c02f377580f871c69
+vendor/lib/vendor.qti.hardware.soter@1.0.so|a7a86d4df3206fedfc224ee93ca5b09f05b96f8c
+vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|3d19c671e83c0627bb979988a6090faef4ef3fd0
+vendor/lib64/vendor.qti.hardware.soter@1.0.so|9d13ecccffec6774e7acc4af3bfce40c027cad31
 
-# SSR
-vendor/bin/ssr_diag|6f4de47ac2687bb4bc0feb717fd34c2bf3c97a48
-vendor/bin/ssr_setup|06ccf2d2f01d27cb63ab34d5e8978013ce46807f
-vendor/bin/subsystem_ramdump|a8188725e6ab33effdb220dffdaac3eb830b1dc2
-vendor/lib/libsubsystem_control.so|da82bb63993a186c067de0ccd6ec0e165bb36a5e
-vendor/lib64/libsubsystem_control.so|3ae879485eedb7d1bc84a47ddef474608ddb4d3e
+# SSR - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+vendor/bin/ssr_diag|6bad5a754730ddcd691607285494f00585a9abca
+vendor/bin/ssr_setup|3410d636149bc48cf26f5bb381526fe9ec310e49
+vendor/bin/subsystem_ramdump|db0b73917ab715932f2ad17f7e697182210272ef
+vendor/lib/libsubsystem_control.so|88539cfd462b8f2ff9e4c9ea93d766a354c6a671
+vendor/lib64/libsubsystem_control.so|5e8e78ea84866f9ca9d9a2319b7fd33fc3aecae5
 
-# Thermal
-vendor/bin/thermal-engine|fe478f3ba50a819f58cc55dc1227bc0e37d30b14
+# Thermal - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+vendor/bin/thermal-engine|d58d0a84373658e230032d437e35e3bf3db92c8c
 vendor/etc/init/init_thermal-engine.rc|a0310f09da9f09c67e110607b73aec9f9f981c4c
--vendor/lib/libthermalclient.so|b2d69a3a3589eb0387c2f13cc10ff91072c27c9a
--vendor/lib64/libthermalclient.so|26475ef0d6b80fcf40c9490f795d21e46d3d9054
+-vendor/lib/libthermalclient.so|2225ccc5e21c889778591a5d42774ab54a54de88
+-vendor/lib64/libthermalclient.so|40978729e458ec49fabf457375e90ceb081d1ad8
 
-# Time services
--vendor/app/TimeService/TimeService.apk|88f7c7f4c10f53dfd69cf7828f883d3df82003e7
-vendor/bin/time_daemon|48401d7f85c87aa3e12ce7b4a969a50cbf59c293
+# Time Services - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+-vendor/app/TimeService/TimeService.apk|4b18d352dddd78e8591043cf44e73d69d1948d33
+vendor/bin/time_daemon|35147f3f1a63f45d4449b28177ac3495d375b4fc
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
+-vendor/lib/libtime_genoff.so|61f2498b119a9991f86e350c7ed8fe1d2ffbab20
+-vendor/lib64/libtime_genoff.so|118c31a2a35bd82b8d392bc09d6eb37448389437
 
-# TLOC
-vendor/bin/tloc_daemon|d571047e90f4e7036438fc8e444a9a0ac70d6836
+# TLOC - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+vendor/bin/tloc_daemon|905bb189359ee5dbe48d221215d09ea6c29cfceb
 vendor/etc/init/tloc_daemon.rc|9dd38e92847bc34f8a3228f4cd81ef14b6e89785
 
-# TUI
-system_ext/lib/vendor.qti.hardware.tui_comm@1.0.so|e49b434e74a5452b965c1e4e1419150cdcfa6dd2
-system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so|e81ad4da38fa64a012b458c36074425d9850df10
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|15378114c18fd1b1c8f9671f656396285ad1de48
+# TUI - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+system_ext/lib/vendor.qti.hardware.tui_comm@1.0.so|dc30ce560414117dc32ab331ff7737d21347005d
+system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so|b42fa9db67cf5050c3ae4e93ea3954ea2bff4bdb
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|cf3d3d18a169c2fdb601aece7d8ec09df0d88bf7
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
-vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|16dc51cd62ce73adebdff600e764da481504962f
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|4ba792ee3234dca4cd7ebbd7b3f9003c800f51b4
+vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|88a8ac5aa140029762836bd2bba0984ead548756
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|19599f6a2afd8a218a2a1d3bb214575db98e3c53
