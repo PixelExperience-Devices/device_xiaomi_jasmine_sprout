@@ -1,9 +1,3 @@
-# Audio
-audio.offload.min.duration.secs=30
-audio.offload.video=true
-audio.deep_buffer.media=true
-ro.af.client_heap_size_kbyte=7168
-
 # Cable
 ro.qualcomm.cabl=2
 ro.vendor.display.cabl=2

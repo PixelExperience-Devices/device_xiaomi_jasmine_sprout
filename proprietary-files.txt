@@ -72,8 +72,6 @@ vendor/lib/hw/com.dsi.ant@1.0-impl.so|9934368dc60b9fb688c89ded5a853b8d020b6d36
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|20cb53585f9cc23eb44c37d026a97dfcae84d64a
 
 # Audio
-system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
--system_ext/framework/audiosphere.jar|9c28317f12b93a6d881c80a991ff24716fce4a12
 vendor/lib/soundfx/libasphere.so|90940fca6f4b84794046513c6c6868eca9470066
 vendor/lib/soundfx/libqcbassboost.so|8e92c5d40cd23f503840b055d71336e4c9daecc0
 vendor/lib/soundfx/libqcreverb.so|7e05f1f4bdd2947dac3aefd871437d289581078b
@@ -108,27 +106,36 @@ vendor/firmware/dbmd4_va_fw.bin|ee640f9f4e367d513f5fb7d95c85e226c9f75750
 vendor/firmware/tas2557_uCDSP.bin|d16fc1db241670307f5071e256c886ecd18d30f7
 vendor/firmware/tfa98xx.cnt|f8b5291feaebe7e3d18fda5d8960c313656b4a3a
 
-# Bluetooth
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|07d96d0d3c4a500b14ea3c97e02b9eb5ee2bbc4d
+# Bluetooth - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|b1b6de9318b86ae7249af52c8522ec84ec575692
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|886284c5d00b45993371ef1aaeff5c574c3f3a53
-vendor/lib/libbt-hidlclient.so|97b7ab1856183e684f94de089863357d1f391e8a
-vendor/lib/libbtnv.so|753252c216e48b154869197cefd512a066e30f5c
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|c6be436d0f66aafd5be3aa51431d4fc02c50971d
-vendor/lib64/libbt-hidlclient.so|ff301380cf3c0ff68d2b7fcda3ba428ebf0a859e
-vendor/lib64/libbtnv.so|0c74a43550b939b9496b03b3285fa950cf560c48
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|62cc2e03eedc669afe882d50db76347879aaae43
+vendor/lib/libbt-hidlclient.so|d4551a556e48e62f43ff4276fcfb55fa4994a93e
+vendor/lib/libbtnv.so|48cf884c7300b5942b458d5621fea12a891996c1
+vendor/lib/libsoc_helper.so|037d361023ff7b645c7e126dc9d0bd5411928f7c
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|bcc5e8ec073890acf95e4acd4d60dff464134d97
+vendor/lib64/libbt-hidlclient.so|7d6db674026e0beb4249612e5085aafb429ca94a
+vendor/lib64/libbtnv.so|0625957dd33115663ba3a4324e9c7fd57faab9b5
+vendor/lib64/libsoc_helper.so|baf819f79f2ffc4f540e0ec3cc30b5c56e801b18
 
-# Bluetooth (Configstore)
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|c208937b7ebbeda5c450d9febb26802dbdf19fd7
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|cfc982fd153084781f540bcc4a31b6b05a9ced19
+# Bluetooth (A2DP) - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+vendor/lib/hw/audio.bluetooth_qti.default.so|7a8ff638ef7ab081f98bc684bbad63420d257871
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so|68119c857b2f3528ec644aee1355f916fe8450ac
+vendor/lib/btaudio_offload_if.so|a2c9b1ef71ea799d675a551cd2fcf9de519e8789
+vendor/lib/libbluetooth_audio_session_qti.so|68d76f5b446ef28bb7f35f43b7ee7095850ccec1
+vendor/lib/libbluetooth_audio_session_qti_2_1.so|6afa397a864df234f4e3399da4b0c2c10e117c82
 
-# Bluetooth (SAR)
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|cc9d165040040a179feb8e805cc9f8c2572d7e99
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|23706dcfa35cc6f7dee934e13886c19a56a9aa12
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so|ece3dafc4447e8302109851c3a6b0d3978b3506d
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|156ec51ccb53f667605cf99422abf9357888b4b6
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|23706dcfa35cc6f7dee934e13886c19a56a9aa12
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|ece3dafc4447e8302109851c3a6b0d3978b3506d
+# Bluetooth (Configstore) - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|f12af4dcc769c40be874cff88f36c12d3577e35e
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|1c85232f8e166072ca325d4a2b4e843be8754200
+
+# Bluetooth (SAR) - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|0162f32a3d17d3a5759449c082c8975d05fe2890
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|c5bf63a776346b89fdd6e40578ab81016b0af821
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so|fb9b3e4caec3c8a06351858dd3114d07925e372d
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|39804e925e2119121af6ed8239fe828577c386a6
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|594e9bcbc5ebe3d7cee650b07d5662201284fb34
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|a9aba53b8a70521bb141e56a29d209c550f0e336
 
 # Camera Actuators - from jasmine V11.0.28.0.QDIMIXM
 vendor/lib/libactuator_wayne_imx376_ofilm_back_ii_dw9763.so|e594f902ccd19fb55a47f935bfca67a8e622b348
@@ -757,18 +764,6 @@ vendor/lib64/libgf_hal.so|56e3eb920f9d90df01345ec0a93413b905c2b1b7
 vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so|2bd9cfcb3b7a06e82cc7ceca2dcf507eb49cf96a
 vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so|7a97ed9b486dd08c99ddcc53200eb327b65a2937
 
-# FM - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
-system_ext/lib/fm_helium.so|4c4d1e86e0ffb02a2808b269c4841e121f61f87d
-system_ext/lib/libfm-hci.so|fa773b18c0081c383ced1f0ce9239929d15bd423
-system_ext/lib/vendor.qti.hardware.fm@1.0.so|05b2b5207d7ab6406785af3ea9e38d7a946f8144
-system_ext/lib64/fm_helium.so|917d8aed5dd0f25ebd0e9fa82a60823996fba586
-system_ext/lib64/libfm-hci.so|8911fc8c721338fc64e3a98c299e20162a9b0f53
-system_ext/lib64/vendor.qti.hardware.fm@1.0.so|45cbf1cf97dbd50d5535e9f0318927e661692fdd
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|c2a04e7b02ad5d7d1ac4abb7cda6c951468b59c7
-vendor/lib/vendor.qti.hardware.fm@1.0.so|d1c35853966025c6a72c20da1c2d336bba017ddf
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|f3d0cd85c9e0a88eafacbcdeff6d4e2b109b95f9
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|2eac8b243af9f225b0c68987b2b1844df9660e84
-
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|2e33e885b92e413440511049025497945d6b8484
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
@@ -813,8 +808,6 @@ vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|c433c73b5469b787cb7fb70b05b
 vendor/lib64/vendor.qti.latency@2.0.so|60ab3143325e855f8c72e3f603c28efe2e7227b9
 
 # Listen
-system_ext/lib/liblistensoundmodel2.qti.so|30ef17eb78ea22610019d6a50866ed5b8d313efa
-system_ext/lib64/liblistensoundmodel2.qti.so|6af0ed9a11f7add1de469889d3add1a610bf68f2
 vendor/lib/libadpcmdec.so|b3ec2cc197b682aa6ae7e1da9c8f25cc1aa75750
 vendor/lib/libgcs-calwrapper.so|a80d1d6b0b6e76083b0ca98d690c5cb46e113904
 vendor/lib/libgcs-ipc.so|177f711fc9e01970ef17e9f8a79776ef31d8c973
