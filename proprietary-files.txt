@@ -703,28 +703,35 @@ vendor/lib/libdpmqmihal.so|67be362f07857e17287f37dc1f316564b77b50e7
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|d9f1aa7f93b928f42499d613d20ccbc60f279097
 vendor/lib64/libdpmqmihal.so|41eb89e66ba065c43a5eb79cd3c72cef0ee167aa
 
-# DRM
-system_ext/lib/libsecureui_svcsock_system.so|e86f8e6c9f08a12d25f2c99ec9133f48f482753b
-system_ext/lib64/libsecureui_svcsock_system.so|f133bc87d9e7988b7761de0ffdc7c40c4ee09e91
+# DRM - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+system_ext/lib/libsecureui_svcsock_system.so|25fadf35cfa1ab4534aee7698a093faeb4b85e7c
+system_ext/lib64/libsecureui_svcsock_system.so|7a05b3ce30f4512929e3f0eb840b38ba06fcf30a
 vendor/bin/init.qti.qseecomd.sh|cfc033c76d520ab8fe7b9397cc86fac0ba5297b2
-vendor/lib/libSecureUILib.so|36a450ef208b48f769d1399521d3b3884a61a883
-vendor/lib/libStDrvInt.so|462a243190fd25574ad6a442a5ca7cdd335e35db
-vendor/lib/libsdedrm.so|752fa74723368e6bde29cbf004fe31d6f33ceb97
-vendor/lib/libsecureui_svcsock.so|5865abafa021ab9bd544c92028f57abc1c5ca985
-vendor/lib64/libSecureUILib.so|b98555b76083a897fc9bbfc27778750d2d47817a
-vendor/lib64/libStDrvInt.so|6091f1f496b87730f9a77e9ede504c4fa99c608a
-vendor/lib64/libsdedrm.so|f02d7bef5f9fa3f1265b5a8b3b8ab481a4cedee2
-vendor/lib64/libsecureui_svcsock.so|6af612f057f4f28720d6db9b300b58c883da6539
+vendor/etc/gpfspath_oem_config.xml|7aeade35b0bbe27530f6aca8c1ed5192a7acf59d
+vendor/lib/libSecureUILib.so|1a7d0ac10823b0ccd9e486127e576bb167d00f9a
+vendor/lib/libStDrvInt.so|f3ac0a575611ab88f96ea766378c26a3a2b7e41c
+vendor/lib/libsdedrm.so|516b320b6a55a23b2f4764074d4796a29483fac1
+vendor/lib/libsecureui_svcsock.so|7238e18ea1153773b53caf8d29277558f31dae77
+vendor/lib/libsecureui.so|a7d463d7e56b9e8c75abc555d64c58ac8cd16fdf
+vendor/lib/libsi.so|27bd5545211c344ae119e322c5df174e3084822a
+vendor/lib64/libSecureUILib.so|8e39219d3cc7ac0dc3563119fddffac8e7ed91d6
+vendor/lib64/libStDrvInt.so|35167fff3f4cb17db48e0c13b2f9351f9fdb0406
+vendor/lib64/libsdedrm.so|d262823ae1e118165ba06a67dba15806bc27d1d2
+vendor/lib64/libsecureui_svcsock.so|ce9b2f737a47ca50118120581790080dc608fbbc
+vendor/lib64/libsecureui.so|7f3887a00b5eeccfe4d9bf8192a5d9b1100e66c1
+vendor/lib64/libsi.so|a357066a9c5c2309452de794c7d9816d62fcfd64
 
-# DRM - Widevine
-vendor/bin/hw/android.hardware.drm@1.3-service.widevine|2158f47423c723a9da29bb81bb16987a1e715c21
-vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|c35e1a6f9a6faff19064a81e07c4be82ceaf4bb5
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
-vendor/lib/mediadrm/libwvdrmengine.so|35eac1e844f6045be0cdacb8e20a6eb9f51891a3
-vendor/lib/librmp.so|fb9e5ea544d0abe48dc0d7fce8df034e0e31133b
-vendor/lib64/mediadrm/libwvdrmengine.so|eef10067daf437a2c302e668967a7c8c55fddbe9
-vendor/lib64/librmp.so|6392e70196f5a6da2d49a1aaec60f06ca378f1c4
-vendor/lib64/libwvhidl.so|acf4870a0b10af74a40a4c6180f2c10a1706ddbd
+# DRM - Widevine - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine|0918336440ba0464f93fee97925b94ad12b7ef5d
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
+vendor/lib/mediadrm/libwvdrmengine.so|0efe83e7cb744e72a8febd4e8df74dcdbe011dec
+vendor/lib/librmp.so|395aa4b45f45ff98f0f0195abce69e30a9df9c20
+vendor/lib/libhdcpsrm.so|af170f9dd21945b16100598c882cd7e77b848559
+vendor/lib64/mediadrm/libwvdrmengine.so|f90815f6dee8ddb57d15d68c8e61258d1085b015
+vendor/lib64/librmp.so|14a97f308196f13ae6d1ad18ea600a6f0237362f
+vendor/lib64/libwvhidl.so|b2649763d9e7ba4f7f8a0f96cc4ad9228b29a490
+vendor/lib64/libhdcpsrm.so|bb9d45e4f2dc7953e80842d2c572b11b97445b32
 
 # DSP
 system_ext/lib/libmdsprpc_system.so|5f40a5c3944e358bd06dec2e8f38f29438cc448a
