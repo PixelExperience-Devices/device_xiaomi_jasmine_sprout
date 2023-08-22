@@ -43,16 +43,18 @@ vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb|79a210a251129613369b7599a733debdf93
 vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb|d6e76640db3849b32515aafc3608c41114cb6953
 vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp|baf806a136c5ad71423cb28422124cf8b4181424
 
-# ADSP
-system_ext/lib/libadsprpc_system.so|fd315da148c4ab2930401b867778b2f9a7f09d79
-system_ext/lib64/libadsprpc_system.so|77e5d1452f0f86185093fa34529b9b5f818a75ef
+# ADSP - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+system_ext/lib/libadsprpc_system.so|4e94197bf49d506b981233880a4f7ad47fd027c8
+system_ext/lib64/libadsprpc_system.so|c59519aa9204ddd1926b2c44180da19c2fcb2fec
 vendor/etc/init/vendor.qti.adsprpc-service.rc|54588df8e7da58c66838028d2284986b966c2d37
-vendor/lib/libadsp_hvx_callback_skel.so|349803cd69d676e386b2a923c128c49aeefdeb4a
-vendor/lib/libadsp_hvx_stub.so|59e9f81b8d3a41a69badf201acee57615f822013
-vendor/lib/libfastcvadsp_stub.so|6e9d2b6e08188daba1d2f96ab708146391594280
-vendor/lib64/libfastcvadsp_stub.so|3de1763ac58a705dfba9b517169ee2683699eb7c
+vendor/bin/loadalgo|15da37c85317b7d5be47cab015d0e852651faed3
+vendor/lib/libadsp_hvx_callback_skel.so|898c6103c757a291c03434a6b8161ca69ff5af78
+vendor/lib/libadsp_hvx_stub.so|3c96b3ecadd9bdb4bf2af39175ca7f894d351fed
+vendor/lib/libfastcvadsp_stub.so|6ae731a488a85b5f62f85d17c9d83fc6ffb6a116
+vendor/lib64/libfastcvadsp_stub.so|1ef9b466a79664f07603b7b9212fdae44f6ed195
+vendor/lib64/libloadalgo_stub.so|31d9d727be8a83d96188eb59b3a7305334f1227a
 
-# ADSP modules
+# ADSP modules - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
 vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so|f4d8675a46c5e52add8f8e90e35b29cd33ac582b
 vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_800h_skel.so|c240d45c3a5fc37b964c4adab06f4cb0bfda62f5
 vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so|b9f68e320d24e9c51871a2056e1f47239bd1cb40
@@ -71,35 +73,41 @@ vendor/lib/rfsa/adsp/libvpp_svc_skel.so|2da97f61c1d14f1f9a38aecd8ab89a1f6fa8d991
 vendor/lib/hw/com.dsi.ant@1.0-impl.so|9934368dc60b9fb688c89ded5a853b8d020b6d36
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so|20cb53585f9cc23eb44c37d026a97dfcae84d64a
 
-# Audio
-vendor/lib/soundfx/libasphere.so|90940fca6f4b84794046513c6c6868eca9470066
-vendor/lib/soundfx/libqcbassboost.so|8e92c5d40cd23f503840b055d71336e4c9daecc0
-vendor/lib/soundfx/libqcreverb.so|7e05f1f4bdd2947dac3aefd871437d289581078b
-vendor/lib/soundfx/libqcvirt.so|03a8b95eb77811e3861307ab1451f4144bba2572
-vendor/lib/libacdb-fts.so|96db6fe2e443326705a37ac6e2e394f03144a386
-vendor/lib/libacdbloader.so|4d0743fe7f3eb1d2318feafc06363ffb527ca942
-vendor/lib/libacdbrtac.so|b6484ac64f20c4a0f605fb4901d33b8b27a95a74
-vendor/lib/libadiertac.so|b0a0ebc89be729e37fe34ceaa05f97a1bc9560a6
-vendor/lib/libadm.so|2fd429c8066572cc49262fe0d452c78706197d54
-vendor/lib/libaudcal.so|5361c538d20634221c317851c33b0842ced93fca
-vendor/lib/libaudioalsa.so|e54da6926b0e284a7a89a6a636003cf562ff53db
-vendor/lib/libaudioparsers.so|9a998d072d1bcfe7ce9ca0a4e7a4a38a66318ee6
-vendor/lib/libdrc.so|95ae02c1c274e9407b992587b8bb0ff39a08f34e
-vendor/lib/libhdmipassthru.so|097e4a0eabbd4e455377baef4b9493442b861055
-vendor/lib/libqtigef.so|977cbb704f6b2bae7f4e2f17b8c15146a6cacffb
-vendor/lib64/soundfx/libasphere.so|b9296f601776e631be0f347f8f10d26689103d12
-vendor/lib64/soundfx/libqcbassboost.so|c7848527250aadbebf3678f7a4dabaa626ff0592
-vendor/lib64/soundfx/libqcreverb.so|3757e8f881b812a9dd15745ea3970cc503c1fe2e
-vendor/lib64/soundfx/libqcvirt.so|87e373b19ef8afed1f087571136b37c3a8d452c0
-vendor/lib64/libacdb-fts.so|436bc68b1de28716607e5c8445b60dd21f56a5d2
-vendor/lib64/libacdbloader.so|f0c47deb5cabfc7e7922e31c74d9913a78f062fe
-vendor/lib64/libacdbrtac.so|621360f8363fd5e55ea9cd0f4c8f216397ff900c
-vendor/lib64/libadiertac.so|2a529d2fee97919b0bfb1f94854bf01845c3fdf7
-vendor/lib64/libaudcal.so|2e89c718670a9772ff90ed2739a42626b977dc39
-vendor/lib64/libaudioalsa.so|361b3de1f094cc0943add1ef7040ffeadc5dbdcb
-vendor/lib64/libaudioparsers.so|c0c3f1e2eafac1194334fd85dfcdb7e398a2c6c2
-vendor/lib64/libhdmipassthru.so|f6e46857a65a39214a09838f1b37a82926a485c6
-vendor/lib64/libqtigef.so|cdbc8eb095afddd0f990c972cd8c1b2b4e7e9cd7
+# Audio - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+vendor/bin/audioflacapp|3fdaf339ca21db8ec19c597872885fad3725c942
+vendor/lib/soundfx/libasphere.so|316ca9f69ff8a97444003624d533cad9ccd642d0
+vendor/lib/soundfx/libqcbassboost.so|fe97b4b27d014436d8b77beec605c5a67828002d
+vendor/lib/soundfx/libqcreverb.so|9fdd32f7fd22ac873013953698d8b4456ed2069f
+vendor/lib/soundfx/libqcvirt.so|e9d753fc4c02d0b922905b158f34d43f5a7cdcb0
+vendor/lib/libacdb-fts.so|136dd41e2b08cfb266e99ba7071efceb5d9202c4
+vendor/lib/libacdbloader.so|f38126e3cb307c07e09a32b26d69845ba4b6c0e6
+vendor/lib/libacdbrtac.so|80d1ac83bee8c16e8fc9bb2c226e132dbb4ea0ad
+vendor/lib/libadiertac.so|79b77f53938bf5232748d928fd9bbde0a3da88d9
+vendor/lib/libadm.so|f302f2dd721c151b72cbc8c2c2e3699ddcf3ef3f
+vendor/lib/libaudcal.so|26ab9bdc71ff9d53cb14d3ae495e5959b730ab00
+vendor/lib/libaudio_log_utils.so|3f7c4a80774cee0e9fc5162d199155e9ca94388d
+vendor/lib/libaudioalsa.so|caa9282dd0af3da807104888d21299af0ad88678
+vendor/lib/libaudioconfigstore.so|79d1ab7b5cb0deef9dd3a2ff5799ca8c97b19030
+vendor/lib/libaudioparsers.so|71bf05d08c766dc4bd37a74c0eff04f7d718afb9
+vendor/lib/libdrc.so|0a0f85a502073813e48f37c29adc2edbb7407c8d
+vendor/lib/libhdmipassthru.so|ef0a2208cfa4e345675d428797acf6abd920d76c
+vendor/lib/libqtigef.so|9eeb56a073e1d8b6a85288c118cd3b3ab2ad8735
+vendor/lib64/soundfx/libasphere.so|33dc884c4aed5189dd96fc83682713213af0c3bd
+vendor/lib64/soundfx/libqcbassboost.so|dd076f991cccccf05d8a826cff16828aecf42de2
+vendor/lib64/soundfx/libqcreverb.so|0368be7d10307259f58451be4b0aa9767f6bd52f
+vendor/lib64/soundfx/libqcvirt.so|64f5f836d45b1adf81744ab86e3268164e13e208
+vendor/lib64/libacdb-fts.so|69526a450cdb93454720ca01da21eba267d4b8f5
+vendor/lib64/libacdbloader.so|489ea58f49a99ff49725d10cf79e1e886d966638
+vendor/lib64/libacdbrtac.so|2a9a7f89b88ad366578b9fe8458d000adea067bf
+vendor/lib64/libadiertac.so|6c0d209e8da0150217c0f1f4d45ff8a7fd0968ec
+vendor/lib64/libaudcal.so|453cf77d051c84c53e4f534d2f96e9a777949cd7
+vendor/lib64/libaudio_log_utils.so|9bcdbf2209649f515942e81bd402025215ed1283
+vendor/lib64/libaudioalsa.so|8d4a7ff7352033987ac7fa8cad42720b312d549f
+vendor/lib64/libaudioconfigstore.so|90d0581e4974cdd89be261bd2d41a5df3f52691a
+vendor/lib64/libaudioparsers.so|5fda61f11849004db9196aa9604cb81cb3224df9
+vendor/lib64/libhdmipassthru.so|16b247e210d31807271a9889c7d222174eff82d4
+vendor/lib64/libqtigef.so|7b8bf697aaec567ff1f0cfd1fdc352a563df864a
+vendor/lib/libsurround_3mic_proc.so|77d993c938591fb19b5c0ac4bd27e5364049ba06
 
 # Audio Power Amplifier - from jasmine V11.0.28.0.QDIMIXM
 vendor/firmware/dbmd4_va_fw.bin|ee640f9f4e367d513f5fb7d95c85e226c9f75750
@@ -588,11 +596,11 @@ vendor/lib/libmmcamera_wayne_imx486_ofilm_ii.so|192ae5688933af0c5fa7a4abcb2f9685
 vendor/lib/libmmcamera_wayne_imx486_sunny_i.so|09d6c72bd7808be2365b3d726f77532250c71b25
 vendor/lib/libmmcamera_wayne_imx486_sunny_iii.so|140da52cbabfa80f74be0dd798a889f7bcdcc293
 
-# CDSP
-system_ext/lib/libcdsprpc_system.so|78b3fc57248a97ad0498a070487d58875aa2fe3b
-system_ext/lib64/libcdsprpc_system.so|2fddb95160c8d803d28ed3b4b9f4146812d65280
-vendor/lib/libfastrpc_utf_stub.so|945a41ea68452806d1a5add3584d34b30c7f9a95
-vendor/lib64/libfastrpc_utf_stub.so|15243b9539bb74069d6ee59bd70340b0ea0ec338
+# CDSP - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+system_ext/lib/libcdsprpc_system.so|75c30470b4acacd3b5c2c4fc97d9254555c0b5d2
+system_ext/lib64/libcdsprpc_system.so|7058213c25f41ce01ec0aa625b333fe3164a6766
+vendor/lib/libfastrpc_utf_stub.so|8c8cf80974490616e1fe5cd73cb49763af03df9c
+vendor/lib64/libfastrpc_utf_stub.so|8c15be13807067917308d4df4a8c80dec681678f
 
 # Charger - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
 vendor/bin/hvdcp_opti|f796b2851846d4f24424a4a1c4fd97bada885bcf
@@ -733,13 +741,13 @@ vendor/lib64/librmp.so|14a97f308196f13ae6d1ad18ea600a6f0237362f
 vendor/lib64/libwvhidl.so|b2649763d9e7ba4f7f8a0f96cc4ad9228b29a490
 vendor/lib64/libhdcpsrm.so|bb9d45e4f2dc7953e80842d2c572b11b97445b32
 
-# DSP
-system_ext/lib/libmdsprpc_system.so|5f40a5c3944e358bd06dec2e8f38f29438cc448a
-system_ext/lib/libsdsprpc_system.so|4da90922c4a78cd2887bc507a58b961e1f14e434
-system_ext/lib/vendor.qti.hardware.dsp@1.0.so|4a5b835bc386a71f1922b6ffa7a58947e4930c19
-system_ext/lib64/libmdsprpc_system.so|b5ea6a8e2b9d99cb85b6d313a8d7bf2a28c82c7f
-system_ext/lib64/libsdsprpc_system.so|cde1ea070efa2f8ab4b3b5dfeeb26b732ce1017d
-system_ext/lib64/vendor.qti.hardware.dsp@1.0.so|cb00ecf199d18de8e2ce3ca4e75e2042504fa772
+# DSP - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+system_ext/lib/libmdsprpc_system.so|3b36f13941377a0b7ec922de9c155e92c697b8a9
+system_ext/lib/libsdsprpc_system.so|1aaf0f33d0587d394638ff5d332f65345b12ceaa
+system_ext/lib/vendor.qti.hardware.dsp@1.0.so|a596e3db6a393e064c9497b29d58f5e4336242bb
+system_ext/lib64/libmdsprpc_system.so|8d3ffbf13ec9e4d021a066db2880a0ab5c0ef8ed
+system_ext/lib64/libsdsprpc_system.so|628163654db45cce166db5e0be6f985f9b2c7815
+system_ext/lib64/vendor.qti.hardware.dsp@1.0.so|7d0bee273a6d55af32bad503698e20ee1f4c2fde
 
 # Fingerprint firmware - from jasmine V11.0.28.0.QDIMIXM
 etc/firmware/goodixfp.b00:vendor/firmware/goodixfp.b00|c5c3594b47dffb3aadb81abced42518d24637893
