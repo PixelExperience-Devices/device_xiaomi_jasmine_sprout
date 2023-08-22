@@ -1,47 +1,15 @@
 # All blobs below are extracted from Cat/S62Pro/S62Pro:11/RKQ1.210406.002/1.015.00:user/release-keys
 
-# ACDB
-vendor/etc/acdbdata/MTP/sdm660-tavil-snd-card/MTP_WCD9340_Bluetooth_cal.acdb|42c03cedbc1f2e59ef6966f16e36584df608974a
-vendor/etc/acdbdata/MTP/sdm660-tavil-snd-card/MTP_WCD9340_Codec_cal.acdb|9355e204a8a29973c3024bea5dccfbbd00158bc1
-vendor/etc/acdbdata/MTP/sdm660-tavil-snd-card/MTP_WCD9340_General_cal.acdb|f0fd94970b674016f00b32d75253c7fa1a5873f2
-vendor/etc/acdbdata/MTP/sdm660-tavil-snd-card/MTP_WCD9340_Global_cal.acdb|f105774d65786e755adf48a41fa0b38964395e8a
-vendor/etc/acdbdata/MTP/sdm660-tavil-snd-card/MTP_WCD9340_Handset_cal.acdb|5f1fc3524637c2e7e7b8b0f6c44933fa224029a8
-vendor/etc/acdbdata/MTP/sdm660-tavil-snd-card/MTP_WCD9340_Hdmi_cal.acdb|498e72448115680fb4dbd9717438b9e689d04d04
-vendor/etc/acdbdata/MTP/sdm660-tavil-snd-card/MTP_WCD9340_Headset_cal.acdb|2fc402db3aa2bc095ec37beb92aba20695947b2d
-vendor/etc/acdbdata/MTP/sdm660-tavil-snd-card/MTP_WCD9340_Speaker_cal.acdb|ce739c4d9542941f7f660aef457325993a45f7d4
-vendor/etc/acdbdata/MTP/sdm660-tavil-snd-card/MTP_WCD9340_workspaceFile.qwsp|afbfa190ee1bf9d813fbe751060a9dc62346d1e6
-vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|4bd7f1b395dbde827b2c3a681086de87950bd7c8
-vendor/etc/acdbdata/MTP/MTP_General_cal.acdb|7d7f4a491ad0a80f1e40d5be886aa9c2d5950f0c
-vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb|a4140294b74e2e7b5bbd6a8e37876ca6e2516f4e
-vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb|39e16d5d5396633ddaf5bae89957d9c3fe7d448c
-vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb|874ecf3a5c4c989356ec714ad30a8565afe149a0
-vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb|d2465dec72ac40d410850dac2255ddab15ef108f
-vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb|0800218f0e72efe69f60e0650912851da5328973
-vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp|57f7d8e1fa238851b6e81fed05b7c9c15f9aefd3
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Bluetooth_cal.acdb|593c3a4ffd324bb1b33e721320d3aa6170ae8ab4
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_General_cal.acdb|8f57bde716d58eaa6a643e201f684b3bfdd1e61f
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Global_cal.acdb|4b1ebca156e64f8f03512cf205e3d459a60df666
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Handset_cal.acdb|bfef09b45d38ce423351de40d9d01b3a927b0790
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Hdmi_cal.acdb|f3f5008569f26fde50286dcaf256ad376c9fbdcc
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Headset_cal.acdb|5109a86d528d787d7afebe5ccb8dc07db8a44787
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Speaker_cal.acdb|07b68e05e63090c11263793fa11118d8f237b968
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_workspaceFile.qwsp|263b80df4487b37c49d5c9b80e81476acd2bffb7
-vendor/etc/acdbdata/QRD/sdm660-tasha-skus-snd-card/QRD_SKUS_Bluetooth_cal.acdb|8da096b1ce951a3a6d0b9f54cc3f3e87d1b48469
-vendor/etc/acdbdata/QRD/sdm660-tasha-skus-snd-card/QRD_SKUS_General_cal.acdb|5ae5c1ca2535374357006591647717ac875ff45f
-vendor/etc/acdbdata/QRD/sdm660-tasha-skus-snd-card/QRD_SKUS_Global_cal.acdb|d97dc782954a57be595eaab53f4ab74207a9bf5f
-vendor/etc/acdbdata/QRD/sdm660-tasha-skus-snd-card/QRD_SKUS_Handset_cal.acdb|d95888573ec58d4e2413d7ff8ba5e0f5415b95f6
-vendor/etc/acdbdata/QRD/sdm660-tasha-skus-snd-card/QRD_SKUS_Hdmi_cal.acdb|36b633c2b1877678dd4446b27214a4406c3cbd3d
-vendor/etc/acdbdata/QRD/sdm660-tasha-skus-snd-card/QRD_SKUS_Headset_cal.acdb|42cc19419f61d623a59c60922b24243db8d57e22
-vendor/etc/acdbdata/QRD/sdm660-tasha-skus-snd-card/QRD_SKUS_Speaker_cal.acdb|cadbea7edb293e8f828f30502d915b30b8fa073c
-vendor/etc/acdbdata/QRD/sdm660-tasha-skus-snd-card/QRD_SKUS_workspaceFile.qwsp|27f6b681ed7ffb0c1e22a88ec7f9cc5f73df1337
-vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb|3258592d5a9c86efb2b0b0dfd38e5ecec81f34bc
-vendor/etc/acdbdata/QRD/QRD_General_cal.acdb|7b2e9f0f644342fad607c8b14cfab24817739d59
-vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb|0bd86b56f661695959a23504225912891bb7f75c
-vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb|0cdb9c0ece58a41209a371ce0be464d56dfc096e
-vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb|643e27b74828549079671fa39f4a5208a9d8bca4
-vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb|79a210a251129613369b7599a733debdf938e40a
-vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb|d6e76640db3849b32515aafc3608c41114cb6953
-vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp|baf806a136c5ad71423cb28422124cf8b4181424
+# ACDB - from jasmine V11.0.28.0.QDIMIXM
+vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb|57837ee3c6d7072ee1a919e592fab0d0e016eaed
+vendor/etc/acdbdata/MTP/MTP_General_cal.acdb|ec2636696cb39ef5eeba2d1b5196d017cd949dba
+vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb|0b3b101c8c48e1c5d463fba629dc597624859f93
+vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb|b95ed10e51cf7d255e355dfe59a91dcc9c012d2f
+vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb|cf7dbd5ccb31fa8ff87741f832e6f1c58c84b2ed
+vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb|e2072f38c4a1860d74cb788dd52874c9473fc717
+vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb|d4c98a463c0a7b147d08876b8347c514e881be29
+vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp|5b55bf4db3181950a8982483ae22d85ab7721155
+vendor/etc/acdbdata/adsp_avs_config.acdb|d9507f31b8970320233128fed24c39742ee53c67
 
 # ADSP - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
 system_ext/lib/libadsprpc_system.so|4e94197bf49d506b981233880a4f7ad47fd027c8
@@ -53,6 +21,10 @@ vendor/lib/libadsp_hvx_stub.so|3c96b3ecadd9bdb4bf2af39175ca7f894d351fed
 vendor/lib/libfastcvadsp_stub.so|6ae731a488a85b5f62f85d17c9d83fc6ffb6a116
 vendor/lib64/libfastcvadsp_stub.so|1ef9b466a79664f07603b7b9212fdae44f6ed195
 vendor/lib64/libloadalgo_stub.so|31d9d727be8a83d96188eb59b3a7305334f1227a
+
+# ADSP modules - from jasmine V11.0.28.0.QDIMIXM
+vendor/lib/rfsa/adsp/dirac_resource.dar|7728d5b2ee2927a01df5bd6d7edae3736186c844
+vendor/lib/rfsa/adsp/libdirac-capiv2.so|e56031dfaee094d5267e3cc16625cfceaa07cc27
 
 # ADSP modules - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
 vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so|f4d8675a46c5e52add8f8e90e35b29cd33ac582b
