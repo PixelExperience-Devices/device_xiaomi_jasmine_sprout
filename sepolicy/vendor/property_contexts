@@ -20,6 +20,9 @@ persist.vendor.imx376_ofilm.            u:object_r:camera_prop:s0
 persist.vendor.imx376_sunny.            u:object_r:camera_prop:s0
 vendor.camera.skip_unconfigure.packagelist  u:object_r:camera_prop:s0
 
+# cnd
+persist.vendor.iwlan.logging.logcat     u:object_r:vendor_cnd_vendor_prop:s0
+
 # Fingerprint
 fpc_kpi                                 u:object_r:vendor_default_prop:s0
 gf.debug.dump_data                      u:object_r:vendor_default_prop:s0

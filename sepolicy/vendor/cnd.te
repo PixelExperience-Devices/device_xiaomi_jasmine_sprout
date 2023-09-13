@@ -1,3 +1,4 @@
 add_hwservice(cnd,hal_slmadapter_hwservice)
 allow cnd hal_slmadapter_hwservice:hwservice_manager find;
 allow cnd diag_device:chr_file { read write open };
+get_prop(cnd, camera_prop)
