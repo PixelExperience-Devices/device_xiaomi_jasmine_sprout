@@ -48,7 +48,7 @@
 #include "QCamera3VendorTags.h"
 #include "QCameraDualCamSettings.h"
 #include "QCameraFOVControl.h"
-#include "QCameraThermalAdapter.h"
+#include "HAL/QCameraThermalAdapter.h"
 #include "QCameraPerfTranslator.h"
 
 extern "C" {

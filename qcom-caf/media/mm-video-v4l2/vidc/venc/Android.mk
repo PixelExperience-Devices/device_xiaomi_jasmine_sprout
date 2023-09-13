@@ -105,12 +105,12 @@ endif
 # Common Includes
 libmm-venc-inc      := $(LOCAL_PATH)/inc
 libmm-venc-inc      += $(LIBION_HEADER_PATHS)
-libmm-venc-inc      += device/xiaomi/jasmine_sprout/qcom-caf/media/mm-video-v4l2/vidc/common/inc
-libmm-venc-inc      += device/xiaomi/jasmine_sprout/qcom-caf/media/mm-core/inc
-libmm-venc-inc      += device/xiaomi/jasmine_sprout/qcom-caf/media/libstagefrighthw
+libmm-venc-inc      += $(TARGET_HALS_PATH)/media/mm-video-v4l2/vidc/common/inc
+libmm-venc-inc      += $(TARGET_HALS_PATH)/media/mm-core/inc
+libmm-venc-inc      += $(TARGET_HALS_PATH)/media/libstagefrighthw
 libmm-venc-inc      += $(TARGET_OUT_HEADERS)/adreno
-libmm-venc-inc      += device/xiaomi/jasmine_sprout/qcom-caf/media/libc2dcolorconvert
-libmm-venc-inc      += device/xiaomi/jasmine_sprout/qcom-caf/media/hypv-intercept
+libmm-venc-inc      += $(TARGET_HALS_PATH)/media/libc2dcolorconvert
+libmm-venc-inc      += $(TARGET_HALS_PATH)/media/hypv-intercept
 libmm-venc-inc      += $(TARGET_OUT_HEADERS)/libvqzip
 libmm-venc-inc      += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 ifeq ($(call is-board-platform-in-list, $(TARGETS_THAT_SUPPORT_PQ)),true)

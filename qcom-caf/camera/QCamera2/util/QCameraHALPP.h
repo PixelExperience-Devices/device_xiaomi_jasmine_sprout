@@ -31,7 +31,7 @@
 #define __QCAMERA_HAL_PP_H__
 
 // Camera dependencies
-#include "QCamera2HWI.h"
+#include "HAL/QCamera2HWI.h"
 #include "QCameraPprocManager.h"
 
 // STL dependencies

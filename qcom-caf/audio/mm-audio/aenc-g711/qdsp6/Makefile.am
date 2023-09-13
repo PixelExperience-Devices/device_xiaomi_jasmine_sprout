@@ -12,7 +12,7 @@ AM_CFLAGS = -Wall \
             -DAUDIOV2 \
             -I inc \
             -I $(PKG_CONFIG_SYSROOT_DIR)/usr/include/audio-kernel \
-            -I ${WORKSPACE}/hardware/qcom/media/mm-core/inc/
+            -I ${WORKSPACE}/device/xiaomi/jasmine_sprout/qcom-caf/media/mm-core/inc/
 
 C_SOURCES = src/aenc_svr.c \
             src/omx_g711_aenc.cpp \

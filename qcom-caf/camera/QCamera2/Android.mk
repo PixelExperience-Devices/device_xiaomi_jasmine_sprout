@@ -122,8 +122,8 @@ LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/stack/mm-camera-interface/inc \
         $(LOCAL_PATH)/util \
         $(LOCAL_PATH)/HAL3 \
-        device/xiaomi/jasmine_sprout/qcom-caf/media/libstagefrighthw \
-        device/xiaomi/jasmine_sprout/qcom-caf/media/mm-core/inc \
+        $(TARGET_HALS_PATH)/media/libstagefrighthw \
+        $(TARGET_HALS_PATH)/media/mm-core/inc \
         $(TARGET_OUT_HEADERS)/mm-camera-lib/cp/prebuilt
 
 ifneq (,$(filter $(TRINKET),$(TARGET_BOARD_PLATFORM)))
@@ -151,7 +151,7 @@ LOCAL_HEADER_LIBRARIES += libhardware_headers
 
 #HAL 1.0 Include paths
 LOCAL_C_INCLUDES += \
-         device/xiaomi/jasmine_sprout/qcom-caf/camera/QCamera2/HAL
+        $(TARGET_HALS_PATH)/camera/QCamera2/HAL
 
 ifeq ($(TARGET_COMPILE_WITH_MSM_KERNEL),true)
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
@@ -178,7 +178,7 @@ LOCAL_CFLAGS += -DUSE_CAMERA_METABUFFER_UTILS
 
 #LOCAL_STATIC_LIBRARIES := libqcamera2_util
 LOCAL_C_INCLUDES += \
-        device/xiaomi/jasmine_sprout/qcom-caf/display/libqservice
+        $(TARGET_HALS_PATH)/display/libqservice
 LOCAL_SHARED_LIBRARIES := liblog libhardware libutils libcutils libdl libsync
 LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface libui libcamera_metadata
 LOCAL_SHARED_LIBRARIES += libqdMetaData libqservice libbinder

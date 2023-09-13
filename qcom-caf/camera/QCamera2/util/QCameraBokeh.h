@@ -32,7 +32,7 @@
 
 // Camera dependencies
 #include "QCameraHALPP.h"
-#include "QCameraPostProc.h"
+#include "HAL/QCameraPostProc.h"
 
 typedef struct  {
     cam_frame_size_t main;

@@ -362,19 +362,45 @@ void* async_message_thread (void *input)
 void* message_thread_dec(void *input)
 {
     omx_vdec* omx = reinterpret_cast<omx_vdec*>(input);
+    unsigned char id;
+    int n;
+
+    fd_set readFds;
     int res = 0;
+    struct timeval tv;
 
     DEBUG_PRINT_HIGH("omx_vdec: message thread start");
     prctl(PR_SET_NAME, (unsigned long)"VideoDecMsgThread", 0, 0, 0);
     while (!omx->message_thread_stop) {
-        res = omx->signal.wait(2 * 1000000000);
-        if (res == ETIMEDOUT || omx->message_thread_stop) {
+
+        tv.tv_sec = 2;
+        tv.tv_usec = 0;
+
+        FD_ZERO(&readFds);
+        FD_SET(omx->m_pipe_in, &readFds);
+
+        res = select(omx->m_pipe_in + 1, &readFds, NULL, NULL, &tv);
+        if (res < 0) {
+            DEBUG_PRINT_ERROR("select() ERROR: %s", strerror(errno));
             continue;
-        } else if (res) {
-            DEBUG_PRINT_ERROR("omx_vdec: message_thread_dec wait on condition failed, exiting");
+        } else if (res == 0 /*timeout*/ || omx->message_thread_stop) {
+            continue;
+        }
+
+        n = read(omx->m_pipe_in, &id, 1);
+
+        if (0 == n) {
             break;
         }
-        omx->process_event_cb(omx);
+
+        if (1 == n) {
+            omx->process_event_cb(omx, id);
+        }
+
+        if ((n < 0) && (errno != EINTR)) {
+            DEBUG_PRINT_LOW("ERROR: read from pipe failed, ret %d errno %d", n, errno);
+            break;
+        }
     }
     DEBUG_PRINT_HIGH("omx_vdec: message thread stop");
     return 0;
@@ -382,8 +408,14 @@ void* message_thread_dec(void *input)
 
 void post_message(omx_vdec *omx, unsigned char id)
 {
-    DEBUG_PRINT_LOW("omx_vdec: post_message %d", id);
-    omx->signal.signal();
+    int ret_value;
+    DEBUG_PRINT_LOW("omx_vdec: post_message %d pipe out%d", id,omx->m_pipe_out);
+    ret_value = write(omx->m_pipe_out, &id, 1);
+    if (ret_value <= 0) {
+        DEBUG_PRINT_ERROR("post_message to pipe failed : %s", strerror(errno));
+    } else {
+        DEBUG_PRINT_LOW("post_message to pipe done %d",ret_value);
+    }
 }
 
 // omx_cmd_queue destructor
@@ -646,6 +678,8 @@ omx_vdec::omx_vdec(): m_error_propogated(false),
     m_is_display_session(false),
     m_buffer_error(false)
 {
+    m_pipe_in = -1;
+    m_pipe_out = -1;
     m_poll_efd = -1;
     drv_ctx.video_driver_fd = -1;
     drv_ctx.extradata_info.ion.data_fd = -1;
@@ -951,6 +985,10 @@ omx_vdec::~omx_vdec()
         DEBUG_PRINT_HIGH("Waiting on OMX Msg Thread exit");
         pthread_join(msg_thread_id,NULL);
     }
+    close(m_pipe_in);
+    close(m_pipe_out);
+    m_pipe_in = -1;
+    m_pipe_out = -1;
     DEBUG_PRINT_HIGH("Waiting on OMX Async Thread exit");
     if(eventfd_write(m_poll_efd, 1)) {
          DEBUG_PRINT_ERROR("eventfd_write failed for fd: %d, errno = %d, force stop async_thread", m_poll_efd, errno);
@@ -1149,6 +1187,7 @@ OMX_ERRORTYPE omx_vdec::decide_dpb_buffer_mode(bool split_opb_dpb_with_same_colo
                 if (capture_capability != V4L2_PIX_FMT_NV12_UBWC) {
                     drv_ctx.output_format = VDEC_YUV_FORMAT_NV12_UBWC;
                     capture_capability = V4L2_PIX_FMT_NV12_UBWC;
+
                     memset(&fmt, 0x0, sizeof(struct v4l2_format));
                     fmt.type = V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE;
                     rc = ioctl(drv_ctx.video_driver_fd, VIDIOC_G_FMT, &fmt);
@@ -1415,7 +1454,7 @@ int omx_vdec::decide_downscalar()
    None.
 
    ========================================================================== */
-void omx_vdec::process_event_cb(void *ctxt)
+void omx_vdec::process_event_cb(void *ctxt, unsigned char id)
 {
     unsigned long p1; // Parameter - 1
     unsigned long p2; // Parameter - 2
@@ -1455,7 +1494,8 @@ void omx_vdec::process_event_cb(void *ctxt)
 
         /*process message if we have one*/
         if (qsize > 0) {
-            switch (ident) {
+            id = ident;
+            switch (id) {
                 case OMX_COMPONENT_GENERATE_EVENT:
                     if (pThis->m_cb.EventHandler) {
                         switch (p1) {
@@ -2818,13 +2858,20 @@ OMX_ERRORTYPE omx_vdec::component_init(OMX_STRING role)
             }
         }
 
-        msg_thread_created = true;
-        r = pthread_create(&msg_thread_id,0,message_thread_dec,this);
-
-        if (r < 0) {
-            DEBUG_PRINT_ERROR("component_init(): message_thread_dec creation failed");
-            msg_thread_created = false;
+        if (pipe(fds)) {
+            DEBUG_PRINT_ERROR("pipe creation failed");
             eRet = OMX_ErrorInsufficientResources;
+        } else {
+            m_pipe_in = fds[0];
+            m_pipe_out = fds[1];
+            msg_thread_created = true;
+            r = pthread_create(&msg_thread_id,0,message_thread_dec,this);
+
+            if (r < 0) {
+                DEBUG_PRINT_ERROR("component_init(): message_thread_dec creation failed");
+                msg_thread_created = false;
+                eRet = OMX_ErrorInsufficientResources;
+            }
         }
     }
 

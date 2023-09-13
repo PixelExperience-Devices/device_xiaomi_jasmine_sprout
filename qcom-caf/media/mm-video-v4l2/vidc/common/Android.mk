@@ -25,10 +25,10 @@ endif
 
 libmm-vidc-inc      := $(LOCAL_PATH)/inc
 libmm-vidc-inc      += $(LIBION_HEADER_PATHS)
-libmm-vidc-inc      += device/xiaomi/jasmine_sprout/qcom-caf/media/mm-core/inc
-libmm-vidc-inc      += device/xiaomi/jasmine_sprout/qcom-caf/media/mm-video-v4l2/vidc/vdec/inc
-libmm-vidc-inc      += device/xiaomi/jasmine_sprout/qcom-caf/media/mm-video-v4l2/vidc/venc/inc
-libmm-vidc-inc      += device/xiaomi/jasmine_sprout/qcom-caf/media/libc2dcolorconvert
+libmm-vidc-inc      += $(TARGET_HALS_PATH)/media/mm-core/inc
+libmm-vidc-inc      += $(TARGET_HALS_PATH)/media/mm-video-v4l2/vidc/vdec/inc
+libmm-vidc-inc      += $(TARGET_HALS_PATH)/media/mm-video-v4l2/vidc/venc/inc
+libmm-vidc-inc      += $(TARGET_HALS_PATH)/media/libc2dcolorconvert
 libmm-vidc-inc      += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 
 LOCAL_MODULE                    := libOmxVidcCommon

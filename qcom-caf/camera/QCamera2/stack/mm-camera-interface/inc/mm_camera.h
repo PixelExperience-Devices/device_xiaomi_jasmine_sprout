@@ -51,13 +51,13 @@
 
 #define MM_CAMERA_DEV_NAME_LEN 32
 #define MM_CAMERA_DEV_OPEN_TRIES 20
-#define MM_CAMERA_DEV_OPEN_RETRY_SLEEP 40
+#define MM_CAMERA_DEV_OPEN_RETRY_SLEEP 20
 #define THREAD_NAME_SIZE 15
 
 /* Future frame idx, large enough to make sure capture
 * settings can be applied and small enough to still capture an image */
 #define MM_CAMERA_MAX_FUTURE_FRAME_WAIT 100
-#define WAIT_TIMEOUT 10
+#define WAIT_TIMEOUT 5
 
 /*For frame sync */
 #define MAX_OBJS_FOR_FRAME_SYNC   4

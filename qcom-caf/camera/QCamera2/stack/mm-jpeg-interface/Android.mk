@@ -25,11 +25,7 @@ endif
 LOCAL_C_INCLUDES+= $(kernel_includes)
 LOCAL_ADDITIONAL_DEPENDENCIES := $(common_deps)
 
-ifneq ($(QCPATH),)
-LIB2D_ROTATION=true
-else
 LIB2D_ROTATION=false
-endif
 
 LOCAL_C_INCLUDES += \
     $(LOCAL_PATH)/inc \

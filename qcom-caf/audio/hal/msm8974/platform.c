@@ -5631,11 +5631,11 @@ int platform_send_audio_calibration(void *platform, struct audio_usecase *usecas
         sample_rate = DEFAULT_OUTPUT_SAMPLING_RATE;
         if (my_data->acdb_send_audio_cal_v4) {
             my_data->acdb_send_audio_cal_v4(acdb_dev_id, acdb_dev_type,
-                                            app_type, sample_rate, i,
+                                            app_type, sample_rate, i + 1,
                                             sample_rate);
         } else if (my_data->acdb_send_audio_cal_v3) {
             my_data->acdb_send_audio_cal_v3(acdb_dev_id, acdb_dev_type,
-                                            app_type, sample_rate, i);
+                                            app_type, sample_rate, i + 1);
         } else if (my_data->acdb_send_audio_cal) {
             my_data->acdb_send_audio_cal(acdb_dev_id, acdb_dev_type, app_type,
                                          sample_rate);

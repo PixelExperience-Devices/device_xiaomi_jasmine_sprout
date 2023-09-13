@@ -68,10 +68,6 @@ ifeq ($(TARGET_USES_GRALLOC1), true)
     common_flags += -DUSE_GRALLOC1
 endif
 
-ifneq ($(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE),false)
-    common_flags += -DGRALLOC_HANDLE_HAS_RESERVED_SIZE
-endif
-
 #Common libraries external to display HAL
 common_libs := liblog libutils libcutils libhardware
 common_deps  :=

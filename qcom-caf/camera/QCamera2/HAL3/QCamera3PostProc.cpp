@@ -42,7 +42,7 @@
 #include "QCamera3Stream.h"
 #include "QCameraTrace.h"
 #include "QCameraPprocManager.h"
-#include "QCameraMem.h"
+#include "HAL/QCameraMem.h"
 
 extern "C" {
 #include "mm_camera_dbg.h"

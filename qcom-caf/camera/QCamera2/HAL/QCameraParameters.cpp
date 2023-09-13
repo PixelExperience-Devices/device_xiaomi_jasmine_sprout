@@ -769,7 +769,7 @@ const QCameraParameters::QCameraMap<cam_antibanding_mode_type>
 const QCameraParameters::QCameraMap<cam_iso_mode_type>
         QCameraParameters::ISO_MODES_MAP[] = {
     { ISO_AUTO,  CAM_ISO_MODE_AUTO },
-    { ISO_HJR,   CAM_ISO_MODE_AUTO },
+    { ISO_HJR,   CAM_ISO_MODE_DEBLUR },
     { ISO_100,   CAM_ISO_MODE_100 },
     { ISO_200,   CAM_ISO_MODE_200 },
     { ISO_400,   CAM_ISO_MODE_400 },
@@ -5602,6 +5602,7 @@ int32_t QCameraParameters::setLongshotParam(const QCameraParameters& params)
 
     if (str != NULL) {
         if (prev_str == NULL || strcmp(str, prev_str) != 0) {
+            set(KEY_QC_LONG_SHOT, str);
             if (prev_str && !strcmp(str, "off") && !strcmp(prev_str, "on")) {
                 // We restart here, to reset the FPS and no
                 // of buffers as per the requirement of single snapshot usecase.
@@ -5610,7 +5611,6 @@ int32_t QCameraParameters::setLongshotParam(const QCameraParameters& params)
                 // longshot command is triggered through sendCommand.
                 m_bNeedRestart = true;
             }
-            set(KEY_QC_LONG_SHOT, str);
         }
     }
 
@@ -6200,7 +6200,7 @@ int32_t QCameraParameters::initDefaultParameters()
             AUTO_EXPOSURE_MAP,
             PARAM_MAP_SIZE(AUTO_EXPOSURE_MAP));
     set(KEY_QC_SUPPORTED_AUTO_EXPOSURE, autoExposureValues.string());
-    setAutoExposure(AUTO_EXPOSURE_CENTER_WEIGHTED);
+    setAutoExposure(AUTO_EXPOSURE_FRAME_AVG);
 
     // Set Exposure Compensation
     set(KEY_MAX_EXPOSURE_COMPENSATION, m_pCapability->exposure_compensation_max); // 12
@@ -6303,13 +6303,11 @@ int32_t QCameraParameters::initDefaultParameters()
     set(KEY_SUPPORTED_SCENE_MODES, sceneModeValues);
     setSceneMode(SCENE_MODE_AUTO);
 
-#if 0
     // Set CDS Mode
     String8 cdsModeValues = createValuesStringFromMap(
             CDS_MODES_MAP,
             PARAM_MAP_SIZE(CDS_MODES_MAP));
     set(KEY_QC_SUPPORTED_CDS_MODES, cdsModeValues);
-#endif
 
     // Set video CDS Mode
     String8 videoCdsModeValues = createValuesStringFromMap(
@@ -7228,13 +7226,6 @@ int32_t QCameraParameters::setPreviewFpsRange(int min_fps,
     /*This property get value should be the fps that user needs*/
     property_get("persist.vendor.debug.set.fixedfps", value, "0");
     fixedFpsValue = atoi(value);
-
-    // Don't allow function callers to request min fps same as max fps
-    // I mean SnapdragonCamera.
-    if (max_fps >= 24000 && min_fps == max_fps) {
-        LOGH("min_fps %d same as max_fps %d, setting min_fps to 7000", min_fps, max_fps);
-        min_fps = 7000;
-    }
 
     LOGD("E minFps = %d, maxFps = %d , vid minFps = %d, vid maxFps = %d",
                  min_fps, max_fps, vid_min_fps, vid_max_fps);

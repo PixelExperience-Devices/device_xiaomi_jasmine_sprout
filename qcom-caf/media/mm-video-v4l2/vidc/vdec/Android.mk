@@ -82,18 +82,18 @@ include $(CLEAR_VARS)
 # Common Includes
 libmm-vdec-inc          := $(LOCAL_PATH)/inc
 libmm-vdec-inc          += $(LIBION_HEADER_PATHS)
-libmm-vdec-inc          += device/xiaomi/jasmine_sprout/qcom-caf/media/mm-video-v4l2/vidc/common/inc
-libmm-vdec-inc          += device/xiaomi/jasmine_sprout/qcom-caf/media/mm-core/inc
+libmm-vdec-inc          += $(TARGET_HALS_PATH)/media/mm-video-v4l2/vidc/common/inc
+libmm-vdec-inc          += $(TARGET_HALS_PATH)/media/mm-core/inc
 libmm-vdec-inc          += $(TARGET_OUT_HEADERS)/adreno
-libmm-vdec-inc      	+= device/xiaomi/jasmine_sprout/qcom-caf/media/libc2dcolorconvert
-libmm-vdec-inc          += device/xiaomi/jasmine_sprout/qcom-caf/media/hypv-intercept
+libmm-vdec-inc          += $(TARGET_HALS_PATH)/media/libc2dcolorconvert
+libmm-vdec-inc          += $(TARGET_HALS_PATH)/media/hypv-intercept
 libmm-vdec-inc          += $(TARGET_OUT_HEADERS)/mm-video/SwVdec
 libmm-vdec-inc          += $(TARGET_OUT_HEADERS)/mm-video/swvdec
 libmm-vdec-inc          += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 
 ifeq ($(PLATFORM_SDK_VERSION), 18)  #JB_MR2
 libmm-vdec-def += -DANDROID_JELLYBEAN_MR2=1
-libmm-vdec-inc += device/xiaomi/jasmine_sprout/qcom-caf/media/libstagefrighthw
+libmm-vdec-inc += $(TARGET_HALS_PATH)/media/libstagefrighthw
 endif
 
 # Common Dependencies
@@ -137,6 +137,7 @@ LOCAL_VENDOR_MODULE             := true
 LOCAL_CFLAGS                    := $(libmm-vdec-def) -Werror
 
 LOCAL_HEADER_LIBRARIES := \
+        display_headers \
         media_plugin_headers \
         libnativebase_headers \
         libutils_headers \
@@ -177,6 +178,7 @@ LOCAL_VENDOR_MODULE           := true
 LOCAL_CFLAGS                  := $(libmm-vdec-def)
 
 LOCAL_HEADER_LIBRARIES := \
+        display_headers \
         media_plugin_headers \
         libnativebase_headers \
         libutils_headers \
