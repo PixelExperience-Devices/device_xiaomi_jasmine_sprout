@@ -87,11 +87,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     otapreopt_script
 
-# Apex
-TARGET_SUPPORTS_UPDATABLE_APEX := true
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-PRODUCT_COMPRESSED_APEX := false
-
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
