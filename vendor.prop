@@ -143,9 +143,6 @@ debug.stagefright.omx_default_rank=0
 persist.vendor.data.iwlan.enable=true
 ro.telephony.iwlan_operation_mode=legacy
 
-# OEM Unlocking
-ro.oem_unlock_supported=1
-
 # Proximity
 gsm.proximity.enable=true
 
