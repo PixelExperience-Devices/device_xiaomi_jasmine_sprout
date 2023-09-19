@@ -763,38 +763,22 @@ vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|0174adc1a1b87f10e044056b6dc6b709fa1
 vendor/lib64/libdpmqmihal.so|f61467c788163c045716ec1c12b28526ab8ad38f
 
 # DRM - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
-vendor/bin/qseecomd|580fbb8109e191c0ba2eb476acd8d29c8d2eefed
 vendor/etc/gpfspath_oem_config.xml|7aeade35b0bbe27530f6aca8c1ed5192a7acf59d
-vendor/lib/libQSEEComAPI.so|3a8eca79e24ffdaf1791b0f1cae84abf88f4161e
 vendor/lib/libsdedrm.so|516b320b6a55a23b2f4764074d4796a29483fac1
-vendor/lib64/libGPQTEEC_vendor.so|a4a5b76e15f388a68d2511cd88db4d71d52d74ab
-vendor/lib64/libGPTEE_vendor.so|50f15ad9e0a86ea0edee0b0dad778dbb1aad30e1
-vendor/lib64/libGPreqcancel.so|85bd5c16f107b7fbfccf506386e52e41d53d67e7
-vendor/lib64/libGPreqcancel_svc.so|00aa6595a81d9a5df09d2132347a903995e6dc95
-vendor/lib64/libQSEEComAPI.so|ac4f9387915027b61a8e958a4dd9eeda7583b4d9
 vendor/lib64/libSecureUILib.so|8e39219d3cc7ac0dc3563119fddffac8e7ed91d6
 vendor/lib64/libStDrvInt.so|35167fff3f4cb17db48e0c13b2f9351f9fdb0406
-vendor/lib64/libdrmfs.so|af6a20adc4b778337c5b978051d154d40020d00f
-vendor/lib64/libdrmtime.so|08c0a5c8f311b9440c41a8509ade8d889f984f11
-vendor/lib64/libqisl.so|cf0d6f091fefb95f482f6ea5dfd98755bf816f63
-vendor/lib64/librpmb.so|183ea86bd0608af5eaef76c275348b2893a7ce72
 vendor/lib64/libsdedrm.so|d262823ae1e118165ba06a67dba15806bc27d1d2
 vendor/lib64/libsecureui.so|7f3887a00b5eeccfe4d9bf8192a5d9b1100e66c1
 vendor/lib64/libsecureui_svcsock.so|ce9b2f737a47ca50118120581790080dc608fbbc
 vendor/lib64/libsi.so|a357066a9c5c2309452de794c7d9816d62fcfd64
-vendor/lib64/libssd.so|0473126e74e5cf7dff2bfa1f0b9f8c504818fe38
 vendor/lib64/libtrustedapploader.so|8e1ba14b222370acb44775a40e4cdaca74d8fc4b
-vendor/lib64/libtzdrmgenprov.so|77f37f35c1e61d36bf32df4215487329872095c9
 
 # DRM (Widevine) - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine|0918336440ba0464f93fee97925b94ad12b7ef5d
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
-vendor/lib/libcpion.so|183ae0506fc49d15118a621dc259f1d6dc471add
 vendor/lib/libmm-hdcpmgr.so|0e6c6b410f5f14b5cb1ae9bc7e4aff7354a6e57b
 vendor/lib64/mediadrm/libwvdrmengine.so|f90815f6dee8ddb57d15d68c8e61258d1085b015
-vendor/lib64/libbase64.so|df5aef5f70d27e5335c978b99012d6ca202a0266
-vendor/lib64/libcpion.so|d7d4e062babfb51805e7d6ea81fe00de1fb8e3d1
 vendor/lib64/libhdcpsrm.so|bb9d45e4f2dc7953e80842d2c572b11b97445b32
 vendor/lib64/libmm-hdcpmgr.so|6eb020e22b98becb011c9b8965fddafd8a80c37a
 vendor/lib64/librmp.so|14a97f308196f13ae6d1ad18ea600a6f0237362f
@@ -804,11 +788,7 @@ vendor/lib64/libwvhidl.so|b2649763d9e7ba4f7f8a0f96cc4ad9228b29a490
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|1f19be8fdbd58738aa80d5f658ea63818571bb59
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
 vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|c476af2a78e7948849a5c96319fceb467b75e0ed
-vendor/lib/libQTEEConnector_vendor.so|82fb1d256fe039c27378b0e8e848b91e0808d27a
-vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so|0e59f6289bbf88375bd1f3ba92e3c3be9759ccb7
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|183e7a78dda19e11f9232537b45ea9cac98d1eff
-vendor/lib64/libQTEEConnector_vendor.so|c76e55b6408d52857fbb4e600f3d33fe74daabb4
-vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|0e8a8a4e021b6db3c8429ebea782f82c804059f8
 
 # DSP - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
 vendor/bin/dspservice|4ea49e1d95df172efe99e49d66c4a2cc485bd01d
@@ -910,7 +890,6 @@ vendor/lib64/liblocationservice.so|643510a4740a7da6337c4b98ad347dbcfc7316b6
 vendor/lib64/liblocationservice_glue.so|791352fd96d938133d3f68611f0bf970996ed158
 vendor/lib64/liblowi_client.so|aa0b2a74e92f027c60a246bd53d03db1abb108f9
 vendor/lib64/liblowi_wifihal.so|2957825343ee1dd60d762c82ed09fb57ecdb1a30
-vendor/lib64/libminksocket.so|5a84e37a6ffb43f892154a4029e016274dbcce4f
 vendor/lib64/libqcc_file_agent.so|5ee8573028b537196c40cebfb70a4889675f6ae9
 vendor/lib64/libqdma_file_agent.so|209c1c33e273761ea1e8feae425dd0256f0dd489
 vendor/lib64/libslimclient.so|8c8101f0c756425c535be828fcc10dcd15e0faa0
@@ -1116,11 +1095,9 @@ system_ext/lib64/libqmi_encdec_system.so|0b5d19d8ed0587be50453a639fa40b8b20dc4e2
 vendor/bin/irsc_util|608c74ce948b60f88633dba6cbcc55fbe9e0c8e3
 vendor/bin/pd-mapper|9d4f5e0689f56724be3a599cf49a43585679aabe
 vendor/etc/seccomp_policy/qti-systemd.policy|40bf52fb50a94eb8325beefe1927d9ba155fb02a
-vendor/lib/libdiag.so|bb787820599ac39255184cb43a37e5180740f3c6
 vendor/lib/libdsutils.so|b59829a617a3ca2cba0a0f5cc163bf576516363e
 vendor/lib/libidl.so|504e9288d5be36c7d28ddda03cab19d8bd86aa61
 vendor/lib/libmdmdetect.so|9d3d876d6953ef5a35760e0c16325a8a8b784b7f
-vendor/lib/libminkdescriptor.so|020daf71b5c409874f954fe895f38c86de453559
 vendor/lib/libqcci_legacy.so|132b03efa4021e2cb73250f1cd4f0da4cd5be4bd
 vendor/lib/libqdi.so|3eaa0fcb615f77296f665f5675dca8f3091036f3
 vendor/lib/libqdp.so|9cbcf859e0ebd2f39d202bada50d7867d5cf5a19
@@ -1133,11 +1110,9 @@ vendor/lib/libqmi_csi.so|a371a1bb2ea02f296b2c4305e3aa74bb66c04bbb
 vendor/lib/libqmi_encdec.so|e7f0a065c2ef1addb093172099fef53985bd03ee
 vendor/lib/libqmi_legacy.so|adc4c0072de094b9f5c40469234accd708364834
 vendor/lib/libqmiservices.so|ae96e2731734f45f85f0af22be8229d90c2b1a93
-vendor/lib64/libdiag.so|42796c2ce991908b1aeeb1d292bda139d9fb3d6a
 vendor/lib64/libdsutils.so|cd26587ed32251e4cf707cfa926d6ea81384a709
 vendor/lib64/libidl.so|ded7970043351d0b58ff5ac08688e2df8f765ced
 vendor/lib64/libmdmdetect.so|00dbd10a4fdade46cff3af2201d1c0f32c7a5c26
-vendor/lib64/libminkdescriptor.so|c1bc3560d0547f122cac084c5b02b4f9c86a7d1c
 vendor/lib64/libqcci_legacy.so|86a998f16eebab869d3a3dcfbe1c2dcc4162a1e6
 vendor/lib64/libqdi.so|d68e9d0865d25499a8c02f9e4b97257c3f37f020
 vendor/lib64/libqdp.so|1721e4a1a33d2efff784804d8940423fdf129dce
@@ -1460,8 +1435,6 @@ vendor/etc/init/init_thermal-engine.rc|a0310f09da9f09c67e110607b73aec9f9f981c4c
 -vendor/app/TimeService/TimeService.apk|4b18d352dddd78e8591043cf44e73d69d1948d33
 vendor/bin/time_daemon|35147f3f1a63f45d4449b28177ac3495d375b4fc
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
--vendor/lib/libtime_genoff.so|61f2498b119a9991f86e350c7ed8fe1d2ffbab20
--vendor/lib64/libtime_genoff.so|118c31a2a35bd82b8d392bc09d6eb37448389437
 
 # TLOC - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
 vendor/bin/tloc_daemon|905bb189359ee5dbe48d221215d09ea6c29cfceb

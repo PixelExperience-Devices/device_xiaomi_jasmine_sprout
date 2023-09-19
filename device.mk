@@ -458,7 +458,7 @@ PRODUCT_COPY_FILES += \
 
 # QCOM Common
 $(call inherit-product, device/qcom/common/common.mk)
-TARGET_COMMON_QTI_COMPONENTS := alarm av init media overlay perf usb vibrator wlan
+TARGET_COMMON_QTI_COMPONENTS := alarm av init media overlay perf qseecomd usb vibrator wlan
 
 # RIL
 PRODUCT_PACKAGES += \
