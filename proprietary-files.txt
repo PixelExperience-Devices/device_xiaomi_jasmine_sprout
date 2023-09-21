@@ -9,6 +9,7 @@ vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb|cf7dbd5ccb31fa8ff87741f832e6f1c58c84b2
 vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb|e2072f38c4a1860d74cb788dd52874c9473fc717
 vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb|d4c98a463c0a7b147d08876b8347c514e881be29
 vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp|5b55bf4db3181950a8982483ae22d85ab7721155
+vendor/etc/acdbdata/adsp_avs_config.acdb|d9507f31b8970320233128fed24c39742ee53c67
 
 # ADSP - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
 system_ext/lib/libadsprpc_system.so|4e94197bf49d506b981233880a4f7ad47fd027c8
