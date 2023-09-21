@@ -137,7 +137,6 @@ ro.vendor.use_data_netmgrd=true
 gsm.proximity.enable=true
 
 # Radio
-rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
 persist.rild.nitz_long_ons_1=
@@ -152,7 +151,6 @@ DEVICE_PROVISIONED=1
 ro.telephony.default_network=22,20
 telephony.lteOnCdmaDevice=1
 persist.vendor.radio.enableadvancedscan=false
-rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so
 persist.radio.cust_ds_ui=ss
 
 # SD-Card
