@@ -121,6 +121,7 @@ persist.log.tag.OpenGLRenderer=S
 debug.sf.auto_latch_unsignaled=true
 debug.sf.treat_170m_as_sRGB=1debug.sf.treat_170m_as_sRGB=1
 debug.sf.predict_hwc_composition_strategy=0
+debug.sf.enable_transaction_tracing=false
 
 # DPM
 persist.vendor.dpmhalservice.enable=1
