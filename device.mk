@@ -468,6 +468,10 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, device/qcom/common/common.mk)
 TARGET_COMMON_QTI_COMPONENTS := alarm av init media overlay perf qseecomd usb vibrator wlan
 
+# Qmi
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/qmi/qmi_fw.conf:$(TARGET_COPY_OUT_VENDOR)/etc/qmi_fw.conf
+
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
