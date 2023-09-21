@@ -452,6 +452,10 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
     libprotobuf-cpp-lite-vendorcompat
 
+# Properties
+include $(DEVICE_PATH)/configs/properties/log_silencer.mk
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+
 # Public Libraries
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
