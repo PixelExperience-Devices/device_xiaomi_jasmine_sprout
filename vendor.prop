@@ -77,9 +77,6 @@ vendor.audio.feature.wsa.enable=false
 vendor.audio.feature.audiozoom.enable=false
 vendor.audio.feature.snd_mon.enable=true
 vendor.audio.gsl.shmem.dmaheap.uncached=true
-ro.audio.spatializer_enabled=true
-ro.audio.spatializer_transaural_enabled_default=false
-persist.vendor.audio.spatializer.speaker_enabled=true
 
 # Bluetooth
 persist.vendor.qcom.bluetooth.soc=cherokee
