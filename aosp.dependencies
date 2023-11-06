@@ -2,25 +2,25 @@
    {
       "repository":"kernel_xiaomi_jasmine_sprout",
       "target_path":"kernel/xiaomi/jasmine_sprout",
-      "branch":"thirteen",
+      "branch":"fourteen",
       "remote":"pixel-devices"
    },
    {
       "repository":"vendor_xiaomi_jasmine_sprout",
       "target_path":"vendor/xiaomi/jasmine_sprout",
-      "branch":"thirteen",
+      "branch":"fourteen",
       "remote":"pixel-devices-blobs"
    },
    {
       "repository":"hardware_xiaomi",
       "target_path":"hardware/xiaomi",
-      "branch":"thirteen",
+      "branch":"fourteen",
       "remote":"pixel"
    },
    {
       "repository":"device_qcom_common",
       "target_path":"device/qcom/common",
-      "branch":"thirteen",
+      "branch":"fourteen",
       "remote":"pixel-devices"
    }
 ]
