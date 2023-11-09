@@ -121,7 +121,7 @@ PRODUCT_PACKAGES += \
     libcomprcapture \
     libexthwplugin \
     libspkrprot \
-    libstdc++.vendor \
+    libstdc++_vendor \
     libtinyalsa
 
 PRODUCT_PACKAGES += \
