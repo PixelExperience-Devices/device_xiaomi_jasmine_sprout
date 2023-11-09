@@ -1,6 +1,3 @@
-# Apex
-ro.apex.updatable=false
-
 # Audio
 af.fast_track_multiplier=1
 vendor.audio_hal.period_size=192
