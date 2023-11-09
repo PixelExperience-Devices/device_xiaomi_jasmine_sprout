@@ -170,7 +170,8 @@ PRODUCT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 BOARD_SEPOLICY_M4DEFS += \
     hal_perf_default=vendor_hal_perf_default \
-    hal_perf_hwservice=vendor_hal_perf_hwservice
+    hal_perf_hwservice=vendor_hal_perf_hwservice \
+    lmkd_prop=vendor_lmkd_prop
 
 # Treble
 BOARD_VNDK_VERSION := current
