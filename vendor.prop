@@ -142,7 +142,6 @@ debug.stagefright.omx_default_rank=0
 
 # Netmgr
 persist.vendor.data.iwlan.enable=true
-ro.telephony.iwlan_operation_mode=legacy
 
 # Proximity
 gsm.proximity.enable=true
