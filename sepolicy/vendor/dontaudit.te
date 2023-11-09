@@ -1,3 +1,6 @@
-# Apps are no longer allowed open access to /dev/ashmem, unless they
-# target API level < Q.
-dontaudit untrusted_app ashmem_device:chr_file open;
+dontaudit untrusted_app zygote:unix_stream_socket  getopt;
+dontaudit untrusted_app_25 zygote:unix_stream_socket getopt;
+dontaudit untrusted_app_27 zygote:unix_stream_socket getopt;
+dontaudit untrusted_app_29 zygote:unix_stream_socket getopt;
+dontaudit untrusted_app_30 zygote:unix_stream_socket getopt;
+dontaudit untrusted_app_32 zygote:unix_stream_socket getopt;
