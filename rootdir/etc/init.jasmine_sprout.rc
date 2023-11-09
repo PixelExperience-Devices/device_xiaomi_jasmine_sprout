@@ -70,10 +70,6 @@ on charger
 on property:sys.camera.face.unlock=*
     setprop vendor.camera.face.unlock ${sys.camera.face.unlock}
 
-# Restrict permissions to socket file
-# to hide Magisk & co.
-    chmod 440 /proc/net/unix
-
 on property:vendor.post_boot.parsed=1
     # Back to default VM settings
     write /proc/sys/vm/dirty_expire_centisecs 3000
