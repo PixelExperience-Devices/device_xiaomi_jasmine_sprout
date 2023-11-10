@@ -6,3 +6,8 @@ com.fingerprints.extension::IFingerprintSensorTest                      u:object
 vendor.goodix.hardware.fingerprint::IGoodixBiometricsFingerprint        u:object_r:hal_fingerprint_hwservice:s0
 vendor.xiaomi.hardware.mlipay::IMlipayService                           u:object_r:hal_mlipay_hwservice:s0
 vendor.qti.hardware.slmadapter::ISlmAdapter                             u:object_r:hal_slmadapter_hwservice:s0
+
+# C2 Codecs
+hardware.google.media.c2::IConfigurable                         u:object_r:hal_codec2_hwservice:s0
+hardware.google.media.c2::IComponentStore                       u:object_r:hal_codec2_hwservice:s0
+android.hardware.media.c2::IConfigurable                        u:object_r:hal_codec2_hwservice:s0
