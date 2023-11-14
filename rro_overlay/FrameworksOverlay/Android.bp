@@ -17,5 +17,5 @@
 runtime_resource_overlay {
     name: "FrameworksOverlay",
     resource_dirs: ["res"],
-    vendor: true,
+    product_specific: true,
 }
